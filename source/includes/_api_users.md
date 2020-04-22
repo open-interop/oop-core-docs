@@ -16,7 +16,7 @@ password | string | yes | only accessed via API calls
 ## Create a New User
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/users' \
+curl --location --request POST 'http://localhost/api/v1/users' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
@@ -48,7 +48,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/users'
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/users`
+`POST http://localhost/api/v1/users`
 
 ### Headers
 
@@ -76,7 +76,7 @@ Json string containing:
 ## Get User
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/users/666' \
+curl --location --request GET 'http://localhost/api/v1/users/666' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -97,7 +97,7 @@ Get details for a single user on the system.
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/users/<id>`
+`GET http://localhost/api/v1/users/<id>`
 
 ### URL Parameter
 
@@ -118,7 +118,7 @@ Authorization | yourauthtoken
 ## List Users
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/users' \
+curl --location --request GET 'http://localhost/api/v1/users' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -150,7 +150,7 @@ Gets a list of the users on the system.
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/users`
+`GET http://localhost/api/v1/users`
 
 ### URL Parameter
 
@@ -175,7 +175,7 @@ Authorization | yourauthtoken
 ## Delete a User
 
 ```shell
-curl --location --request DELETE 'http://oop.bluefrontier.local:9009/api/v1/users/666' \
+curl --location --request DELETE 'http://localhost/api/v1/users/666' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -184,7 +184,7 @@ Delete a single user from the system.
 
 ### HTTP Request
 
-`DELETE http://oop.bluefrontier.local:9009/api/v1/users/<id>`
+`DELETE http://localhost/api/v1/users/<id>`
 
 ### URL Parameter
 
@@ -206,7 +206,7 @@ Authorization | yourauthtoken
 ## Update a User
 
 ```shell
-curl --location --request PUT 'http://oop.bluefrontier.local:9009/api/v1/users/666' \
+curl --location --request PUT 'http://localhost/api/v1/users/666' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'  \
 --data-raw '{ "user" : { "time_zone" : "Bern" } }'
@@ -216,7 +216,7 @@ Update details for a single user on the system.
 
 ### HTTP Request
 
-`PUT http://oop.bluefrontier.local:9009/api/v1/users/<id>`
+`PUT http://localhost/api/v1/users/<id>`
 
 ### URL Parameter
 

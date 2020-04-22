@@ -5,7 +5,7 @@
 ## Request Password Reset
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/passwords' \
+curl --location --request POST 'http://localhost/api/v1/passwords' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
@@ -17,7 +17,7 @@ If you have forgotten your password then you can request a token to allow it to 
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/passwords`
+`POST http://localhost/api/v1/passwords`
 
 ### Content Body
 
@@ -34,7 +34,7 @@ Json string containing:
 ## Reset password
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/passwords/reset' \
+curl --location --request POST 'http://localhost/api/v1/passwords/reset' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
@@ -48,7 +48,7 @@ Once you have the reset password token (from above), then you can send though an
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/passwords/reset`
+`POST http://localhost/api/v1/passwords/reset`
 
 ### Headers
 

@@ -23,7 +23,7 @@ active	| bool | true or false
 ## Create
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/schedules' \
+curl --location --request POST 'http://localhost/api/v1/schedules' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
@@ -55,7 +55,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/schedu
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/schedules`
+`POST http://localhost/api/v1/schedules`
 
 ### Headers
 
@@ -84,7 +84,7 @@ Json string containing:
 ## List
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/schedules' \
+curl --location --request GET 'http://localhost/api/v1/schedules' \
 --header 'Authorization: yourauthtoken'
 ```
 
@@ -107,7 +107,7 @@ This command will ...
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/schedules`
+`GET http://localhost/api/v1/schedules`
 
 ### URL Parameter
 
@@ -130,7 +130,7 @@ Authorization | yourauthtoken
 ## Update
 
 ```shell
-curl --location --request PUT 'http://oop.bluefrontier.local:9009/api/v1/schedules/1' \
+curl --location --request PUT 'http://localhost/api/v1/schedules/1' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain' \
@@ -146,7 +146,7 @@ This command will ...
 
 ### HTTP Request
 
-`PUT http://oop.bluefrontier.local:9009/api/v1/schedules/<id>`
+`PUT http://localhost/api/v1/schedules/<id>`
 
 ### URL Parameter
 
@@ -180,7 +180,7 @@ Authorization | yourauthtoken
 ## Delete
 
 ```shell
-curl --location --request DELETE 'http://oop.bluefrontier.local:9009/api/v1/schedules/16' \
+curl --location --request DELETE 'http://localhost/api/v1/schedules/16' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -189,7 +189,7 @@ Delete a single schedule from the system.
 
 ### HTTP Request
 
-`DELETE http://oop.bluefrontier.local:9009/api/v1/schedules/<id>`
+`DELETE http://localhost/api/v1/schedules/<id>`
 
 ### URL Parameter
 
@@ -211,7 +211,7 @@ Authorization | yourauthtoken
 ## History
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/schedules/59/history' \
+curl --location --request GET 'http://localhost/api/v1/schedules/59/history' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -225,7 +225,7 @@ This command will ...
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/schedules/<id>/history`
+`GET http://localhost/api/v1/schedules/<id>/history`
 
 ### URL Parameter
 
@@ -247,7 +247,7 @@ Authorization | yourauthtoken
 ## Assign Tempr to Schedule
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/schedules/10/assign_tempr?tempr_id=5' \
+curl --location --request POST 'http://localhost/api/v1/schedules/10/assign_tempr?tempr_id=5' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --data-raw ''
@@ -262,7 +262,7 @@ This command will ...
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/schedules/<id>/assign_tempr?tempr_id=<tid>`
+`GET http://localhost/api/v1/schedules/<id>/assign_tempr?tempr_id=<tid>`
 
 ### URL Parameter
 

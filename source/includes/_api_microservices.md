@@ -7,8 +7,8 @@ The core token is predefined when the core is setup - see Jacks Documentation (L
 ## List Devices Auth
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/services/v1/devices/auth' \
---header 'X-Core-Token: foobar'
+curl --location --request GET 'http://localhost/services/v1/devices/auth' \
+--header 'X-Core-Token: yourcoretoken'
 ```
 
 > On success returns:
@@ -18,10 +18,10 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/services/v1/de
     {
         "id": 8,
         "authentication": {
-            "hostname": "oop.bluefrontier.local",
+            "hostname": "openinterop.local",
             "headers.x-api-key": "some-api-key"
         },
-        "tempr_url": "http://oop.bluefrontier.local:9009/services/v1/devices/8/temprs"
+        "tempr_url": "http://localhost/services/v1/devices/8/temprs"
     },
     {
     	...
@@ -31,7 +31,7 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/services/v1/de
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/services/v1/devices/auth`
+`GET http://localhost/services/v1/devices/auth`
 
 ### Headers
 
@@ -47,8 +47,8 @@ X-Core-Token | yourcoretoken
 ## List Temprs for Device
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/services/v1/devices/5/temprs' \
---header 'X-Core-Token: foobar' \
+curl --location --request GET 'http://localhost/services/v1/devices/5/temprs' \
+--header 'X-Core-Token: yourcoretoken' \
 --header 'Content-Type: application/json'
 ```
 
@@ -78,7 +78,7 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/services/v1/de
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/services/v1/devices/<id>/temprs`
+`GET http://localhost/services/v1/devices/<id>/temprs`
 
 ### Headers
 
@@ -101,8 +101,8 @@ id | device ID
 ## List Temprs for Schedule
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/services/v1/schedules/1/temprs' \
---header 'X-Core-Token: foobar'
+curl --location --request GET 'http://localhost/services/v1/schedules/1/temprs' \
+--header 'X-Core-Token: yourcoretoken'
 ```
 
 > On success returns:
@@ -112,7 +112,7 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/services/v1/sc
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/services/v1/schedules/<id>/temprs`
+`GET http://localhost/services/v1/schedules/<id>/temprs`
 
 ### Headers
 
@@ -135,8 +135,8 @@ id | schedule ID
 ## List Schedules
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/services/v1/schedules' \
---header 'X-Core-Token: foobar'
+curl --location --request GET 'http://localhost/services/v1/schedules' \
+--header 'X-Core-Token: yourcoretoken'
 ```
 
 > On success returns:
@@ -146,7 +146,7 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/services/v1/sc
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/services/v1/schedules`
+`GET http://localhost/services/v1/schedules`
 
 ### Headers
 
