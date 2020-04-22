@@ -1,0 +1,3355 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>OOP API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen-a1ce949a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-c5541673.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-1e815a84.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="ruby">ruby</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#login" class="toc-h2 toc-link" data-title="Login">Login</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#dashboard" class="toc-h1 toc-link" data-title="Dashboard">Dashboard</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#transmissions-status" class="toc-h2 toc-link" data-title="Transmissions Status">Transmissions Status</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#password" class="toc-h1 toc-link" data-title="Password">Password</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#request-password-reset" class="toc-h2 toc-link" data-title="Request Password Reset">Request Password Reset</a>
+                  </li>
+                  <li>
+                    <a href="#reset-password" class="toc-h2 toc-link" data-title="Reset password">Reset password</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-new-user" class="toc-h2 toc-link" data-title="Create a New User">Create a New User</a>
+                  </li>
+                  <li>
+                    <a href="#get-user" class="toc-h2 toc-link" data-title="Get User">Get User</a>
+                  </li>
+                  <li>
+                    <a href="#list-users" class="toc-h2 toc-link" data-title="List Users">List Users</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-user" class="toc-h2 toc-link" data-title="Delete a User">Delete a User</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-user" class="toc-h2 toc-link" data-title="Update a User">Update a User</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#sites" class="toc-h1 toc-link" data-title="Sites">Sites</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-new-site" class="toc-h2 toc-link" data-title="Create a New Site">Create a New Site</a>
+                  </li>
+                  <li>
+                    <a href="#list-sites" class="toc-h2 toc-link" data-title="List Sites">List Sites</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-site" class="toc-h2 toc-link" data-title="Delete a Site">Delete a Site</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-site" class="toc-h2 toc-link" data-title="Update a Site">Update a Site</a>
+                  </li>
+                  <li>
+                    <a href="#history" class="toc-h2 toc-link" data-title="History">History</a>
+                  </li>
+                  <li>
+                    <a href="#sidebar" class="toc-h2 toc-link" data-title="Sidebar">Sidebar</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#device-groups" class="toc-h1 toc-link" data-title="Device Groups">Device Groups</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-a-new-device-group" class="toc-h2 toc-link" data-title="Create a New Device Group">Create a New Device Group</a>
+                  </li>
+                  <li>
+                    <a href="#list" class="toc-h2 toc-link" data-title="List">List</a>
+                  </li>
+                  <li>
+                    <a href="#update" class="toc-h2 toc-link" data-title="Update">Update</a>
+                  </li>
+                  <li>
+                    <a href="#delete" class="toc-h2 toc-link" data-title="Delete">Delete</a>
+                  </li>
+                  <li>
+                    <a href="#history" class="toc-h2 toc-link" data-title="History">History</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#schedules" class="toc-h1 toc-link" data-title="Schedules">Schedules</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create" class="toc-h2 toc-link" data-title="Create">Create</a>
+                  </li>
+                  <li>
+                    <a href="#list" class="toc-h2 toc-link" data-title="List">List</a>
+                  </li>
+                  <li>
+                    <a href="#update" class="toc-h2 toc-link" data-title="Update">Update</a>
+                  </li>
+                  <li>
+                    <a href="#delete" class="toc-h2 toc-link" data-title="Delete">Delete</a>
+                  </li>
+                  <li>
+                    <a href="#history" class="toc-h2 toc-link" data-title="History">History</a>
+                  </li>
+                  <li>
+                    <a href="#assign-tempr-to-schedule" class="toc-h2 toc-link" data-title="Assign Tempr to Schedule">Assign Tempr to Schedule</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#devices" class="toc-h1 toc-link" data-title="Devices">Devices</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create" class="toc-h2 toc-link" data-title="Create">Create</a>
+                  </li>
+                  <li>
+                    <a href="#list" class="toc-h2 toc-link" data-title="List">List</a>
+                  </li>
+                  <li>
+                    <a href="#update" class="toc-h2 toc-link" data-title="Update">Update</a>
+                  </li>
+                  <li>
+                    <a href="#delete" class="toc-h2 toc-link" data-title="Delete">Delete</a>
+                  </li>
+                  <li>
+                    <a href="#history" class="toc-h2 toc-link" data-title="History">History</a>
+                  </li>
+                  <li>
+                    <a href="#assign-tempr-to-device" class="toc-h2 toc-link" data-title="Assign Tempr to Device">Assign Tempr to Device</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#device-transmissions" class="toc-h1 toc-link" data-title="Device Transmissions">Device Transmissions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list" class="toc-h2 toc-link" data-title="List">List</a>
+                  </li>
+                  <li>
+                    <a href="#show" class="toc-h2 toc-link" data-title="Show">Show</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#temprs" class="toc-h1 toc-link" data-title="Temprs">Temprs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create" class="toc-h2 toc-link" data-title="Create">Create</a>
+                  </li>
+                  <li>
+                    <a href="#preview-js" class="toc-h2 toc-link" data-title="Preview (js)">Preview (js)</a>
+                  </li>
+                  <li>
+                    <a href="#preview-moustache" class="toc-h2 toc-link" data-title="Preview (moustache)">Preview (moustache)</a>
+                  </li>
+                  <li>
+                    <a href="#list" class="toc-h2 toc-link" data-title="List">List</a>
+                  </li>
+                  <li>
+                    <a href="#update" class="toc-h2 toc-link" data-title="Update">Update</a>
+                  </li>
+                  <li>
+                    <a href="#delete" class="toc-h2 toc-link" data-title="Delete">Delete</a>
+                  </li>
+                  <li>
+                    <a href="#history" class="toc-h2 toc-link" data-title="History">History</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#schedule-temprs" class="toc-h1 toc-link" data-title="Schedule Temprs">Schedule Temprs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create" class="toc-h2 toc-link" data-title="Create">Create</a>
+                  </li>
+                  <li>
+                    <a href="#list" class="toc-h2 toc-link" data-title="List">List</a>
+                  </li>
+                  <li>
+                    <a href="#delete" class="toc-h2 toc-link" data-title="Delete">Delete</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#device-temprs" class="toc-h1 toc-link" data-title="Device Temprs">Device Temprs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create" class="toc-h2 toc-link" data-title="Create">Create</a>
+                  </li>
+                  <li>
+                    <a href="#list" class="toc-h2 toc-link" data-title="List">List</a>
+                  </li>
+                  <li>
+                    <a href="#delete" class="toc-h2 toc-link" data-title="Delete">Delete</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#microservices" class="toc-h1 toc-link" data-title="Microservices">Microservices</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-devices-auth" class="toc-h2 toc-link" data-title="List Devices Auth">List Devices Auth</a>
+                  </li>
+                  <li>
+                    <a href="#list-temprs-for-device" class="toc-h2 toc-link" data-title="List Temprs for Device">List Temprs for Device</a>
+                  </li>
+                  <li>
+                    <a href="#list-temprs-for-schedule" class="toc-h2 toc-link" data-title="List Temprs for Schedule">List Temprs for Schedule</a>
+                  </li>
+                  <li>
+                    <a href="#list-schedules" class="toc-h2 toc-link" data-title="List Schedules">List Schedules</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='#'></a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the OOP API! You can use our API to access OOP API endpoints, which can get information on various information in our database.</p>
+
+<p>You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+
+<p>Other intro words here...</p>
+<h1 id='authentication'>Authentication</h1>
+<p>Before being able to use the system you will need to login with the username and password given to you (either by your manager or through signing up).</p>
+
+<p>Use the authentication token retrieved with the Login call below.</p>
+<h2 id='login'>Login</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/auth/login'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+    "email": "your_email_address",
+    "password": "your_password"
+}'</span>
+</code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/auth/login</code></p>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;email&quot;:&quot;your_email_address&quot;,
+        &quot;password&quot;:&quot;your_password&quot;
+    }
+</code></p>
+<h1 id='dashboard'>Dashboard</h1>
+<p>The Dashboard is where summary information would be gathered from</p>
+<h2 id='transmissions-status'>Transmissions Status</h2><h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local/api/v1/dashboards/transmissions?group=status</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>group</td>
+<td>status</td>
+</tr>
+</tbody></table>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://oop.bluefrontier.local/api/v1/dashboards/transmissions?group=status"</span>
+  -H <span class="s2">"Authorization: yourauthtoken"</span>
+</code></pre><h1 id='password'>Password</h1><h2 id='request-password-reset'>Request Password Reset</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/passwords'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+  "email": "your_email_address"
+}'</span>
+</code></pre>
+<p>If you have forgotten your password then you can request a token to allow it to be reset.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/passwords</code></p>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;email&quot;:&quot;your_email_address&quot;
+    }
+</code></p>
+<h2 id='reset-password'>Reset password</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/passwords/reset'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+  "token": "your_password_reset_token",
+  "password" : "newpassword",
+  "password_confirmation" : "newpassword"
+}'</span>
+</code></pre>
+<p>Once you have the reset password token (from above), then you can send though an updated password along with a confirmation copy of it.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/passwords/reset</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>token</td>
+<td>your_password_reset_token</td>
+</tr>
+<tr>
+<td>password</td>
+<td>your_new_password_string</td>
+</tr>
+<tr>
+<td>password_confirmation</td>
+<td>your_new_password_string</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>your_password_reset_token</code> with the actual password reset token you will have received from the password reset request above!</aside>
+<h1 id='users'>Users</h1>
+<p>Users are made up of the following fields... (and other words)</p>
+
+<p>The Site can have one or more of the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>time_zone</td>
+<td>string</td>
+<td>no</td>
+<td>Default en-gb</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>yes</td>
+<td>only accessed via API calls</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-new-user'>Create a New User</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+"user" : {
+  "email": "new_email_address",
+  "password": "new_password",
+  "password_confirmation": "new_password"
+}}'</span>
+</code></pre>
+<blockquote>
+<p>If there is a problem then the command returns JSON structured like this (with multiple errors the fields will each have an entry):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"&lt;fieldname&gt;"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"&lt;error message details&gt;"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/users</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;email&quot;:&quot;new_email_address&quot;,
+        &quot;password&quot;:&quot;new_password&quot;,
+        &quot;password_confirmation&quot;:&quot;new_password&quot;,
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='get-user'>Get User</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users/666'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<blockquote>
+<p>On Success:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">666</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testperson1@testplace.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-13T16:30:56.104Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T09:43:33.425Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mexico City"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+</span></code></pre>
+<p>Get details for a single user on the system.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/users/&lt;id&gt;</code></p>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>User ID</td>
+</tr>
+</tbody></table>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h2 id='list-users'>List Users</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">666</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testperson1@testplace.com"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-13T16:30:56.104Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T09:43:33.425Z"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Gets a list of the users on the system.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/users</code></p>
+<h3 id='url-parameter-2'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter[xx]</td>
+<td>yy</td>
+</tr>
+</tbody></table>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='delete-a-user'>Delete a User</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users/666'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<p>Delete a single user from the system.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/users/&lt;id&gt;</code></p>
+<h3 id='url-parameter-3'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>User ID to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-4'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='update-a-user'>Update a User</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users/666'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>  <span class="se">\</span>
+--data-raw <span class="s1">'{ "user" : { "time_zone" : "Bern" } }'</span>
+</code></pre>
+<p>Update details for a single user on the system.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/users/&lt;id&gt;</code></p>
+<h3 id='url-parameter-4'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>User ID to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='headers-5'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body-2'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;user&quot;: {
+            &quot;time_zone&quot;:&quot;Bern&quot;,
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h1 id='sites'>Sites</h1>
+<p>Sites are made up of the folloqinf fields... (and other words)</p>
+
+<p>The Site can have one or more of the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>account_id</td>
+<td>number</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>site_id</td>
+<td>number</td>
+<td>no</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>no</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>no</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+<td>no</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+<td>no</td>
+</tr>
+<tr>
+<td>state</td>
+<td>string</td>
+<td>no</td>
+</tr>
+<tr>
+<td>zip_code</td>
+<td>string</td>
+<td>no</td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td>no</td>
+</tr>
+<tr>
+<td>region</td>
+<td>string</td>
+<td>no</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>number</td>
+<td>no</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>number</td>
+<td>no</td>
+</tr>
+<tr>
+<td>time_zone</td>
+<td>string</td>
+<td>no</td>
+</tr>
+<tr>
+<td>external_uuids</td>
+<td>object</td>
+<td>no</td>
+</tr>
+<tr>
+<td>full_name</td>
+<td>string</td>
+<td>no</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-new-site'>Create a New Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{ "site" : { "name" : "XYZABC", "account_id" : 22 } }'</span>
+</code></pre>
+<blockquote>
+<p>If there is a problem then the command returns JSON structured like this (with multiple errors the fields will each have an entry):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"&lt;fieldname&gt;"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"&lt;error message details&gt;"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZABC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"external_uuids"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T16:28:08.984Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T16:28:09.025Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZABC"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/sites</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;site&quot; : { 
+            &quot;name&quot; : &quot;XYZABC&quot;,
+            &quot;account_id&quot; : 22 
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='list-sites'>List Sites</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZABC"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZABC"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"region"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"external_uuids"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T16:28:08.984Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-14T16:28:09.025Z"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Gets a list of the sites on the system.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/sites</code></p>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter[xx]</td>
+<td>yy</td>
+</tr>
+</tbody></table>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='delete-a-site'>Delete a Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites/666'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<p>Delete a single site from the system.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/sites/&lt;id&gt;</code></p>
+<h3 id='url-parameter-2'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Site ID to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='update-a-site'>Update a Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites/666'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>  <span class="se">\</span>
+--data-raw <span class="s1">'{ "site" : { "name" : "QWERTY" } }'</span>
+</code></pre>
+<p>Update details for a single site on the system.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/sites/&lt;id&gt;</code></p>
+<h3 id='url-parameter-3'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Site ID to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='headers-4'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body-2'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;site&quot;: {
+            &quot;name&quot;:&quot;QWERTY&quot;,
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites/666/history'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<p>Get the History Audit information for a single Site on the system.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/sites/&lt;id&gt;/history</code></p>
+<h3 id='url-parameter-4'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Site ID to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='headers-5'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='sidebar'>Sidebar</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites/sidebar?site_id=666'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<blockquote>
+<p>On Success it Returns:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"sites"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">666</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test Account Site"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"device_groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test Account Device Group"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Test Account Device"</span><span class="w">
+                        </span><span class="p">},</span><span class="w">
+                        </span><span class="p">{</span><span class="w">
+                            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+                            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AnotherTestDevice"</span><span class="w">
+                        </span><span class="p">}</span><span class="w">
+                    </span><span class="p">]</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">78</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZ-Capture devices"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Get the Sidebar structure for a single Site on the system.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p>To get ALL sites:</p>
+
+<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/sites/sidebar</code></p>
+
+<p>For a specific site:</p>
+
+<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/sites/sidebar?site_id=5</code></p>
+<h3 id='url-parameter-5'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_id</td>
+<td>(optional) Site ID to get sidebar for</td>
+</tr>
+</tbody></table>
+<h3 id='headers-6'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h1 id='device-groups'>Device Groups</h1>
+<p>The Device Group can have one or more of the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>xemail</td>
+<td>string</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>xtime_zone</td>
+<td>string</td>
+<td>no</td>
+<td>Default en-gb</td>
+</tr>
+<tr>
+<td>xpassword</td>
+<td>string</td>
+<td>yes</td>
+<td>only accessed via API calls</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-new-device-group'>Create a New Device Group</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_groups'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{ "device_group" : { "name" : "XYZ_ABC", "description" : "Test of XYZ Connector" } }'</span>
+</code></pre>
+<blockquote>
+<p>If there is a problem then the command returns JSON structured like this (with multiple errors the fields will each have an entry):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"&lt;fieldname&gt;"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"&lt;error message details&gt;"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/device_groups</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;device_group&quot; : { 
+            &quot;name&quot; : &quot;XYZ_ABC&quot;,
+            &quot;description&quot; : &quot;Test of XYZ Connector&quot; 
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_groups'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ABC-Capture devices"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-10-25T14:24:50.649Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-10-25T14:24:50.649Z"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZ Device Group"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-08-30T08:58:48.022Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-08-30T08:58:48.022Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will list existing device groups.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/device_groups</code></p>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter[xx]</td>
+<td>yy</td>
+</tr>
+</tbody></table>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_groups/4'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{ "user" : { "time_zone" : "London" } }'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre>
+<p>This command will update specified fields within a device group.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/device_groups/&lt;id&gt;</code></p>
+<h3 id='url-parameter-2'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>device group ID to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='content-body-2'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;xxx&quot;: {
+            &quot;name&quot;:&quot;QWERTY&quot;,
+        }
+    }
+</code></p>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code></code></pre>
+<p>Delete a single device group from the system.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/device_groups/&lt;id&gt;</code></p>
+<h3 id='url-parameter-3'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>device group ID to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-4'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_groups/1/history'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will get the audit history for the specified device group.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/device_groups/&lt;id&gt;/history</code></p>
+<h3 id='url-parameter-4'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>device group ID to get history for</td>
+</tr>
+</tbody></table>
+<h3 id='headers-5'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h1 id='schedules'>Schedules</h1>
+<p>Timings are Cron style timing definitions
+&quot;/x&quot; = runs every x minor time units, 
+&quot;x&quot; = run on x minor time units after the major time until
+eg. for minute &quot;12/2&quot; will run the task every 2 minutes after 12</p>
+
+<p>Schedules have these fields:
+Fieldname | Type | Info
+id  | number | Unique ID
+name    | string | Readable name
+minute  | string | Timing string see above
+hour    | string | Timing string see above
+day_of_week | string | Timing string see above
+day_of_month    | string | Timing string see above
+month_of_year   | string | Timing string see above
+year    | string | Timing string see above
+active  | bool | true or false
+    }</p>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+    "schedule" : {
+        "name" : "XYZ_Schedule",
+        "day_of_week" : "1"
+    }
+}'</span>
+</code></pre>
+<blockquote>
+<p>If there is a problem then the command returns JSON structured like this (with multiple errors the fields will each have an entry):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"&lt;fieldname&gt;"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"&lt;error message details&gt;"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/schedules</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;schedule&quot; : { 
+            &quot;name&quot; : &quot;XYZ_Schedule&quot;,
+            &quot;day_of_week&quot; : &quot;1&quot; 
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/schedules</code></p>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter[xx]</td>
+<td>yy</td>
+</tr>
+</tbody></table>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules/1'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{ "schedule" : { "active" : false } }'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/schedules/&lt;id&gt;</code></p>
+<h3 id='url-parameter-2'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>schedule ID to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='content-body-2'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;schedule&quot;: {
+            &quot;active&quot;: false,
+        }
+    }
+</code></p>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules/16'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<p>Delete a single schedule from the system.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/schedules/&lt;id&gt;</code></p>
+<h3 id='url-parameter-3'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>schedule ID to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-4'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules/59/history'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/schedules/&lt;id&gt;/history</code></p>
+<h3 id='url-parameter-4'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>schedule ID to get history for</td>
+</tr>
+</tbody></table>
+<h3 id='headers-5'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='assign-tempr-to-schedule'>Assign Tempr to Schedule</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules/10/assign_tempr?tempr_id=5'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--data-raw <span class="s1">''</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/schedules/&lt;id&gt;/assign_tempr?tempr_id=&lt;tid&gt;</code></p>
+<h3 id='url-parameter-5'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Schedule ID to assign to</td>
+</tr>
+<tr>
+<td>tid</td>
+<td>Tempr ID to assign</td>
+</tr>
+</tbody></table>
+<h3 id='headers-6'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h1 id='devices'>Devices</h1>
+<p>The Device can have one or more of the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>xemail</td>
+<td>string</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>xtime_zone</td>
+<td>string</td>
+<td>no</td>
+<td>Default en-gb</td>
+</tr>
+<tr>
+<td>xpassword</td>
+<td>string</td>
+<td>yes</td>
+<td>only accessed via API calls</td>
+</tr>
+</tbody></table>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+    "device" : {
+        "name" : "XYZ_ABC",
+        "device_group_id" : 1,
+        "site_id" : 1,
+        "authentication_path" : "/gateway/xyz-abc"
+    }
+}'</span>
+</code></pre>
+<blockquote>
+<p>If there is a problem then the command returns JSON structured like this (with multiple errors the fields will each have an entry):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"&lt;fieldname&gt;"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"&lt;error message details&gt;"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/devices</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;xxx&quot; : { 
+            &quot;name&quot; : &quot;XYZ_ABC&quot;,
+            &quot;description&quot; : &quot;Test of XYZ Connector&quot; 
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XyzAbc"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"device_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-13T16:32:11.002Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-13T16:32:15.603Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/devices</code></p>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter[xx]</td>
+<td>yy</td>
+</tr>
+</tbody></table>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/3'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{ "device" : { "authentication_headers" : [] } }'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;</code></p>
+<h3 id='url-parameter-2'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>xxx ID to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='content-body-2'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;device&quot;: {
+            &quot;authentication_headers&quot;:&quot;???&quot;,
+        }
+    }
+</code></p>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/16'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span>
+</code></pre>
+<p>Delete a single device from the system.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;</code></p>
+<h3 id='url-parameter-3'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>device ID to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-4'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/59/history'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"auditable_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"auditable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Device"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"associated_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"associated_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"audited_changes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XyzAbc"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"device_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"authentication_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/gateway/xyzabc"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"authentication_query"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="s2">"authentication_headers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"remote_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"request_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"005da287-ef80-62c0-9ac2-e7066c7b2250"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-13T16:32:11.049Z"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="err">...</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;/history</code></p>
+<h3 id='url-parameter-4'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>device ID to get history for</td>
+</tr>
+</tbody></table>
+<h3 id='headers-5'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='assign-tempr-to-device'>Assign Tempr to Device</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/10/assign_tempr?tempr_id=5'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+  "device_tempr": {
+    "endpoint_type": "http",
+    "queue_response": true,
+    "options": {
+      "host": "202.31.132.92",
+      "port": 80,
+      "path": "/qwe/api/trackedEntityInstances",
+      "requestMethod": "POST",
+      "protocol": "http",
+      "headers":
+        {
+          "Content-Type": "application/json",
+          "Authorization" : "Basic arFjaz0nIVzhNTV6b3Kk"
+        }
+
+    }
+  }
+}'</span>
+</code></pre>
+<p>Assign a Tempr to a single device on the system.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;/assign_tempr?tempr_id=&lt;tid&gt;</code></p>
+<h3 id='url-parameter-5'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>device ID to be assigned to</td>
+</tr>
+<tr>
+<td>tid</td>
+<td>tempr id to assign</td>
+</tr>
+</tbody></table>
+<h3 id='headers-6'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h1 id='device-transmissions'>Device Transmissions</h1>
+<p>When gettinga List you can use these filters:</p>
+
+<p>filter[messageUuid] 
+    filter[sort][field] 
+    filter[sort][direction] </p>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/9/transmissions?filter[messageUuid]=9dc5ab1c-8d05-4e5b-8c21-48a7b2f6f241&amp;filter[sort][field]=created_at&amp;filter[sort][direction]=desc'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;/transmissions?filter[messageUuid]=&lt;uuid&gt;&amp;filter[sort][field]=created_at&amp;filter[sort][direction]=desc</code></p>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>device id</td>
+</tr>
+<tr>
+<td>filter[messageUuid]</td>
+<td>unique message id</td>
+</tr>
+<tr>
+<td>filter[sort][field]</td>
+<td>string field name</td>
+</tr>
+<tr>
+<td>filter[sort][direction]</td>
+<td>string either &#39;asc&#39; or &#39;desc&#39;</td>
+</tr>
+</tbody></table>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='show'>Show</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/9/transmissions'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"device_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tempr_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"schedule_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"message_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35f1e645-be21-4eba-af61-cbbb0f9647f8"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transmission_uuid"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transmitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-09T13:35:09.693Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"response_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">messages</span><span class="se">\"</span><span class="s2">:[{</span><span class="se">\"</span><span class="s2">test</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">core</span><span class="se">\"</span><span class="s2">:{},</span><span class="se">\"</span><span class="s2">pii</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">raw</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">name</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">patient1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">result</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">negative</span><span class="se">\"</span><span class="s2">}}},</span><span class="se">\"</span><span class="s2">sample</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">core</span><span class="se">\"</span><span class="s2">:{},</span><span class="se">\"</span><span class="s2">pii</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">patient</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">core</span><span class="se">\"</span><span class="s2">:{},</span><span class="se">\"</span><span class="s2">pii</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">encounter</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">core</span><span class="se">\"</span><span class="s2">:{},</span><span class="se">\"</span><span class="s2">pii</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}}}]}"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"request_body"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-09T13:35:10.711Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-09T13:35:10.711Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;/transmissions/&lt;id&gt;</code></p>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h1 id='temprs'>Temprs</h1>
+<p>Temprs is short for:
+    Template Mapping Recipe Schema</p>
+
+<p>The Tempr can have one or more of the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>device_group_id</td>
+<td>number</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td>tempr_id</td>
+<td>number</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>yes</td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>endpoint_type</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>queue_request</td>
+<td>boolean</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>queue_response</td>
+<td>boolean</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>host</td>
+<td>string</td>
+<td></td>
+<td>&quot;your-endpoint.example.com&quot;</td>
+</tr>
+<tr>
+<td>port</td>
+<td>number</td>
+<td></td>
+<td>443</td>
+</tr>
+<tr>
+<td>path</td>
+<td>string</td>
+<td></td>
+<td>&quot;/api/devices/XYZ/messages?authentication_token=ABCDEX&quot;</td>
+</tr>
+<tr>
+<td>request_method</td>
+<td>string</td>
+<td></td>
+<td>&quot;POST&quot;</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>string</td>
+<td></td>
+<td>&quot;https&quot;</td>
+</tr>
+<tr>
+<td>language</td>
+<td>string</td>
+<td></td>
+<td>&quot;js&quot;</td>
+</tr>
+<tr>
+<td>script</td>
+<td>string</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+    "tempr" : {
+      "device_group_id": 2,
+      "tempr_id" : 2,
+      "name": "XYZ Bridge",
+      "description": "The basic request sent from the original XYZ Bridge",
+      "endpoint_type": null,
+      "queue_request": false,
+      "queue_response": false,
+      "template": {
+        "host": "action-interop.thecdx.org",
+        "port": 443,
+        "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+        "request_method": "POST",
+        "protocol": "https",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "language": "js",
+          "script": "module.exports = { \"event\" : message.message.body }"
+        }
+      }
+}
+}'</span>
+</code></pre>
+<blockquote>
+<p>If there is a problem then the command returns JSON structured like this (with multiple errors the fields will each have an entry):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"&lt;fieldname&gt;"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"&lt;error message details&gt;"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/temprs</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;tempr&quot; : { 
+            &quot;name&quot; : &quot;XYZ_ABC&quot;,
+            &quot;description&quot; : &quot;Test of XYZ Connector&quot; 
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='preview-js'>Preview (js)</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/preview'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+    "tempr" : {
+      "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"ZMB\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"ZULTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+      "template" : {
+      "host": "action-interop.thecdx.org",
+      "port": 443,
+      "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+      "request_method": "POST",
+      "protocol": "https",
+
+      "headers": 
+        {
+          "Content-Type": "application/json"
+        },
+        "body" : {
+            "language" : "js",
+            "script" : "let payload = {   \"trackedEntityType\": \"tuhi0maUrlh\",   \"orgUnit\": message.message.body.event.FARM_NUM,   \"attributes\": [     {       \"attribute\": \"udQ5rLwup6d\",       \"value\": message.message.body.event.SPEC_NUM     },     {       \"attribute\": \"wAr0ZjIO0d8\",       \"value\": \"WNet_Animal\"     }   ],   \"enrollments\": [     {       \"orgUnit\": message.message.body.event.FARM_NUM,       \"program\": \"sWf6NXIupFI\",       \"programStage\": \"kGfHGNWI6iQ\",       \"enrollmentDate\": message.message.body.event.SPEC_DATE,       \"incidentDate\": message.message.body.event.SPEC_DATE,       \"events\": [         {           \"program\": \"sWf6NXIupFI\",           \"orgUnit\": message.message.body.event.FARM_NUM,           \"eventDate\": message.message.body.event.SPEC_DATE,           \"status\": \"COMPLETED\",           \"programStage\": \"kGfHGNWI6iQ\",           \"dataValues\": [               { \"dataElement\" : \"h74xyBYnXPB\", \"value\" : message.message.body.event.AMP_ND10 },               { \"dataElement\" : \"hMbQTNDTia2\", \"value\" : message.message.body.event.CPD_ND10 },               { \"dataElement\" : \"IYXfvQ9nS4O\", \"value\" : message.message.body.event.CIP_ND5 },               { \"dataElement\" : \"gnX3CxdocmO\", \"value\" : message.message.body.event.TCY_ND30 },               { \"dataElement\" : \"OxT8HFtgtCW\", \"value\" : message.message.body.event.GEN_ND10 },               { \"dataElement\" : \"zyXV5PZjiBm\", \"value\" : message.message.body.event.SXT_ND1_2 },               { \"dataElement\" : \"Wsk4NARIElI\", \"value\" : message.message.body.event.ORGANISM },               { \"dataElement\" : \"IvVVi4ft0v8\", \"value\" : message.message.body.event.SPEC_TYPE  }           ]         }       ]     }   ] };  module.exports = payload; "
+        } }
+    }
+}'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"rendered"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action-interop.thecdx.org"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="s2">"443"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">trackedEntityType</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">tuhi0maUrlh</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">attributes</span><span class="se">\"</span><span class="s2">:[{</span><span class="se">\"</span><span class="s2">attribute</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">udQ5rLwup6d</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">attribute</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">wAr0ZjIO0d8</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">value</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">WNet_Animal</span><span class="se">\"</span><span class="s2">}],</span><span class="se">\"</span><span class="s2">enrollments</span><span class="se">\"</span><span class="s2">:[{</span><span class="se">\"</span><span class="s2">program</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">sWf6NXIupFI</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">programStage</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">kGfHGNWI6iQ</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">events</span><span class="se">\"</span><span class="s2">:[{</span><span class="se">\"</span><span class="s2">program</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">sWf6NXIupFI</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">status</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">COMPLETED</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">programStage</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">kGfHGNWI6iQ</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">dataValues</span><span class="se">\"</span><span class="s2">:[{</span><span class="se">\"</span><span class="s2">dataElement</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">h74xyBYnXPB</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">dataElement</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">hMbQTNDTia2</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">dataElement</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">IYXfvQ9nS4O</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">dataElement</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">gnX3CxdocmO</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">dataElement</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">OxT8HFtgtCW</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">dataElement</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">zyXV5PZjiBm</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">dataElement</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">Wsk4NARIElI</span><span class="se">\"</span><span class="s2">},{</span><span class="se">\"</span><span class="s2">dataElement</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">IvVVi4ft0v8</span><span class="se">\"</span><span class="s2">}]}]}]}"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"console"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/temprs/preview</code></p>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body-2'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;tempr&quot; : {
+            &quot;example_transmission&quot; : &quot;transmission data layout&quot;,
+            &quot;template&quot; : {
+                &quot;host&quot;: &quot;action-interop.thecdx.org&quot;,
+                &quot;port&quot;: 443,
+                &quot;path&quot;: &quot;/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN&quot;,
+                &quot;request_method&quot;: &quot;POST&quot;,
+                &quot;protocol&quot;: &quot;https&quot;,
+                &quot;headers&quot;: 
+                {
+                    &quot;Content-Type&quot;: &quot;application/json&quot;
+                },
+                &quot;body&quot; : {
+                    &quot;language&quot; : &quot;moustache&quot;,
+                    &quot;body&quot; : &quot;content of the template display&quot;
+                } 
+            }
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='preview-moustache'>Preview (moustache)</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/preview'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+    "tempr" : {
+      "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"ZMB\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"ZULTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+      "template" : {
+      "host": "action-interop.thecdx.org",
+      "port": 443,
+      "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+      "request_method": "POST",
+      "protocol": "https",
+
+      "headers": 
+        {
+          "Content-Type": "application/json"
+        },
+        "body" : {
+            "language" : "moustache",
+            "body" : "asd of this thing {{message.body.event.COUNTRY_A}} and also {{message.body.event.PATIENT_ID}}"
+        } }
+    }
+}'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"rendered"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action-interop.thecdx.org"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="s2">"443"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"Content-Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"moustache"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asd of this thing ZMB and also ZULTEST4"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"console"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/temprs/preview</code></p>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body-3'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;tempr&quot; : {
+            &quot;example_transmission&quot; : &quot;transmission data layout&quot;,
+            &quot;template&quot; : {
+                &quot;host&quot;: &quot;action-interop.thecdx.org&quot;,
+                &quot;port&quot;: 443,
+                &quot;path&quot;: &quot;/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN&quot;,
+                &quot;request_method&quot;: &quot;POST&quot;,
+                &quot;protocol&quot;: &quot;https&quot;,
+                &quot;headers&quot;: 
+                {
+                    &quot;Content-Type&quot;: &quot;application/json&quot;
+                },
+                &quot;body&quot; : {
+                    &quot;language&quot; : &quot;moustache&quot;,
+                    &quot;body&quot; : &quot;content of the template display&quot;
+                } 
+            }
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"device_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tempr_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dummy passthrough"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"endpoint_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"queue_request"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"queue_response"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"template"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+                </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oop.bluefrontier.local"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/gateway/dummy-no-auth"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">9009</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"js"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"script"</span><span class="p">:</span><span class="w"> </span><span class="s2">"module.exports = message.message.body"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"example_transmission"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-11T09:08:09.458Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-11T09:08:09.458Z"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/temprs</code></p>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter[xx]</td>
+<td>yy</td>
+</tr>
+</tbody></table>
+<h3 id='headers-4'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/68'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{
+    "tempr" : {
+        "tempr_id" : 64
+    }
+}'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/temprs/&lt;id&gt;</code></p>
+<h3 id='url-parameter-2'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>tempr ID to be updated</td>
+</tr>
+</tbody></table>
+<h3 id='content-body-4'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;tempr&quot;: {
+            &quot;tempr_id&quot;:&quot;1234&quot;,
+        }
+    }
+</code></p>
+<h3 id='headers-5'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/65'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
+--data-raw <span class="s1">'{}'</span>
+</code></pre>
+<p>Delete a single tempr from the system.</p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/temprs/&lt;id&gt;</code></p>
+<h3 id='url-parameter-3'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>tempr ID to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-6'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/56/history'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">289</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"auditable_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">56</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"auditable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tempr"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"associated_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"associated_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"audited_changes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dummy passthrough"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"notes"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"template"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"script"</span><span class="p">:</span><span class="w"> </span><span class="s2">"module.exports = message.message.body"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"js"</span><span class="w">
+                    </span><span class="p">},</span><span class="w">
+                    </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oop.bluefrontier.local"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/gateway/dummy-no-auth"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">9009</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+                    </span><span class="s2">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"tempr_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"endpoint_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"queue_request"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"queue_response"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"device_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"example_transmission"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"remote_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"request_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"93740d5d-5935-44a8-b8ba-a2eae9e07d79"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-11T09:08:09.469Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/temprs/&lt;id&gt;/history</code></p>
+<h3 id='url-parameter-4'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>tempr ID to get history for</td>
+</tr>
+</tbody></table>
+<h3 id='headers-7'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h1 id='schedule-temprs'>Schedule Temprs</h1>
+<p>The Schedule Temprs can have one or more of the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>xemail</td>
+<td>string</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>xtime_zone</td>
+<td>string</td>
+<td>no</td>
+<td>Default en-gb</td>
+</tr>
+<tr>
+<td>xpassword</td>
+<td>string</td>
+<td>yes</td>
+<td>only accessed via API calls</td>
+</tr>
+</tbody></table>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?tempr_id=1&amp;schedule_id=1'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--data-raw <span class="s1">''</span>
+</code></pre>
+<blockquote>
+<p>If there is a problem then the command returns JSON structured like this (with multiple errors the fields will each have an entry):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"&lt;fieldname&gt;"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"&lt;error message details&gt;"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?tempr_id=&lt;tid&gt;&amp;schedule_id=&lt;sid&gt;</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>tid</td>
+<td>tempr ID</td>
+</tr>
+<tr>
+<td>sid</td>
+<td>schedule ID</td>
+</tr>
+</tbody></table>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?filter[schedule_id]=1'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"schedule_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tempr_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">59</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?filter[schedule_id]=&lt;sid&gt;</code></p>
+<h3 id='url-parameter-2'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sid</td>
+<td>schedule ID</td>
+</tr>
+<tr>
+<td>filter[xx]</td>
+<td>yy</td>
+</tr>
+</tbody></table>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedule_temprs/1?device_id=4&amp;tempr_id=8'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: text/plain'</span>
+</code></pre>
+<p>Delete a single xxx from the system.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/schedule_temprs/&lt;id&gt;?device_id=&lt;did&gt;&amp;tempr_id=&lt;tid&gt;</code></p>
+<h3 id='url-parameter-3'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>schedule temprs ID to be deleted</td>
+</tr>
+<tr>
+<td>did</td>
+<td>device ID</td>
+</tr>
+<tr>
+<td>tid</td>
+<td>tempr ID</td>
+</tr>
+</tbody></table>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h1 id='device-temprs'>Device Temprs</h1>
+<p>The Device Temprs can have one or more of the following fields:</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>xemail</td>
+<td>string</td>
+<td>yes</td>
+<td>Unique</td>
+</tr>
+<tr>
+<td>xtime_zone</td>
+<td>string</td>
+<td>no</td>
+<td>Default en-gb</td>
+</tr>
+<tr>
+<td>xpassword</td>
+<td>string</td>
+<td>yes</td>
+<td>only accessed via API calls</td>
+</tr>
+</tbody></table>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_temprs?tempr_id=1&amp;device_id=3'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
+--data-raw <span class="s1">''</span>
+</code></pre>
+<blockquote>
+<p>If there is a problem then the command returns JSON structured like this (with multiple errors the fields will each have an entry):</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"&lt;fieldname&gt;"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"&lt;error message details&gt;"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>On Success the command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST http://oop.bluefrontier.local:9009/api/v1/device_temprs</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+<h3 id='content-body'>Content Body</h3>
+<p>Json string containing:
+<code>
+    {
+        &quot;xxx&quot; : { 
+            &quot;name&quot; : &quot;XYZ_ABC&quot;,
+            &quot;description&quot; : &quot;Test of XYZ Connector&quot; 
+        }
+    }
+</code></p>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_temprs?filter[tempr_id]]=2'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<blockquote>
+<p>On Success the command will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"device_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tempr_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will ...</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/api/v1/device_temprs</code></p>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>filter[tempr_id]</td>
+<td>unique temprs id</td>
+</tr>
+</tbody></table>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_temprs/10?device_id=9&amp;tempr_id=4'</span> <span class="se">\</span>
+--header <span class="s1">'Authorization: yourauthtoken'</span>
+</code></pre>
+<p>Delete a single device temprs from the system.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/device_temprs/&lt;id&gt;?device_id=&lt;did&gt;&amp;tempr_id=&lt;tid&gt;</code></p>
+<h3 id='url-parameter-2'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>device_temprs ID to be deleted</td>
+</tr>
+<tr>
+<td>did</td>
+<td>device ID to be deleted</td>
+</tr>
+<tr>
+<td>tid</td>
+<td>temprs ID to be deleted</td>
+</tr>
+</tbody></table>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Authorization</td>
+<td>yourauthtoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+<h1 id='microservices'>Microservices</h1>
+<p>The core token is predefined when the core is setup - see Jacks Documentation (LOL!)</p>
+<h2 id='list-devices-auth'>List Devices Auth</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/services/v1/devices/auth'</span> <span class="se">\</span>
+--header <span class="s1">'X-Core-Token: foobar'</span>
+</code></pre>
+<blockquote>
+<p>On success returns:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>[
+    {
+        "id": 8,
+        "authentication": {
+            "hostname": "oop.bluefrontier.local",
+            "headers.x-api-key": "some-api-key"
+        },
+        "tempr_url": "http://oop.bluefrontier.local:9009/services/v1/devices/8/temprs"
+    },
+    {
+        ...
+    }
+]
+</code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/services/v1/devices/auth</code></p>
+<h3 id='headers'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>X-Core-Token</td>
+<td>yourcoretoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourcoretoken</code> with your actual provided core token</aside>
+<h2 id='list-temprs-for-device'>List Temprs for Device</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/services/v1/devices/5/temprs'</span> <span class="se">\</span>
+--header <span class="s1">'X-Core-Token: foobar'</span> <span class="se">\</span>
+--header <span class="s1">'Content-Type: application/json'</span>
+</code></pre>
+<blockquote>
+<p>On success returns:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>{
+    "ttl": 300000,
+    "data": [
+        {
+            "id": 1,
+            "deviceId": 5,
+            "scheduleId": null,
+            "name": "ABC XYZ",
+            "endpointType": null,
+            "queueRequest": false,
+            "queueResponse": false,
+            "template": {},
+            "createdAt": "2019-08-30T08:59:17.321Z",
+            "updatedAt": "2019-09-09T12:49:56.297Z",
+            "temprs": []
+        },
+        {...}
+    ]
+}
+</code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/services/v1/devices/&lt;id&gt;/temprs</code></p>
+<h3 id='headers-2'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>X-Core-Token</td>
+<td>yourcoretoken</td>
+</tr>
+</tbody></table>
+<h3 id='url-parameter'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>device ID</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourcoretoken</code> with your actual provided core token</aside>
+<h2 id='list-temprs-for-schedule'>List Temprs for Schedule</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/services/v1/schedules/1/temprs'</span> <span class="se">\</span>
+--header <span class="s1">'X-Core-Token: foobar'</span>
+</code></pre>
+<blockquote>
+<p>On success returns:</p>
+</blockquote>
+<pre class="highlight plaintext"><code></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/services/v1/schedules/&lt;id&gt;/temprs</code></p>
+<h3 id='headers-3'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>X-Core-Token</td>
+<td>yourcoretoken</td>
+</tr>
+</tbody></table>
+<h3 id='url-parameter-2'>URL Parameter</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>schedule ID</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourcoretoken</code> with your actual provided core token</aside>
+<h2 id='list-schedules'>List Schedules</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/services/v1/schedules'</span> <span class="se">\</span>
+--header <span class="s1">'X-Core-Token: foobar'</span>
+</code></pre>
+<blockquote>
+<p>On success returns:</p>
+</blockquote>
+<pre class="highlight plaintext"><code></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET http://oop.bluefrontier.local:9009/services/v1/schedules</code></p>
+<h3 id='headers-4'>Headers</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>X-Core-Token</td>
+<td>yourcoretoken</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">Replace <code>yourcoretoken</code> with your actual provided core token</aside>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="ruby">ruby</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
