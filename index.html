@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>OOP API Reference</title>
+    <title>Open Interop Core API Reference</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -196,12 +196,12 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen-a1ce949a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-cce64d2c.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-c5541673.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -209,10 +209,9 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="Logo" />
+      <img src="images/logo-debf0445.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -449,16 +448,14 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the OOP API! You can use our API to access OOP API endpoints, which can get information on various information in our database.</p>
+<p>Welcome to the Open Interop Core API! You can use our API to access Open Interop Core API endpoints, which can get information on various information in the platform. The API is also what the interface within the application uses in order to manage the interoperability layer.</p>
 
 <p>You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>Other intro words here...</p>
 <h1 id='authentication'>Authentication</h1>
 <p>Before being able to use the system you will need to login with the username and password given to you (either by your manager or through signing up).</p>
 
 <p>Use the authentication token retrieved with the Login call below.</p>
-<h2 id='login'>Login</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/auth/login'</span> <span class="se">\</span>
+<h2 id='login'>Login</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/auth/login'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
 --data-raw <span class="s1">'{
@@ -466,7 +463,7 @@
     "password": "your_password"
 }'</span>
 </code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/auth/login</code></p>
+<p><code>POST http://localhost/api/v1/auth/login</code></p>
 <h3 id='content-body'>Content Body</h3>
 <p>Json string containing:
 <code>
@@ -478,7 +475,7 @@
 <h1 id='dashboard'>Dashboard</h1>
 <p>The Dashboard is where summary information would be gathered from</p>
 <h2 id='transmissions-status'>Transmissions Status</h2><h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local/api/v1/dashboards/transmissions?group=status</code></p>
+<p><code>GET http://localhost/api/v1/dashboards/transmissions?group=status</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -505,9 +502,9 @@
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://oop.bluefrontier.local/api/v1/dashboards/transmissions?group=status"</span>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://localhost/api/v1/dashboards/transmissions?group=status"</span>
   -H <span class="s2">"Authorization: yourauthtoken"</span>
-</code></pre><h1 id='password'>Password</h1><h2 id='request-password-reset'>Request Password Reset</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/passwords'</span> <span class="se">\</span>
+</code></pre><h1 id='password'>Password</h1><h2 id='request-password-reset'>Request Password Reset</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/passwords'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
 --data-raw <span class="s1">'{
@@ -516,7 +513,7 @@
 </code></pre>
 <p>If you have forgotten your password then you can request a token to allow it to be reset.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/passwords</code></p>
+<p><code>POST http://localhost/api/v1/passwords</code></p>
 <h3 id='content-body'>Content Body</h3>
 <p>Json string containing:
 <code>
@@ -524,7 +521,7 @@
         &quot;email&quot;:&quot;your_email_address&quot;
     }
 </code></p>
-<h2 id='reset-password'>Reset password</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/passwords/reset'</span> <span class="se">\</span>
+<h2 id='reset-password'>Reset password</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/passwords/reset'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
 --data-raw <span class="s1">'{
@@ -535,7 +532,7 @@
 </code></pre>
 <p>Once you have the reset password token (from above), then you can send though an updated password along with a confirmation copy of it.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/passwords/reset</code></p>
+<p><code>POST http://localhost/api/v1/passwords/reset</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -596,7 +593,7 @@
 <td>only accessed via API calls</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-new-user'>Create a New User</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users'</span> <span class="se">\</span>
+<h2 id='create-a-new-user'>Create a New User</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/users'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -623,7 +620,7 @@
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/users</code></p>
+<p><code>POST http://localhost/api/v1/users</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -647,7 +644,7 @@
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='get-user'>Get User</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users/666'</span> <span class="se">\</span>
+<h2 id='get-user'>Get User</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/users/666'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
@@ -664,7 +661,7 @@
 </span></code></pre>
 <p>Get details for a single user on the system.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/users/&lt;id&gt;</code></p>
+<p><code>GET http://localhost/api/v1/users/&lt;id&gt;</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -689,7 +686,7 @@
 <td>yourauthtoken</td>
 </tr>
 </tbody></table>
-<h2 id='list-users'>List Users</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users'</span> <span class="se">\</span>
+<h2 id='list-users'>List Users</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/users'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
@@ -717,7 +714,7 @@
 </span></code></pre>
 <p>Gets a list of the users on the system.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/users</code></p>
+<p><code>GET http://localhost/api/v1/users</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -744,13 +741,13 @@
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='delete-a-user'>Delete a User</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users/666'</span> <span class="se">\</span>
+<h2 id='delete-a-user'>Delete a User</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://localhost/api/v1/users/666'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
 <p>Delete a single user from the system.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/users/&lt;id&gt;</code></p>
+<p><code>DELETE http://localhost/api/v1/users/&lt;id&gt;</code></p>
 <h3 id='url-parameter-3'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -777,14 +774,14 @@
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='update-a-user'>Update a User</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/users/666'</span> <span class="se">\</span>
+<h2 id='update-a-user'>Update a User</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://localhost/api/v1/users/666'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>  <span class="se">\</span>
 --data-raw <span class="s1">'{ "user" : { "time_zone" : "Bern" } }'</span>
 </code></pre>
 <p>Update details for a single user on the system.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/users/&lt;id&gt;</code></p>
+<p><code>PUT http://localhost/api/v1/users/&lt;id&gt;</code></p>
 <h3 id='url-parameter-4'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -908,7 +905,7 @@
 <td>no</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-new-site'>Create a New Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites'</span> <span class="se">\</span>
+<h2 id='create-a-new-site'>Create a New Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/sites'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -947,7 +944,7 @@
   </span><span class="s2">"full_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZABC"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/sites</code></p>
+<p><code>POST http://localhost/api/v1/sites</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -972,7 +969,7 @@
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='list-sites'>List Sites</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites'</span> <span class="se">\</span>
+<h2 id='list-sites'>List Sites</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/sites'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
@@ -1014,7 +1011,7 @@
 </span></code></pre>
 <p>Gets a list of the sites on the system.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/sites</code></p>
+<p><code>GET http://localhost/api/v1/sites</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1041,13 +1038,13 @@
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='delete-a-site'>Delete a Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites/666'</span> <span class="se">\</span>
+<h2 id='delete-a-site'>Delete a Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://localhost/api/v1/sites/666'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
 <p>Delete a single site from the system.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/sites/&lt;id&gt;</code></p>
+<p><code>DELETE http://localhost/api/v1/sites/&lt;id&gt;</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1074,14 +1071,14 @@
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='update-a-site'>Update a Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites/666'</span> <span class="se">\</span>
+<h2 id='update-a-site'>Update a Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://localhost/api/v1/sites/666'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>  <span class="se">\</span>
 --data-raw <span class="s1">'{ "site" : { "name" : "QWERTY" } }'</span>
 </code></pre>
 <p>Update details for a single site on the system.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/sites/&lt;id&gt;</code></p>
+<p><code>PUT http://localhost/api/v1/sites/&lt;id&gt;</code></p>
 <h3 id='url-parameter-3'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1117,13 +1114,13 @@
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites/666/history'</span> <span class="se">\</span>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/sites/666/history'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
 <p>Get the History Audit information for a single Site on the system.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/sites/&lt;id&gt;/history</code></p>
+<p><code>PUT http://localhost/api/v1/sites/&lt;id&gt;/history</code></p>
 <h3 id='url-parameter-4'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1150,7 +1147,7 @@
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='sidebar'>Sidebar</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/sites/sidebar?site_id=666'</span> <span class="se">\</span>
+<h2 id='sidebar'>Sidebar</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/sites/sidebar?site_id=666'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
@@ -1194,11 +1191,11 @@
 <h3 id='http-request-6'>HTTP Request</h3>
 <p>To get ALL sites:</p>
 
-<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/sites/sidebar</code></p>
+<p><code>PUT http://localhost/api/v1/sites/sidebar</code></p>
 
 <p>For a specific site:</p>
 
-<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/sites/sidebar?site_id=5</code></p>
+<p><code>PUT http://localhost/api/v1/sites/sidebar?site_id=5</code></p>
 <h3 id='url-parameter-5'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1261,7 +1258,7 @@
 <td>only accessed via API calls</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-new-device-group'>Create a New Device Group</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_groups'</span> <span class="se">\</span>
+<h2 id='create-a-new-device-group'>Create a New Device Group</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/device_groups'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -1283,7 +1280,7 @@
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/device_groups</code></p>
+<p><code>POST http://localhost/api/v1/device_groups</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -1308,7 +1305,7 @@
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_groups'</span> <span class="se">\</span>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/device_groups'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <blockquote>
@@ -1340,7 +1337,7 @@
 </span></code></pre>
 <p>This command will list existing device groups.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/device_groups</code></p>
+<p><code>GET http://localhost/api/v1/device_groups</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1367,7 +1364,7 @@
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_groups/4'</span> <span class="se">\</span>
+<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://localhost/api/v1/device_groups/4'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -1379,7 +1376,7 @@
 <pre class="highlight json tab-json"><code></code></pre>
 <p>This command will update specified fields within a device group.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/device_groups/&lt;id&gt;</code></p>
+<p><code>PUT http://localhost/api/v1/device_groups/&lt;id&gt;</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1418,7 +1415,7 @@
 <h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code></code></pre>
 <p>Delete a single device group from the system.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/device_groups/&lt;id&gt;</code></p>
+<p><code>DELETE http://localhost/api/v1/device_groups/&lt;id&gt;</code></p>
 <h3 id='url-parameter-3'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1445,7 +1442,7 @@
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_groups/1/history'</span> <span class="se">\</span>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/device_groups/1/history'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
@@ -1465,7 +1462,7 @@
 </span></code></pre>
 <p>This command will get the audit history for the specified device group.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/device_groups/&lt;id&gt;/history</code></p>
+<p><code>GET http://localhost/api/v1/device_groups/&lt;id&gt;/history</code></p>
 <h3 id='url-parameter-4'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1510,7 +1507,7 @@ month_of_year   | string | Timing string see above
 year    | string | Timing string see above
 active  | bool | true or false
     }</p>
-<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules'</span> <span class="se">\</span>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/schedules'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -1537,7 +1534,7 @@ active  | bool | true or false
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/schedules</code></p>
+<p><code>POST http://localhost/api/v1/schedules</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -1562,7 +1559,7 @@ active  | bool | true or false
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules'</span> <span class="se">\</span>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/schedules'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <blockquote>
@@ -1581,7 +1578,7 @@ active  | bool | true or false
 </span></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/schedules</code></p>
+<p><code>GET http://localhost/api/v1/schedules</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1608,7 +1605,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules/1'</span> <span class="se">\</span>
+<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://localhost/api/v1/schedules/1'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -1620,7 +1617,7 @@ active  | bool | true or false
 <pre class="highlight json tab-json"><code></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/schedules/&lt;id&gt;</code></p>
+<p><code>PUT http://localhost/api/v1/schedules/&lt;id&gt;</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1656,13 +1653,13 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules/16'</span> <span class="se">\</span>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://localhost/api/v1/schedules/16'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <p>Delete a single schedule from the system.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/schedules/&lt;id&gt;</code></p>
+<p><code>DELETE http://localhost/api/v1/schedules/&lt;id&gt;</code></p>
 <h3 id='url-parameter-3'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1689,7 +1686,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules/59/history'</span> <span class="se">\</span>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/schedules/59/history'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
@@ -1699,7 +1696,7 @@ active  | bool | true or false
 <pre class="highlight json tab-json"><code></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/schedules/&lt;id&gt;/history</code></p>
+<p><code>GET http://localhost/api/v1/schedules/&lt;id&gt;/history</code></p>
 <h3 id='url-parameter-4'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1726,7 +1723,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='assign-tempr-to-schedule'>Assign Tempr to Schedule</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedules/10/assign_tempr?tempr_id=5'</span> <span class="se">\</span>
+<h2 id='assign-tempr-to-schedule'>Assign Tempr to Schedule</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/schedules/10/assign_tempr?tempr_id=5'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --data-raw <span class="s1">''</span>
@@ -1737,7 +1734,7 @@ active  | bool | true or false
 <pre class="highlight json tab-json"><code></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/schedules/&lt;id&gt;/assign_tempr?tempr_id=&lt;tid&gt;</code></p>
+<p><code>GET http://localhost/api/v1/schedules/&lt;id&gt;/assign_tempr?tempr_id=&lt;tid&gt;</code></p>
 <h3 id='url-parameter-5'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1804,7 +1801,7 @@ active  | bool | true or false
 <td>only accessed via API calls</td>
 </tr>
 </tbody></table>
-<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices'</span> <span class="se">\</span>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/devices'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -1833,7 +1830,7 @@ active  | bool | true or false
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/devices</code></p>
+<p><code>POST http://localhost/api/v1/devices</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -1858,7 +1855,7 @@ active  | bool | true or false
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices'</span> <span class="se">\</span>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/devices'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <blockquote>
@@ -1890,7 +1887,7 @@ active  | bool | true or false
 </span></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/devices</code></p>
+<p><code>GET http://localhost/api/v1/devices</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1917,7 +1914,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/3'</span> <span class="se">\</span>
+<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://localhost/api/v1/devices/3'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -1929,7 +1926,7 @@ active  | bool | true or false
 <pre class="highlight json tab-json"><code></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;</code></p>
+<p><code>PUT http://localhost/api/v1/devices/&lt;id&gt;</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1965,14 +1962,14 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/16'</span> <span class="se">\</span>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://localhost/api/v1/devices/16'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span>
 </code></pre>
 <p>Delete a single device from the system.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;</code></p>
+<p><code>DELETE http://localhost/api/v1/devices/&lt;id&gt;</code></p>
 <h3 id='url-parameter-3'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -1999,7 +1996,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/59/history'</span> <span class="se">\</span>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/devices/59/history'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
@@ -2052,7 +2049,7 @@ active  | bool | true or false
 </span></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;/history</code></p>
+<p><code>GET http://localhost/api/v1/devices/&lt;id&gt;/history</code></p>
 <h3 id='url-parameter-4'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -2079,7 +2076,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='assign-tempr-to-device'>Assign Tempr to Device</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/10/assign_tempr?tempr_id=5'</span> <span class="se">\</span>
+<h2 id='assign-tempr-to-device'>Assign Tempr to Device</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/devices/10/assign_tempr?tempr_id=5'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -2105,7 +2102,7 @@ active  | bool | true or false
 </code></pre>
 <p>Assign a Tempr to a single device on the system.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;/assign_tempr?tempr_id=&lt;tid&gt;</code></p>
+<p><code>POST http://localhost/api/v1/devices/&lt;id&gt;/assign_tempr?tempr_id=&lt;tid&gt;</code></p>
 <h3 id='url-parameter-5'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -2142,7 +2139,7 @@ active  | bool | true or false
 <p>filter[messageUuid] 
     filter[sort][field] 
     filter[sort][direction] </p>
-<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/9/transmissions?filter[messageUuid]=9dc5ab1c-8d05-4e5b-8c21-48a7b2f6f241&amp;filter[sort][field]=created_at&amp;filter[sort][direction]=desc'</span> <span class="se">\</span>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/devices/9/transmissions?filter[messageUuid]=9dc5ab1c-8d05-4e5b-8c21-48a7b2f6f241&amp;filter[sort][field]=created_at&amp;filter[sort][direction]=desc'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <blockquote>
@@ -2151,7 +2148,7 @@ active  | bool | true or false
 <pre class="highlight json tab-json"><code></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;/transmissions?filter[messageUuid]=&lt;uuid&gt;&amp;filter[sort][field]=created_at&amp;filter[sort][direction]=desc</code></p>
+<p><code>GET http://localhost/api/v1/devices/&lt;id&gt;/transmissions?filter[messageUuid]=&lt;uuid&gt;&amp;filter[sort][field]=created_at&amp;filter[sort][direction]=desc</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -2190,7 +2187,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='show'>Show</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/devices/9/transmissions'</span> <span class="se">\</span>
+<h2 id='show'>Show</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/devices/9/transmissions'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <blockquote>
@@ -2225,7 +2222,7 @@ active  | bool | true or false
 </span></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/devices/&lt;id&gt;/transmissions/&lt;id&gt;</code></p>
+<p><code>GET http://localhost/api/v1/devices/&lt;id&gt;/transmissions/&lt;id&gt;</code></p>
 <h3 id='headers-2'>Headers</h3>
 <table><thead>
 <tr>
@@ -2241,10 +2238,7 @@ active  | bool | true or false
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
 <h1 id='temprs'>Temprs</h1>
-<p>Temprs is short for:
-    Template Mapping Recipe Schema</p>
-
-<p>The Tempr can have one or more of the following fields:</p>
+<p>A <code>Tempr</code> is a template, mapping, recipe, or schema. It can have one or more of the following fields.</p>
 
 <table><thead>
 <tr>
@@ -2339,7 +2333,7 @@ active  | bool | true or false
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs'</span> <span class="se">\</span>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/temprs'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -2353,9 +2347,9 @@ active  | bool | true or false
       "queue_request": false,
       "queue_response": false,
       "template": {
-        "host": "action-interop.thecdx.org",
+        "host": "endpoint.openinterop.local",
         "port": 443,
-        "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+        "path": "/some/path/to/an/api",
         "request_method": "POST",
         "protocol": "https",
         "headers": {
@@ -2385,7 +2379,7 @@ active  | bool | true or false
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/temprs</code></p>
+<p><code>POST http://localhost/api/v1/temprs</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -2410,17 +2404,17 @@ active  | bool | true or false
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='preview-js'>Preview (js)</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/preview'</span> <span class="se">\</span>
+<h2 id='preview-js'>Preview (js)</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/temprs/preview'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
 --data-raw <span class="s1">'{
     "tempr" : {
-      "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"ZMB\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"ZULTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+      "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
       "template" : {
-      "host": "action-interop.thecdx.org",
+      "host": "endpoint.openinterop.local",
       "port": 443,
-      "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+      "path": "/some/path/to/an/api",
       "request_method": "POST",
       "protocol": "https",
 
@@ -2440,9 +2434,9 @@ active  | bool | true or false
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"rendered"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action-interop.thecdx.org"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"endpoint.openinterop.local"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="s2">"443"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/some/path/to/an/api"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2453,7 +2447,7 @@ active  | bool | true or false
     </span><span class="s2">"console"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/temprs/preview</code></p>
+<p><code>POST http://localhost/api/v1/temprs/preview</code></p>
 <h3 id='headers-2'>Headers</h3>
 <table><thead>
 <tr>
@@ -2473,9 +2467,9 @@ active  | bool | true or false
         &quot;tempr&quot; : {
             &quot;example_transmission&quot; : &quot;transmission data layout&quot;,
             &quot;template&quot; : {
-                &quot;host&quot;: &quot;action-interop.thecdx.org&quot;,
+                &quot;host&quot;: &quot;endpoint.openinterop.local&quot;,
                 &quot;port&quot;: 443,
-                &quot;path&quot;: &quot;/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN&quot;,
+                &quot;path&quot;: &quot;/some/path/to/an/api&quot;,
                 &quot;request_method&quot;: &quot;POST&quot;,
                 &quot;protocol&quot;: &quot;https&quot;,
                 &quot;headers&quot;: 
@@ -2492,17 +2486,17 @@ active  | bool | true or false
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='preview-moustache'>Preview (moustache)</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/preview'</span> <span class="se">\</span>
+<h2 id='preview-moustache'>Preview (moustache)</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/temprs/preview'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
 --data-raw <span class="s1">'{
     "tempr" : {
-      "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"ZMB\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"ZULTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+      "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
       "template" : {
-      "host": "action-interop.thecdx.org",
+      "host": "endpoint.openinterop.local",
       "port": 443,
-      "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+      "path": "/some/path/to/an/api",
       "request_method": "POST",
       "protocol": "https",
 
@@ -2522,9 +2516,9 @@ active  | bool | true or false
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"rendered"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"action-interop.thecdx.org"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"endpoint.openinterop.local"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="s2">"443"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/some/path/to/an/api"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"request_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2532,13 +2526,13 @@ active  | bool | true or false
         </span><span class="p">},</span><span class="w">
         </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"moustache"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asd of this thing ZMB and also ZULTEST4"</span><span class="w">
+            </span><span class="s2">"body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asd of this thing UK and also PATTEST4"</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"console"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/temprs/preview</code></p>
+<p><code>POST http://localhost/api/v1/temprs/preview</code></p>
 <h3 id='headers-3'>Headers</h3>
 <table><thead>
 <tr>
@@ -2558,9 +2552,9 @@ active  | bool | true or false
         &quot;tempr&quot; : {
             &quot;example_transmission&quot; : &quot;transmission data layout&quot;,
             &quot;template&quot; : {
-                &quot;host&quot;: &quot;action-interop.thecdx.org&quot;,
+                &quot;host&quot;: &quot;endpoint.openinterop.local&quot;,
                 &quot;port&quot;: 443,
-                &quot;path&quot;: &quot;/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN&quot;,
+                &quot;path&quot;: &quot;/some/path/to/an/api&quot;,
                 &quot;request_method&quot;: &quot;POST&quot;,
                 &quot;protocol&quot;: &quot;https&quot;,
                 &quot;headers&quot;: 
@@ -2577,7 +2571,7 @@ active  | bool | true or false
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs'</span> <span class="se">\</span>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/temprs'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
@@ -2603,7 +2597,7 @@ active  | bool | true or false
             </span><span class="s2">"queue_response"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
             </span><span class="s2">"template"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-                </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oop.bluefrontier.local"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"localhost"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/gateway/dummy-no-auth"</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">9009</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"protocol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http"</span><span class="p">,</span><span class="w">
@@ -2625,7 +2619,7 @@ active  | bool | true or false
 </span></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/temprs</code></p>
+<p><code>GET http://localhost/api/v1/temprs</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -2652,7 +2646,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/68'</span> <span class="se">\</span>
+<h2 id='update'>Update</h2><pre class="highlight shell tab-shell"><code>curl --location --request PUT <span class="s1">'http://localhost/api/v1/temprs/68'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -2668,7 +2662,7 @@ active  | bool | true or false
 <pre class="highlight json tab-json"><code></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>PUT http://oop.bluefrontier.local:9009/api/v1/temprs/&lt;id&gt;</code></p>
+<p><code>PUT http://localhost/api/v1/temprs/&lt;id&gt;</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -2704,7 +2698,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/65'</span> <span class="se">\</span>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://localhost/api/v1/temprs/65'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
@@ -2712,7 +2706,7 @@ active  | bool | true or false
 </code></pre>
 <p>Delete a single tempr from the system.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/temprs/&lt;id&gt;</code></p>
+<p><code>DELETE http://localhost/api/v1/temprs/&lt;id&gt;</code></p>
 <h3 id='url-parameter-3'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -2739,7 +2733,7 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/temprs/56/history'</span> <span class="se">\</span>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/temprs/56/history'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
@@ -2773,7 +2767,7 @@ active  | bool | true or false
                         </span><span class="s2">"script"</span><span class="p">:</span><span class="w"> </span><span class="s2">"module.exports = message.message.body"</span><span class="p">,</span><span class="w">
                         </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"js"</span><span class="w">
                     </span><span class="p">},</span><span class="w">
-                    </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"oop.bluefrontier.local"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"openinterop.local"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/gateway/dummy-no-auth"</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">9009</span><span class="p">,</span><span class="w">
                     </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
@@ -2801,7 +2795,7 @@ active  | bool | true or false
 </span></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-7'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/temprs/&lt;id&gt;/history</code></p>
+<p><code>GET http://localhost/api/v1/temprs/&lt;id&gt;/history</code></p>
 <h3 id='url-parameter-4'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -2864,7 +2858,7 @@ active  | bool | true or false
 <td>only accessed via API calls</td>
 </tr>
 </tbody></table>
-<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?tempr_id=1&amp;schedule_id=1'</span> <span class="se">\</span>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/schedule_temprs?tempr_id=1&amp;schedule_id=1'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --data-raw <span class="s1">''</span>
@@ -2885,7 +2879,7 @@ active  | bool | true or false
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?tempr_id=&lt;tid&gt;&amp;schedule_id=&lt;sid&gt;</code></p>
+<p><code>POST http://localhost/api/v1/schedule_temprs?tempr_id=&lt;tid&gt;&amp;schedule_id=&lt;sid&gt;</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -2922,7 +2916,7 @@ active  | bool | true or false
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?filter[schedule_id]=1'</span> <span class="se">\</span>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/schedule_temprs?filter[schedule_id]=1'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
@@ -2948,7 +2942,7 @@ active  | bool | true or false
 </span></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?filter[schedule_id]=&lt;sid&gt;</code></p>
+<p><code>GET http://localhost/api/v1/schedule_temprs?filter[schedule_id]=&lt;sid&gt;</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -2979,14 +2973,14 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/schedule_temprs/1?device_id=4&amp;tempr_id=8'</span> <span class="se">\</span>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://localhost/api/v1/schedule_temprs/1?device_id=4&amp;tempr_id=8'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span>
 </code></pre>
 <p>Delete a single xxx from the system.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/schedule_temprs/&lt;id&gt;?device_id=&lt;did&gt;&amp;tempr_id=&lt;tid&gt;</code></p>
+<p><code>DELETE http://localhost/api/v1/schedule_temprs/&lt;id&gt;?device_id=&lt;did&gt;&amp;tempr_id=&lt;tid&gt;</code></p>
 <h3 id='url-parameter-3'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -3057,7 +3051,7 @@ active  | bool | true or false
 <td>only accessed via API calls</td>
 </tr>
 </tbody></table>
-<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_temprs?tempr_id=1&amp;device_id=3'</span> <span class="se">\</span>
+<h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/device_temprs?tempr_id=1&amp;device_id=3'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --data-raw <span class="s1">''</span>
@@ -3078,7 +3072,7 @@ active  | bool | true or false
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://oop.bluefrontier.local:9009/api/v1/device_temprs</code></p>
+<p><code>POST http://localhost/api/v1/device_temprs</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -3103,7 +3097,7 @@ active  | bool | true or false
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_temprs?filter[tempr_id]]=2'</span> <span class="se">\</span>
+<h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/device_temprs?filter[tempr_id]]=2'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <blockquote>
@@ -3128,7 +3122,7 @@ active  | bool | true or false
 </span></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/api/v1/device_temprs</code></p>
+<p><code>GET http://localhost/api/v1/device_temprs</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -3155,12 +3149,12 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://oop.bluefrontier.local:9009/api/v1/device_temprs/10?device_id=9&amp;tempr_id=4'</span> <span class="se">\</span>
+<h2 id='delete'>Delete</h2><pre class="highlight shell tab-shell"><code>curl --location --request DELETE <span class="s1">'http://localhost/api/v1/device_temprs/10?device_id=9&amp;tempr_id=4'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <p>Delete a single device temprs from the system.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://oop.bluefrontier.local:9009/api/v1/device_temprs/&lt;id&gt;?device_id=&lt;did&gt;&amp;tempr_id=&lt;tid&gt;</code></p>
+<p><code>DELETE http://localhost/api/v1/device_temprs/&lt;id&gt;?device_id=&lt;did&gt;&amp;tempr_id=&lt;tid&gt;</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
 <table><thead>
 <tr>
@@ -3197,8 +3191,8 @@ active  | bool | true or false
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
 <h1 id='microservices'>Microservices</h1>
 <p>The core token is predefined when the core is setup - see Jacks Documentation (LOL!)</p>
-<h2 id='list-devices-auth'>List Devices Auth</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/services/v1/devices/auth'</span> <span class="se">\</span>
---header <span class="s1">'X-Core-Token: foobar'</span>
+<h2 id='list-devices-auth'>List Devices Auth</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/services/v1/devices/auth'</span> <span class="se">\</span>
+--header <span class="s1">'X-Core-Token: yourcoretoken'</span>
 </code></pre>
 <blockquote>
 <p>On success returns:</p>
@@ -3207,17 +3201,17 @@ active  | bool | true or false
     {
         "id": 8,
         "authentication": {
-            "hostname": "oop.bluefrontier.local",
+            "hostname": "openinterop.local",
             "headers.x-api-key": "some-api-key"
         },
-        "tempr_url": "http://oop.bluefrontier.local:9009/services/v1/devices/8/temprs"
+        "tempr_url": "http://localhost/services/v1/devices/8/temprs"
     },
     {
         ...
     }
 ]
 </code></pre><h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/services/v1/devices/auth</code></p>
+<p><code>GET http://localhost/services/v1/devices/auth</code></p>
 <h3 id='headers'>Headers</h3>
 <table><thead>
 <tr>
@@ -3232,8 +3226,8 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourcoretoken</code> with your actual provided core token</aside>
-<h2 id='list-temprs-for-device'>List Temprs for Device</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/services/v1/devices/5/temprs'</span> <span class="se">\</span>
---header <span class="s1">'X-Core-Token: foobar'</span> <span class="se">\</span>
+<h2 id='list-temprs-for-device'>List Temprs for Device</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/services/v1/devices/5/temprs'</span> <span class="se">\</span>
+--header <span class="s1">'X-Core-Token: yourcoretoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span>
 </code></pre>
 <blockquote>
@@ -3259,7 +3253,7 @@ active  | bool | true or false
     ]
 }
 </code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/services/v1/devices/&lt;id&gt;/temprs</code></p>
+<p><code>GET http://localhost/services/v1/devices/&lt;id&gt;/temprs</code></p>
 <h3 id='headers-2'>Headers</h3>
 <table><thead>
 <tr>
@@ -3286,14 +3280,14 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourcoretoken</code> with your actual provided core token</aside>
-<h2 id='list-temprs-for-schedule'>List Temprs for Schedule</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/services/v1/schedules/1/temprs'</span> <span class="se">\</span>
---header <span class="s1">'X-Core-Token: foobar'</span>
+<h2 id='list-temprs-for-schedule'>List Temprs for Schedule</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/services/v1/schedules/1/temprs'</span> <span class="se">\</span>
+--header <span class="s1">'X-Core-Token: yourcoretoken'</span>
 </code></pre>
 <blockquote>
 <p>On success returns:</p>
 </blockquote>
 <pre class="highlight plaintext"><code></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/services/v1/schedules/&lt;id&gt;/temprs</code></p>
+<p><code>GET http://localhost/services/v1/schedules/&lt;id&gt;/temprs</code></p>
 <h3 id='headers-3'>Headers</h3>
 <table><thead>
 <tr>
@@ -3320,14 +3314,14 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourcoretoken</code> with your actual provided core token</aside>
-<h2 id='list-schedules'>List Schedules</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://oop.bluefrontier.local:9009/services/v1/schedules'</span> <span class="se">\</span>
---header <span class="s1">'X-Core-Token: foobar'</span>
+<h2 id='list-schedules'>List Schedules</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/services/v1/schedules'</span> <span class="se">\</span>
+--header <span class="s1">'X-Core-Token: yourcoretoken'</span>
 </code></pre>
 <blockquote>
 <p>On success returns:</p>
 </blockquote>
 <pre class="highlight plaintext"><code></code></pre><h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET http://oop.bluefrontier.local:9009/services/v1/schedules</code></p>
+<p><code>GET http://localhost/services/v1/schedules</code></p>
 <h3 id='headers-4'>Headers</h3>
 <table><thead>
 <tr>
@@ -3347,7 +3341,6 @@ active  | bool | true or false
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
           </div>
       </div>
     </div>
