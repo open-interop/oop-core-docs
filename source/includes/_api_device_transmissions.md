@@ -20,9 +20,35 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/devices
 > On Success the command will return:
 
 ```json
+{
+    "total_records": 1,
+    "number_of_pages": 1,
+    "page": {
+        "number": 1,
+        "size": 20
+    },
+    "data": [
+        {
+            "id": 25,
+            "device_id": 9,
+            "tempr_id": null,
+            "schedule_id": null,
+            "message_uuid": "35f1e645-be21-4eba-af61-cbbb0f9647f8",
+            "transmission_uuid": null,
+            "success": true,
+            "status": 200,
+            "transmitted_at": "2019-09-09T13:35:09.693Z",
+            "response_body": "{\"messages\":[{\"test\":{\"core\":{},\"pii\":{\"custom\":{}},\"custom\":{\"raw\":{\"name\":\"patient1\",\"result\":\"negative\"}}},\"sample\":{\"core\":{},\"pii\":{\"custom\":{}},\"custom\":{}},\"patient\":{\"core\":{},\"pii\":{\"custom\":{}},\"custom\":{}},\"encounter\":{\"core\":{},\"pii\":{\"custom\":{}},\"custom\":{}}}]}",
+            "request_body": null,
+            "created_at": "2019-09-09T13:35:10.711Z",
+            "updated_at": "2019-09-09T13:35:10.711Z"
+        }
+    ],
+    "core_version": "1.1.4"
+}
 ```
 
-This command will ...
+This command will retreive a list of transmissions for a device.
 
 ### HTTP Request
 

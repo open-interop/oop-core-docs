@@ -5,9 +5,8 @@ The Device Temprs can have one or more of the following fields:
 Field | Type | Required | Notes
 ----- | ---- | -------- | -----
 id  | number | yes | Unique
-xemail | string | yes | Unique
-xtime_zone | string | no | Default en-gb
-xpassword | string | yes | only accessed via API calls
+device_id | number | yes | eg. 5
+tempr_id | number | yes | eg. 2
 
 [//]:#(*****************************************************************************)
 
@@ -94,7 +93,7 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/device_
 }
 ```
 
-This command will ...
+This command will return a list of device to temprs links
 
 ### HTTP Request
 

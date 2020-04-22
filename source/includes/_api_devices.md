@@ -5,9 +5,15 @@ The Device can have one or more of the following fields:
 Field | Type | Required | Notes
 ----- | ---- | -------- | -----
 id  | number | yes | Unique
-xemail | string | yes | Unique
-xtime_zone | string | no | Default en-gb
-xpassword | string | yes | only accessed via API calls
+name | string | no | Readable name
+device_group_id | number | no | eg. 1
+site_id | number | no | eg. 21
+latitude | number | no | eg. null
+longitude | number | no | eg. null
+time_zone | string | no | eg. "en-GB"
+active | boolean | no | true or false
+
+[//]:#(*****************************************************************************)
 
 ## Create
 
@@ -40,7 +46,16 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/device
 
 ```json
 {
-  "id": 88
+    "id": 2,
+    "name": "XYZ ABC",
+    "device_group_id": 1,
+    "site_id": 1,
+    "latitude": null,
+    "longitude": null,
+    "time_zone": "",
+    "created_at": "2019-12-13T16:32:11.002Z",
+    "updated_at": "2019-12-13T16:32:15.603Z",
+    "active": true
 }
 ```
 
@@ -59,7 +74,7 @@ Authorization | yourauthtoken
 Json string containing:
 `
 	{
-		"xxx" : { 
+		"device" : { 
 			"name" : "XYZ_ABC",
 			"description" : "Test of XYZ Connector" 
 		}
@@ -107,7 +122,7 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/devices
 }
 ```
 
-This command will ...
+This command will retreive a list of devices based on either filter parameters or all devices by default.
 
 ### HTTP Request
 
@@ -146,7 +161,7 @@ curl --location --request PUT 'http://oop.bluefrontier.local:9009/api/v1/devices
 ```json
 ```
 
-This command will ...
+This command will update a specific device's fields.
 
 ### HTTP Request
 
@@ -269,7 +284,7 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/devices
 }
 ```
 
-This command will ...
+This command will provide details of the audit history for the device.
 
 ### HTTP Request
 
