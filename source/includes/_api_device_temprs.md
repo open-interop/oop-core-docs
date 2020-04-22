@@ -8,6 +8,15 @@ id  | number | yes | Unique
 device_id | number | yes | eg. 5
 tempr_id | number | yes | eg. 2
 
+Filters available:
+Filter | Type
+------ | ----
+id | number
+device_id | number
+tempr_id | number
+sort[field] | string as above
+sort[direction] | string
+
 [//]:#(*****************************************************************************)
 
 ## Create

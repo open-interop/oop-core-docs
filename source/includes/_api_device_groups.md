@@ -5,9 +5,15 @@ The Device Group can have one or more of the following fields:
 Field | Type | Required | Notes
 ----- | ---- | -------- | -----
 id  | number | yes | Unique
-xemail | string | yes | Unique
-xtime_zone | string | no | Default en-gb
-xpassword | string | yes | only accessed via API calls
+name | string | yes | readable
+
+Filters available:
+Filter | Type
+------ | ----
+id | number
+name | string
+sort[field] | string as above
+sort[direction] | string
 
 [//]:#(*****************************************************************************)
 

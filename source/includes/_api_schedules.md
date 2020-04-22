@@ -6,17 +6,26 @@ Timings are Cron style timing definitions
 eg. for minute "12/2" will run the task every 2 minutes after 12
 
 Schedules have these fields:
-Fieldname | Type | Info
-id	| number | Unique ID
-name	| string | Readable name
-minute	| string | Timing string see above
-hour	| string | Timing string see above
-day_of_week	| string | Timing string see above
-day_of_month	| string | Timing string see above
-month_of_year	| string | Timing string see above
-year	| string | Timing string see above
-active	| bool | true or false
-    }
+Fieldname | Type | Info | Sortable
+--------- | ---- | ---- | --------
+id	| number | Unique ID | yes
+name	| string | Readable name | yes
+minute	| string | Timing string see above | no
+hour	| string | Timing string see above | no
+day_of_week	| string | Timing string see above | no
+day_of_month	| string | Timing string see above | no
+month_of_year	| string | Timing string see above | no
+year	| string | Timing string see above | no
+active	| bool | true or false | yes
+
+Filters available:
+Filter | Type
+------ | ----
+id | number
+name | string
+active | string 
+sort[field] | string as above (where marked as sortable)
+sort[direction] | string
 
 [//]:#(*****************************************************************************)
 

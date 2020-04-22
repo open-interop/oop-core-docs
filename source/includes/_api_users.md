@@ -11,6 +11,15 @@ email | string | yes | Unique
 time_zone | string | no | Default en-gb
 password | string | yes | only accessed via API calls
 
+Filters available:
+Filter | Type
+------ | ----
+id | number
+email | string
+time_zone | string
+sort[field] | string as above (excluding password)
+sort[direction] | string
+
 [//]:#(*****************************************************************************)
 
 ## Create a New User

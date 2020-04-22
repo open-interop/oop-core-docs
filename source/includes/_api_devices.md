@@ -13,6 +13,20 @@ longitude | number | no | eg. null
 time_zone | string | no | eg. "en-GB"
 active | boolean | no | true or false
 
+Filters available:
+Filter | Type
+------ | ----
+id | number
+name | string
+deviceGroupId | number
+siteId | number
+latitude | number
+longitude | number
+timeZone | string
+active | boolean
+sort[field] | string as above (except latitude and longitude)
+sort[direction] | string
+
 [//]:#(*****************************************************************************)
 
 ## Create

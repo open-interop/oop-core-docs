@@ -1,12 +1,35 @@
 # Device Transmissions
 
 
-When gettinga List you can use these filters:
+Device Treansmissions have these fields:
+id 
+device_id 
+tempr_id 
+schedule_id 
+status 
+message_uuid
+transmission_uuid 
+success 
+transmitted_at
+created_at 
+updated_at
 
-	filter[messageUuid] 
-	filter[sort][field] 
-	filter[sort][direction] 
 
+Filters available:
+Filter | Type
+------ | ----
+id | number
+status | number
+temprId | number
+scheduleId | number
+messageUuid | string 
+transmissionUuid | string 
+success | boolean
+transmitted_at | date time
+created_at | date time
+updated_at | date time
+sort[field] | string as above
+sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
@@ -60,7 +83,8 @@ Parameter | Description
 --------- | -----------
 id | device id
 filter[messageUuid] | unique message id
-filter[sort][field] | string field name
+filter[...] | see above
+filter[sort][field] | string field name as above
 filter[sort][direction] | string either 'asc' or 'desc'
 
 ### Headers
