@@ -8,7 +8,7 @@ The core token is predefined when the core is setup - see Jacks Documentation (L
 
 ```shell
 curl --location --request GET 'http://localhost/services/v1/devices/auth' \
---header 'X-Core-Token: foobar'
+--header 'X-Core-Token: yourcoretoken'
 ```
 
 > On success returns:
@@ -48,7 +48,7 @@ X-Core-Token | yourcoretoken
 
 ```shell
 curl --location --request GET 'http://localhost/services/v1/devices/5/temprs' \
---header 'X-Core-Token: foobar' \
+--header 'X-Core-Token: yourcoretoken' \
 --header 'Content-Type: application/json'
 ```
 
@@ -102,7 +102,7 @@ id | device ID
 
 ```shell
 curl --location --request GET 'http://localhost/services/v1/schedules/1/temprs' \
---header 'X-Core-Token: foobar'
+--header 'X-Core-Token: yourcoretoken'
 ```
 
 > On success returns:
@@ -136,7 +136,7 @@ id | schedule ID
 
 ```shell
 curl --location --request GET 'http://localhost/services/v1/schedules' \
---header 'X-Core-Token: foobar'
+--header 'X-Core-Token: yourcoretoken'
 ```
 
 > On success returns:
