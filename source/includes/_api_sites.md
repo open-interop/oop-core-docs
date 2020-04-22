@@ -28,7 +28,7 @@ full_name  | string | no
 ## Create a New Site
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/sites' \
+curl --location --request POST 'http://localhost/api/v1/sites' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
@@ -72,7 +72,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/sites'
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/sites`
+`POST http://localhost/api/v1/sites`
 
 ### Headers
 
@@ -102,7 +102,7 @@ Json string containing:
 ## List Sites
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/sites' \
+curl --location --request GET 'http://localhost/api/v1/sites' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -148,7 +148,7 @@ Gets a list of the sites on the system.
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/sites`
+`GET http://localhost/api/v1/sites`
 
 ### URL Parameter
 
@@ -173,7 +173,7 @@ Authorization | yourauthtoken
 ## Delete a Site
 
 ```shell
-curl --location --request DELETE 'http://oop.bluefrontier.local:9009/api/v1/sites/666' \
+curl --location --request DELETE 'http://localhost/api/v1/sites/666' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -182,7 +182,7 @@ Delete a single site from the system.
 
 ### HTTP Request
 
-`DELETE http://oop.bluefrontier.local:9009/api/v1/sites/<id>`
+`DELETE http://localhost/api/v1/sites/<id>`
 
 ### URL Parameter
 
@@ -206,7 +206,7 @@ Authorization | yourauthtoken
 ## Update a Site
 
 ```shell
-curl --location --request PUT 'http://oop.bluefrontier.local:9009/api/v1/sites/666' \
+curl --location --request PUT 'http://localhost/api/v1/sites/666' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'  \
 --data-raw '{ "site" : { "name" : "QWERTY" } }'
@@ -216,7 +216,7 @@ Update details for a single site on the system.
 
 ### HTTP Request
 
-`PUT http://oop.bluefrontier.local:9009/api/v1/sites/<id>`
+`PUT http://localhost/api/v1/sites/<id>`
 
 ### URL Parameter
 
@@ -250,7 +250,7 @@ Json string containing:
 ## History
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/sites/666/history' \
+curl --location --request GET 'http://localhost/api/v1/sites/666/history' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -259,7 +259,7 @@ Get the History Audit information for a single Site on the system.
 
 ### HTTP Request
 
-`PUT http://oop.bluefrontier.local:9009/api/v1/sites/<id>/history`
+`PUT http://localhost/api/v1/sites/<id>/history`
 
 ### URL Parameter
 
@@ -282,7 +282,7 @@ Authorization | yourauthtoken
 ## Sidebar
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/sites/sidebar?site_id=666' \
+curl --location --request GET 'http://localhost/api/v1/sites/sidebar?site_id=666' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -330,11 +330,11 @@ Get the Sidebar structure for a single Site on the system.
 
 To get ALL sites:
 
-`PUT http://oop.bluefrontier.local:9009/api/v1/sites/sidebar`
+`PUT http://localhost/api/v1/sites/sidebar`
 
 For a specific site:
 
-`PUT http://oop.bluefrontier.local:9009/api/v1/sites/sidebar?site_id=5`
+`PUT http://localhost/api/v1/sites/sidebar?site_id=5`
 
 
 ### URL Parameter

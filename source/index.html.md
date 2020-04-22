@@ -3,7 +3,6 @@ title: OOP API Reference
 
 language_tabs:
   - shell
-  - ruby
 
 toc_footers:
   - <a href='#'></a>

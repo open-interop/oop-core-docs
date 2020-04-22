@@ -13,7 +13,7 @@ When gettinga List you can use these filters:
 ## List
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/devices/9/transmissions?filter[messageUuid]=9dc5ab1c-8d05-4e5b-8c21-48a7b2f6f241&filter[sort][field]=created_at&filter[sort][direction]=desc' \
+curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions?filter[messageUuid]=9dc5ab1c-8d05-4e5b-8c21-48a7b2f6f241&filter[sort][field]=created_at&filter[sort][direction]=desc' \
 --header 'Authorization: yourauthtoken'
 ```
 
@@ -26,7 +26,7 @@ This command will ...
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/devices/<id>/transmissions?filter[messageUuid]=<uuid>&filter[sort][field]=created_at&filter[sort][direction]=desc`
+`GET http://localhost/api/v1/devices/<id>/transmissions?filter[messageUuid]=<uuid>&filter[sort][field]=created_at&filter[sort][direction]=desc`
 
 ### URL Parameter
 
@@ -52,7 +52,7 @@ Authorization | yourauthtoken
 ## Show
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/devices/9/transmissions' \
+curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions' \
 --header 'Authorization: yourauthtoken'
 ```
 
@@ -91,7 +91,7 @@ This command will ...
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/devices/<id>/transmissions/<id>`
+`GET http://localhost/api/v1/devices/<id>/transmissions/<id>`
 
 ### Headers
 

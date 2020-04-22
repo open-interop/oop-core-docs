@@ -14,7 +14,7 @@ xpassword | string | yes | only accessed via API calls
 ## Create a New Device Group
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/device_groups' \
+curl --location --request POST 'http://localhost/api/v1/device_groups' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
@@ -41,7 +41,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/device
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/device_groups`
+`POST http://localhost/api/v1/device_groups`
 
 ### Headers
 
@@ -69,7 +69,7 @@ Json string containing:
 ## List
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/device_groups' \
+curl --location --request GET 'http://localhost/api/v1/device_groups' \
 --header 'Authorization: yourauthtoken'
 ```
 
@@ -105,7 +105,7 @@ This command will list existing device groups.
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/device_groups`
+`GET http://localhost/api/v1/device_groups`
 
 ### URL Parameter
 
@@ -128,7 +128,7 @@ Authorization | yourauthtoken
 ## Update
 
 ```shell
-curl --location --request PUT 'http://oop.bluefrontier.local:9009/api/v1/device_groups/4' \
+curl --location --request PUT 'http://localhost/api/v1/device_groups/4' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain' \
@@ -144,7 +144,7 @@ This command will update specified fields within a device group.
 
 ### HTTP Request
 
-`PUT http://oop.bluefrontier.local:9009/api/v1/device_groups/<id>`
+`PUT http://localhost/api/v1/device_groups/<id>`
 
 ### URL Parameter
 
@@ -184,7 +184,7 @@ Delete a single device group from the system.
 
 ### HTTP Request
 
-`DELETE http://oop.bluefrontier.local:9009/api/v1/device_groups/<id>`
+`DELETE http://localhost/api/v1/device_groups/<id>`
 
 ### URL Parameter
 
@@ -206,7 +206,7 @@ Authorization | yourauthtoken
 ## History
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/device_groups/1/history' \
+curl --location --request GET 'http://localhost/api/v1/device_groups/1/history' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -230,7 +230,7 @@ This command will get the audit history for the specified device group.
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/device_groups/<id>/history`
+`GET http://localhost/api/v1/device_groups/<id>/history`
 
 ### URL Parameter
 

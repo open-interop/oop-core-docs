@@ -6,7 +6,7 @@ Use the authentication token retrieved with the Login call below.
 
 ## Login
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/auth/login' \
+curl --location --request POST 'http://localhost/api/v1/auth/login' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
@@ -17,7 +17,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/auth/l
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/auth/login`
+`POST http://localhost/api/v1/auth/login`
 
 ### Content Body
 
