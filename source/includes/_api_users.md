@@ -12,6 +12,7 @@ time_zone | string | no | Default en-gb
 password | string | yes | only accessed via API calls
 
 Filters available:
+
 Filter | Type
 ------ | ----
 id | number

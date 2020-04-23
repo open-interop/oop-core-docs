@@ -25,6 +25,7 @@ full_name  | string | no | yes
 
 
 Filters available:
+
 Filter | Type
 ------ | ----
 id | number

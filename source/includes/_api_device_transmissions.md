@@ -16,6 +16,7 @@ updated_at
 
 
 Filters available:
+
 Filter | Type
 ------ | ----
 id | number

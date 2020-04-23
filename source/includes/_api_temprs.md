@@ -20,6 +20,7 @@ language        |  string  | no | "js"
 script          |  string  | no |
 
 Filters available:
+
 Filter | Type
 ------ | ----
 id | number
