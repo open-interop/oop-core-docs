@@ -32,7 +32,7 @@ sort[direction] | string
 ## Create
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/devices' \
+curl --location --request POST 'http://localhost/api/v1/devices' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
@@ -75,7 +75,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/device
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/devices`
+`POST http://localhost/api/v1/devices`
 
 ### Headers
 
@@ -104,7 +104,7 @@ Json string containing:
 ## List
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/devices' \
+curl --location --request GET 'http://localhost/api/v1/devices' \
 --header 'Authorization: yourauthtoken'
 ```
 
@@ -140,7 +140,7 @@ This command will retreive a list of devices based on either filter parameters o
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/devices`
+`GET http://localhost/api/v1/devices`
 
 ### URL Parameter
 
@@ -163,7 +163,7 @@ Authorization | yourauthtoken
 ## Update
 
 ```shell
-curl --location --request PUT 'http://oop.bluefrontier.local:9009/api/v1/devices/3' \
+curl --location --request PUT 'http://localhost/api/v1/devices/3' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain' \
@@ -179,7 +179,7 @@ This command will update a specific device's fields.
 
 ### HTTP Request
 
-`PUT http://oop.bluefrontier.local:9009/api/v1/devices/<id>`
+`PUT http://localhost/api/v1/devices/<id>`
 
 ### URL Parameter
 
@@ -213,7 +213,7 @@ Authorization | yourauthtoken
 ## Delete
 
 ```shell
-curl --location --request DELETE 'http://oop.bluefrontier.local:9009/api/v1/devices/16' \
+curl --location --request DELETE 'http://localhost/api/v1/devices/16' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain'
@@ -223,7 +223,7 @@ Delete a single device from the system.
 
 ### HTTP Request
 
-`DELETE http://oop.bluefrontier.local:9009/api/v1/devices/<id>`
+`DELETE http://localhost/api/v1/devices/<id>`
 
 ### URL Parameter
 
@@ -245,7 +245,7 @@ Authorization | yourauthtoken
 ## History
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/devices/59/history' \
+curl --location --request GET 'http://localhost/api/v1/devices/59/history' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -302,7 +302,7 @@ This command will provide details of the audit history for the device.
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/devices/<id>/history`
+`GET http://localhost/api/v1/devices/<id>/history`
 
 ### URL Parameter
 
@@ -325,7 +325,7 @@ Authorization | yourauthtoken
 ## Assign Tempr to Device
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/devices/10/assign_tempr?tempr_id=5' \
+curl --location --request POST 'http://localhost/api/v1/devices/10/assign_tempr?tempr_id=5' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain' \
@@ -354,7 +354,7 @@ Assign a Tempr to a single device on the system.
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/devices/<id>/assign_tempr?tempr_id=<tid>`
+`POST http://localhost/api/v1/devices/<id>/assign_tempr?tempr_id=<tid>`
 
 ### URL Parameter
 

@@ -13,7 +13,7 @@ tempr_id | number | yes |
 ## Create
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?tempr_id=1&schedule_id=1' \
+curl --location --request POST 'http://localhost/api/v1/schedule_temprs?tempr_id=1&schedule_id=1' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --data-raw ''
@@ -41,7 +41,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/schedu
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?tempr_id=<tid>&schedule_id=<sid>`
+`POST http://localhost/api/v1/schedule_temprs?tempr_id=<tid>&schedule_id=<sid>`
 
 ### Headers
 
@@ -73,7 +73,7 @@ Json string containing:
 ## List
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?filter[schedule_id]=1' \
+curl --location --request GET 'http://localhost/api/v1/schedule_temprs?filter[schedule_id]=1' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -103,7 +103,7 @@ This command will ...
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/schedule_temprs?filter[schedule_id]=<sid>`
+`GET http://localhost/api/v1/schedule_temprs?filter[schedule_id]=<sid>`
 
 ### URL Parameter
 
@@ -128,7 +128,7 @@ Authorization | yourauthtoken
 ## Delete
 
 ```shell
-curl --location --request DELETE 'http://oop.bluefrontier.local:9009/api/v1/schedule_temprs/1?device_id=4&tempr_id=8' \
+curl --location --request DELETE 'http://localhost/api/v1/schedule_temprs/1?device_id=4&tempr_id=8' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain'
@@ -138,7 +138,7 @@ Delete a single xxx from the system.
 
 ### HTTP Request
 
-`DELETE http://oop.bluefrontier.local:9009/api/v1/schedule_temprs/<id>?device_id=<did>&tempr_id=<tid>`
+`DELETE http://localhost/api/v1/schedule_temprs/<id>?device_id=<did>&tempr_id=<tid>`
 
 ### URL Parameter
 

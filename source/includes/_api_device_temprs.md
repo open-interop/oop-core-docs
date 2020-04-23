@@ -22,7 +22,7 @@ sort[direction] | string
 ## Create
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/device_temprs?tempr_id=1&device_id=3' \
+curl --location --request POST 'http://localhost/api/v1/device_temprs?tempr_id=1&device_id=3' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --data-raw ''
@@ -48,7 +48,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/device
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/device_temprs`
+`POST http://localhost/api/v1/device_temprs`
 
 ### Headers
 
@@ -77,7 +77,7 @@ Json string containing:
 ## List
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/device_temprs?filter[tempr_id]]=2' \
+curl --location --request GET 'http://localhost/api/v1/device_temprs?filter[tempr_id]]=2' \
 --header 'Authorization: yourauthtoken'
 ```
 
@@ -106,7 +106,7 @@ This command will return a list of device to temprs links
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/device_temprs`
+`GET http://localhost/api/v1/device_temprs`
 
 ### URL Parameter
 
@@ -129,7 +129,7 @@ Authorization | yourauthtoken
 ## Delete
 
 ```shell
-curl --location --request DELETE 'http://oop.bluefrontier.local:9009/api/v1/device_temprs/10?device_id=9&tempr_id=4' \
+curl --location --request DELETE 'http://localhost/api/v1/device_temprs/10?device_id=9&tempr_id=4' \
 --header 'Authorization: yourauthtoken'
 ```
 
@@ -137,7 +137,7 @@ Delete a single device temprs from the system.
 
 ### HTTP Request
 
-`DELETE http://oop.bluefrontier.local:9009/api/v1/device_temprs/<id>?device_id=<did>&tempr_id=<tid>`
+`DELETE http://localhost/api/v1/device_temprs/<id>?device_id=<did>&tempr_id=<tid>`
 
 ### URL Parameter
 

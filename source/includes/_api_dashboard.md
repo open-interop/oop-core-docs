@@ -9,7 +9,7 @@ The Dashboard is where summary information would be gathered from
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local/api/v1/dashboards/transmissions?group=status`
+`GET http://localhost/api/v1/dashboards/transmissions?group=status`
 
 
 ### URL Parameters
@@ -28,6 +28,6 @@ Authorization | yourauthtoken
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
 
 ```shell
-curl "http://oop.bluefrontier.local/api/v1/dashboards/transmissions?group=status"
+curl "http://localhost/api/v1/dashboards/transmissions?group=status"
   -H "Authorization: yourauthtoken"
 ```

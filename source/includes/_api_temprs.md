@@ -37,7 +37,7 @@ sort[direction] | string
 ## Create
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs' \
+curl --location --request POST 'http://localhost/api/v1/temprs' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
@@ -51,9 +51,9 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs
       "queue_request": false,
       "queue_response": false,
       "template": {
-        "host": "action-interop.thecdx.org",
+        "host": "endpoint.openinterop.local",
         "port": 443,
-        "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+        "path": "/some/path/to/an/api",
         "request_method": "POST",
         "protocol": "https",
         "headers": {
@@ -88,7 +88,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/temprs`
+`POST http://localhost/api/v1/temprs`
 
 ### Headers
 
@@ -116,17 +116,17 @@ Json string containing:
 
 ## Preview (js)
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs/preview' \
+curl --location --request POST 'http://localhost/api/v1/temprs/preview' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
     "tempr" : {
-	  "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"ZMB\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"ZULTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+	  "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
       "template" : {
-      "host": "action-interop.thecdx.org",
+      "host": "endpoint.openinterop.local",
       "port": 443,
-      "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+      "path": "/some/path/to/an/api",
       "request_method": "POST",
       "protocol": "https",
 
@@ -147,9 +147,9 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs
 ```json
 {
     "rendered": {
-        "host": "action-interop.thecdx.org",
+        "host": "endpoint.openinterop.local",
         "port": "443",
-        "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+        "path": "/some/path/to/an/api",
         "request_method": "POST",
         "protocol": "https",
         "headers": {
@@ -163,7 +163,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/temprs/preview`
+`POST http://localhost/api/v1/temprs/preview`
 
 ### Headers
 
@@ -179,9 +179,9 @@ Json string containing:
 		"tempr" : {
 	  		"example_transmission" : "transmission data layout",
       		"template" : {
-      			"host": "action-interop.thecdx.org",
+      			"host": "endpoint.openinterop.local",
       			"port": 443,
-      			"path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+      			"path": "/some/path/to/an/api",
       			"request_method": "POST",
       			"protocol": "https",
 			    "headers": 
@@ -205,17 +205,17 @@ Json string containing:
 ## Preview (moustache)
 
 ```shell
-curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs/preview' \
+curl --location --request POST 'http://localhost/api/v1/temprs/preview' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
     "tempr" : {
-	  "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"ZMB\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"ZULTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+	  "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
       "template" : {
-      "host": "action-interop.thecdx.org",
+      "host": "endpoint.openinterop.local",
       "port": 443,
-      "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+      "path": "/some/path/to/an/api",
       "request_method": "POST",
       "protocol": "https",
 
@@ -235,9 +235,9 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs
 ```json
 {
     "rendered": {
-        "host": "action-interop.thecdx.org",
+        "host": "endpoint.openinterop.local",
         "port": "443",
-        "path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+        "path": "/some/path/to/an/api",
         "request_method": "POST",
         "protocol": "https",
         "headers": {
@@ -245,7 +245,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs
         },
         "body": {
             "language": "moustache",
-            "body": "asd of this thing ZMB and also ZULTEST4"
+            "body": "asd of this thing UK and also PATTEST4"
         }
     },
     "console": ""
@@ -254,7 +254,7 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/temprs
 
 ### HTTP Request
 
-`POST http://oop.bluefrontier.local:9009/api/v1/temprs/preview`
+`POST http://localhost/api/v1/temprs/preview`
 
 ### Headers
 
@@ -270,9 +270,9 @@ Json string containing:
 		"tempr" : {
 	  		"example_transmission" : "transmission data layout",
       		"template" : {
-      			"host": "action-interop.thecdx.org",
+      			"host": "endpoint.openinterop.local",
       			"port": 443,
-      			"path": "/api/devices/UGctTk8KrX/messages?authentication_token=atRd6qcVuN",
+      			"path": "/some/path/to/an/api",
       			"request_method": "POST",
       			"protocol": "https",
 			    "headers": 
@@ -297,7 +297,7 @@ Json string containing:
 ## List
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/temprs' \
+curl --location --request GET 'http://localhost/api/v1/temprs' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -324,7 +324,7 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/temprs'
             "queue_response": true,
             "template": {
                 "headers": {},
-                "host": "oop.bluefrontier.local",
+                "host": "localhost",
                 "path": "/gateway/dummy-no-auth",
                 "port": 9009,
                 "protocol": "http",
@@ -349,7 +349,7 @@ This command will retreive a list of Temprs on the system, matching supplied fil
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/temprs`
+`GET http://localhost/api/v1/temprs`
 
 ### URL Parameter
 
@@ -372,7 +372,7 @@ Authorization | yourauthtoken
 ## Update
 
 ```shell
-curl --location --request PUT 'http://oop.bluefrontier.local:9009/api/v1/temprs/68' \
+curl --location --request PUT 'http://localhost/api/v1/temprs/68' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain' \
@@ -392,7 +392,7 @@ This command will ...
 
 ### HTTP Request
 
-`PUT http://oop.bluefrontier.local:9009/api/v1/temprs/<id>`
+`PUT http://localhost/api/v1/temprs/<id>`
 
 ### URL Parameter
 
@@ -426,7 +426,7 @@ Authorization | yourauthtoken
 ## Delete
 
 ```shell
-curl --location --request DELETE 'http://oop.bluefrontier.local:9009/api/v1/temprs/65' \
+curl --location --request DELETE 'http://localhost/api/v1/temprs/65' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain' \
@@ -437,7 +437,7 @@ Delete a single tempr from the system.
 
 ### HTTP Request
 
-`DELETE http://oop.bluefrontier.local:9009/api/v1/temprs/<id>`
+`DELETE http://localhost/api/v1/temprs/<id>`
 
 ### URL Parameter
 
@@ -459,7 +459,7 @@ Authorization | yourauthtoken
 ## History
 
 ```shell
-curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/temprs/56/history' \
+curl --location --request GET 'http://localhost/api/v1/temprs/56/history' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -494,7 +494,7 @@ curl --location --request GET 'http://oop.bluefrontier.local:9009/api/v1/temprs/
                         "script": "module.exports = message.message.body",
                         "language": "js"
                     },
-                    "host": "oop.bluefrontier.local",
+                    "host": "openinterop.local",
                     "path": "/gateway/dummy-no-auth",
                     "port": 9009,
                     "headers": {},
@@ -525,7 +525,7 @@ This command will ...
 
 ### HTTP Request
 
-`GET http://oop.bluefrontier.local:9009/api/v1/temprs/<id>/history`
+`GET http://localhost/api/v1/temprs/<id>/history`
 
 ### URL Parameter
 
