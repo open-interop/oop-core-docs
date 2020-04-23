@@ -9,6 +9,7 @@ device_id | number | yes | eg. 5
 tempr_id | number | yes | eg. 2
 
 Filters available:
+
 Filter | Type
 ------ | ----
 id | number

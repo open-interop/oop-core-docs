@@ -14,6 +14,7 @@ time_zone | string | no | eg. "en-GB"
 active | boolean | no | true or false
 
 Filters available:
+
 Filter | Type
 ------ | ----
 id | number

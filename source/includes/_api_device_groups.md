@@ -8,6 +8,7 @@ id  | number | yes | Unique
 name | string | yes | readable
 
 Filters available:
+
 Filter | Type
 ------ | ----
 id | number
