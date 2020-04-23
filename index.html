@@ -462,7 +462,16 @@
     "email": "your_email_address",
     "password": "your_password"
 }'</span>
-</code></pre><h3 id='http-request'>HTTP Request</h3>
+</code></pre>
+<blockquote>
+<p>On Success it will return:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiJ9.byJ1c2VyX2lkIjozMywiZXhwIsoxNTg3NTz1MDc3fQ.z44g3zSXGZkZDwa1iW4NgC7Bd_GSxiz3qCpNu5jYDiQ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04-20-2020 09:44"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bob.testing@testing.co.uk"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST http://localhost/api/v1/auth/login</code></p>
 <h3 id='content-body'>Content Body</h3>
 <p>Json string containing:
@@ -591,6 +600,36 @@
 <td>string</td>
 <td>yes</td>
 <td>only accessed via API calls</td>
+</tr>
+</tbody></table>
+
+<p>Filters available:</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+</tr>
+<tr>
+<td>time_zone</td>
+<td>string</td>
+</tr>
+<tr>
+<td>sort[field]</td>
+<td>string as above (excluding password)</td>
+</tr>
+<tr>
+<td>sort[direction]</td>
+<td>string</td>
 </tr>
 </tbody></table>
 <h2 id='create-a-new-user'>Create a New User</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/users'</span> <span class="se">\</span>
@@ -818,7 +857,7 @@
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
 <h1 id='sites'>Sites</h1>
-<p>Sites are made up of the folloqinf fields... (and other words)</p>
+<p>Sites are made up of the following fields.</p>
 
 <p>The Site can have one or more of the following fields:</p>
 
@@ -827,82 +866,182 @@
 <th>Field</th>
 <th>Type</th>
 <th>Required</th>
+<th>Sortable</th>
 </tr>
 </thead><tbody>
 <tr>
+<td>id</td>
+<td>number</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
 <td>account_id</td>
 <td>number</td>
+<td>yes</td>
 <td>yes</td>
 </tr>
 <tr>
 <td>site_id</td>
 <td>number</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>name</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>description</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>address</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>city</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>state</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>zip_code</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>country</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>region</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>latitude</td>
 <td>number</td>
+<td>no</td>
 <td>no</td>
 </tr>
 <tr>
 <td>longitude</td>
 <td>number</td>
 <td>no</td>
+<td>no</td>
 </tr>
 <tr>
 <td>time_zone</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
 </tr>
 <tr>
 <td>external_uuids</td>
 <td>object</td>
+<td>no</td>
 <td>no</td>
 </tr>
 <tr>
 <td>full_name</td>
 <td>string</td>
 <td>no</td>
+<td>yes</td>
+</tr>
+</tbody></table>
+
+<p>Filters available:</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>account_id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>site_id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>number</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>number</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+</tr>
+<tr>
+<td>full_name</td>
+<td>string</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+</tr>
+<tr>
+<td>address</td>
+<td>string</td>
+</tr>
+<tr>
+<td>city</td>
+<td>string</td>
+</tr>
+<tr>
+<td>state</td>
+<td>string</td>
+</tr>
+<tr>
+<td>zip_code</td>
+<td>string</td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+</tr>
+<tr>
+<td>region</td>
+<td>string</td>
+</tr>
+<tr>
+<td>time_zone</td>
+<td>string</td>
+</tr>
+<tr>
+<td>sort[field]</td>
+<td>string as above (where marked as sortable)</td>
+</tr>
+<tr>
+<td>sort[direction]</td>
+<td>string</td>
 </tr>
 </tbody></table>
 <h2 id='create-a-new-site'>Create a New Site</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/sites'</span> <span class="se">\</span>
@@ -1187,7 +1326,7 @@
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Get the Sidebar structure for a single Site on the system.</p>
+<p>The sidebar endpoint is purely used to render the sidebar in the interface. It groups devices together under their device groups, and the site they belong to.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
 <p>To get ALL sites:</p>
 
@@ -1240,22 +1379,36 @@
 <td>Unique</td>
 </tr>
 <tr>
-<td>xemail</td>
+<td>name</td>
 <td>string</td>
 <td>yes</td>
-<td>Unique</td>
+<td>readable</td>
+</tr>
+</tbody></table>
+
+<p>Filters available:</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
 </tr>
 <tr>
-<td>xtime_zone</td>
+<td>name</td>
 <td>string</td>
-<td>no</td>
-<td>Default en-gb</td>
 </tr>
 <tr>
-<td>xpassword</td>
+<td>sort[field]</td>
+<td>string as above</td>
+</tr>
+<tr>
+<td>sort[direction]</td>
 <td>string</td>
-<td>yes</td>
-<td>only accessed via API calls</td>
 </tr>
 </tbody></table>
 <h2 id='create-a-new-device-group'>Create a New Device Group</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/device_groups'</span> <span class="se">\</span>
@@ -1495,27 +1648,110 @@
 &quot;x&quot; = run on x minor time units after the major time until
 eg. for minute &quot;12/2&quot; will run the task every 2 minutes after 12</p>
 
-<p>Schedules have these fields:
-Fieldname | Type | Info
-id  | number | Unique ID
-name    | string | Readable name
-minute  | string | Timing string see above
-hour    | string | Timing string see above
-day_of_week | string | Timing string see above
-day_of_month    | string | Timing string see above
-month_of_year   | string | Timing string see above
-year    | string | Timing string see above
-active  | bool | true or false
-    }</p>
+<p>Schedules have these fields:</p>
+
+<table><thead>
+<tr>
+<th>Fieldname</th>
+<th>Type</th>
+<th>Info</th>
+<th>Sortable</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+<td>Unique ID</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Readable name</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>minute</td>
+<td>string</td>
+<td>Timing string see above</td>
+<td>no</td>
+</tr>
+<tr>
+<td>hour</td>
+<td>string</td>
+<td>Timing string see above</td>
+<td>no</td>
+</tr>
+<tr>
+<td>day_of_week</td>
+<td>string</td>
+<td>Timing string see above</td>
+<td>no</td>
+</tr>
+<tr>
+<td>day_of_month</td>
+<td>string</td>
+<td>Timing string see above</td>
+<td>no</td>
+</tr>
+<tr>
+<td>month_of_year</td>
+<td>string</td>
+<td>Timing string see above</td>
+<td>no</td>
+</tr>
+<tr>
+<td>year</td>
+<td>string</td>
+<td>Timing string see above</td>
+<td>no</td>
+</tr>
+<tr>
+<td>active</td>
+<td>bool</td>
+<td>true or false</td>
+<td>yes</td>
+</tr>
+</tbody></table>
+
+<p>Filters available:</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+</tr>
+<tr>
+<td>active</td>
+<td>string</td>
+</tr>
+<tr>
+<td>sort[field]</td>
+<td>string as above (where marked as sortable)</td>
+</tr>
+<tr>
+<td>sort[direction]</td>
+<td>string</td>
+</tr>
+</tbody></table>
 <h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/schedules'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
 --data-raw <span class="s1">'{
-    "schedule" : {
-        "name" : "XYZ_Schedule",
-        "day_of_week" : "1"
-    }
+  "schedule" : {
+    "name" : "XYZ_Schedule",
+    "day_of_week" : "1"
+  }
 }'</span>
 </code></pre>
 <blockquote>
@@ -1531,7 +1767,18 @@ active  | bool | true or false
 <p>On Success the command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZ_Schedule"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"minute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"hour"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"day_of_week"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"day_of_month"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"month_of_year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-22T15:12:08.260Z"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-22T15:12:08.260Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST http://localhost/api/v1/schedules</code></p>
@@ -1550,12 +1797,12 @@ active  | bool | true or false
 <h3 id='content-body'>Content Body</h3>
 <p>Json string containing:
 <code>
-    {
-        &quot;schedule&quot; : { 
-            &quot;name&quot; : &quot;XYZ_Schedule&quot;,
-            &quot;day_of_week&quot; : &quot;1&quot; 
-        }
+  {
+    &quot;schedule&quot; : { 
+      &quot;name&quot; : &quot;XYZ_Schedule&quot;,
+      &quot;day_of_week&quot; : &quot;1&quot; 
     }
+  }
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
@@ -1566,17 +1813,31 @@ active  | bool | true or false
 <p>On Success the command will return:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZ_Schedule"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"minute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*/2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hour"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"day_of_week"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"day_of_month"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"month_of_year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-02-03T17:03:02.185Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-02-05T18:21:41.830Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
     </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This command will ...</p>
+<p>This command will fetch a list of schedules based in the filters supplied, or all of them if no filters given.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET http://localhost/api/v1/schedules</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
@@ -1614,8 +1875,22 @@ active  | bool | true or false
 <blockquote>
 <p>On Success the command will return:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre>
-<p>This command will ...</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZ_Schedule"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"minute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"hour"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"day_of_week"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"day_of_month"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"month_of_year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-22T15:12:08.260Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-22T15:17:03.251Z"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will update the schedule for the supplied fields.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>PUT http://localhost/api/v1/schedules/&lt;id&gt;</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
@@ -1633,11 +1908,11 @@ active  | bool | true or false
 <h3 id='content-body-2'>Content Body</h3>
 <p>Json string containing:
 <code>
-    {
-        &quot;schedule&quot;: {
-            &quot;active&quot;: false,
-        }
+  {
+    &quot;schedule&quot;: {
+      &quot;active&quot;: false,
     }
+  }
 </code></p>
 <h3 id='headers-3'>Headers</h3>
 <table><thead>
@@ -1686,14 +1961,52 @@ active  | bool | true or false
 </tbody></table>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
-<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/schedules/59/history'</span> <span class="se">\</span>
+<h2 id='history'>History</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/schedules/2/history'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: application/json'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <blockquote>
 <p>On Success the command will return:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">410</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"auditable_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"auditable_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Schedule"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"associated_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"associated_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"user_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"username"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"audited_changes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"hour"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZ_Schedule"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"minute"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"account_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"day_of_week"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"day_of_month"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"month_of_year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"remote_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"request_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8f78e130-d7a3-4fbf-b6ac-b101b051bf37"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-22T15:12:10.045Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <p>This command will ...</p>
 <h3 id='http-request-5'>HTTP Request</h3>
 <p><code>GET http://localhost/api/v1/schedules/&lt;id&gt;/history</code></p>
@@ -1732,7 +2045,7 @@ active  | bool | true or false
 <p>On Success the command will return:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code></code></pre>
-<p>This command will ...</p>
+<p>This command will link a Tempr to a given Schedule.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
 <p><code>GET http://localhost/api/v1/schedules/&lt;id&gt;/assign_tempr?tempr_id=&lt;tid&gt;</code></p>
 <h3 id='url-parameter-5'>URL Parameter</h3>
@@ -1783,22 +2096,96 @@ active  | bool | true or false
 <td>Unique</td>
 </tr>
 <tr>
-<td>xemail</td>
-<td>string</td>
-<td>yes</td>
-<td>Unique</td>
-</tr>
-<tr>
-<td>xtime_zone</td>
+<td>name</td>
 <td>string</td>
 <td>no</td>
-<td>Default en-gb</td>
+<td>Readable name</td>
 </tr>
 <tr>
-<td>xpassword</td>
+<td>device_group_id</td>
+<td>number</td>
+<td>no</td>
+<td>eg. 1</td>
+</tr>
+<tr>
+<td>site_id</td>
+<td>number</td>
+<td>no</td>
+<td>eg. 21</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>number</td>
+<td>no</td>
+<td>eg. null</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>number</td>
+<td>no</td>
+<td>eg. null</td>
+</tr>
+<tr>
+<td>time_zone</td>
 <td>string</td>
-<td>yes</td>
-<td>only accessed via API calls</td>
+<td>no</td>
+<td>eg. &quot;en-GB&quot;</td>
+</tr>
+<tr>
+<td>active</td>
+<td>boolean</td>
+<td>no</td>
+<td>true or false</td>
+</tr>
+</tbody></table>
+
+<p>Filters available:</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+</tr>
+<tr>
+<td>deviceGroupId</td>
+<td>number</td>
+</tr>
+<tr>
+<td>siteId</td>
+<td>number</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>number</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>number</td>
+</tr>
+<tr>
+<td>timeZone</td>
+<td>string</td>
+</tr>
+<tr>
+<td>active</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>sort[field]</td>
+<td>string as above (except latitude and longitude)</td>
+</tr>
+<tr>
+<td>sort[direction]</td>
+<td>string</td>
 </tr>
 </tbody></table>
 <h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/devices'</span> <span class="se">\</span>
@@ -1827,7 +2214,16 @@ active  | bool | true or false
 <p>On Success the command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"XYZ ABC"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"device_group_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"site_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"time_zone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-13T16:32:11.002Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-12-13T16:32:15.603Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST http://localhost/api/v1/devices</code></p>
@@ -1847,7 +2243,7 @@ active  | bool | true or false
 <p>Json string containing:
 <code>
     {
-        &quot;xxx&quot; : { 
+        &quot;device&quot; : { 
             &quot;name&quot; : &quot;XYZ_ABC&quot;,
             &quot;description&quot; : &quot;Test of XYZ Connector&quot; 
         }
@@ -1885,7 +2281,7 @@ active  | bool | true or false
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This command will ...</p>
+<p>This command will retrieve a list of devices based on either filter parameters or all devices by default.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET http://localhost/api/v1/devices</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
@@ -1924,7 +2320,7 @@ active  | bool | true or false
 <p>On Success the command will return:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code></code></pre>
-<p>This command will ...</p>
+<p>This command will update a specific device&#39;s fields.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>PUT http://localhost/api/v1/devices/&lt;id&gt;</code></p>
 <h3 id='url-parameter-2'>URL Parameter</h3>
@@ -2047,7 +2443,7 @@ active  | bool | true or false
     </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This command will ...</p>
+<p>This command will provide details of the audit history for the device.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
 <p><code>GET http://localhost/api/v1/devices/&lt;id&gt;/history</code></p>
 <h3 id='url-parameter-4'>URL Parameter</h3>
@@ -2134,19 +2530,110 @@ active  | bool | true or false
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
 <h1 id='device-transmissions'>Device Transmissions</h1>
-<p>When gettinga List you can use these filters:</p>
+<p>Device Treansmissions have these fields:
+id 
+device_id 
+tempr_id 
+schedule_id 
+status 
+message_uuid
+transmission_uuid 
+success 
+transmitted_at
+created_at 
+updated_at</p>
 
-<p>filter[messageUuid] 
-    filter[sort][field] 
-    filter[sort][direction] </p>
+<p>Filters available:</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>status</td>
+<td>number</td>
+</tr>
+<tr>
+<td>temprId</td>
+<td>number</td>
+</tr>
+<tr>
+<td>scheduleId</td>
+<td>number</td>
+</tr>
+<tr>
+<td>messageUuid</td>
+<td>string</td>
+</tr>
+<tr>
+<td>transmissionUuid</td>
+<td>string</td>
+</tr>
+<tr>
+<td>success</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>transmitted_at</td>
+<td>date time</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>date time</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>date time</td>
+</tr>
+<tr>
+<td>sort[field]</td>
+<td>string as above</td>
+</tr>
+<tr>
+<td>sort[direction]</td>
+<td>string</td>
+</tr>
+</tbody></table>
 <h2 id='list'>List</h2><pre class="highlight shell tab-shell"><code>curl --location --request GET <span class="s1">'http://localhost/api/v1/devices/9/transmissions?filter[messageUuid]=9dc5ab1c-8d05-4e5b-8c21-48a7b2f6f241&amp;filter[sort][field]=created_at&amp;filter[sort][direction]=desc'</span> <span class="se">\</span>
 --header <span class="s1">'Authorization: yourauthtoken'</span>
 </code></pre>
 <blockquote>
 <p>On Success the command will return:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code></code></pre>
-<p>This command will ...</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"total_records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"number_of_pages"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"device_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"tempr_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"schedule_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"message_uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"35f1e645-be21-4eba-af61-cbbb0f9647f8"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transmission_uuid"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transmitted_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-09T13:35:09.693Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"response_body"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">messages</span><span class="se">\"</span><span class="s2">:[{</span><span class="se">\"</span><span class="s2">test</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">core</span><span class="se">\"</span><span class="s2">:{},</span><span class="se">\"</span><span class="s2">pii</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">raw</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">name</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">patient1</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">result</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">negative</span><span class="se">\"</span><span class="s2">}}},</span><span class="se">\"</span><span class="s2">sample</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">core</span><span class="se">\"</span><span class="s2">:{},</span><span class="se">\"</span><span class="s2">pii</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">patient</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">core</span><span class="se">\"</span><span class="s2">:{},</span><span class="se">\"</span><span class="s2">pii</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">encounter</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">core</span><span class="se">\"</span><span class="s2">:{},</span><span class="se">\"</span><span class="s2">pii</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}},</span><span class="se">\"</span><span class="s2">custom</span><span class="se">\"</span><span class="s2">:{}}}]}"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"request_body"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-09T13:35:10.711Z"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-09T13:35:10.711Z"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This command will retrieve a list of transmissions for a device.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET http://localhost/api/v1/devices/&lt;id&gt;/transmissions?filter[messageUuid]=&lt;uuid&gt;&amp;filter[sort][field]=created_at&amp;filter[sort][direction]=desc</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
@@ -2165,8 +2652,12 @@ active  | bool | true or false
 <td>unique message id</td>
 </tr>
 <tr>
+<td>filter[...]</td>
+<td>see above</td>
+</tr>
+<tr>
 <td>filter[sort][field]</td>
-<td>string field name</td>
+<td>string field name as above</td>
 </tr>
 <tr>
 <td>filter[sort][direction]</td>
@@ -2269,68 +2760,102 @@ active  | bool | true or false
 <tr>
 <td>description</td>
 <td>string</td>
-<td></td>
+<td>no</td>
 <td></td>
 </tr>
 <tr>
 <td>endpoint_type</td>
 <td>string</td>
-<td></td>
+<td>yes</td>
 <td></td>
 </tr>
 <tr>
 <td>queue_request</td>
 <td>boolean</td>
-<td></td>
+<td>??</td>
 <td></td>
 </tr>
 <tr>
 <td>queue_response</td>
 <td>boolean</td>
-<td></td>
+<td>??</td>
 <td></td>
 </tr>
 <tr>
 <td>host</td>
 <td>string</td>
-<td></td>
+<td>yes</td>
 <td>&quot;your-endpoint.example.com&quot;</td>
 </tr>
 <tr>
 <td>port</td>
 <td>number</td>
-<td></td>
+<td>no</td>
 <td>443</td>
 </tr>
 <tr>
 <td>path</td>
 <td>string</td>
-<td></td>
+<td>yes</td>
 <td>&quot;/api/devices/XYZ/messages?authentication_token=ABCDEX&quot;</td>
 </tr>
 <tr>
 <td>request_method</td>
 <td>string</td>
-<td></td>
+<td>yes</td>
 <td>&quot;POST&quot;</td>
 </tr>
 <tr>
 <td>protocol</td>
 <td>string</td>
-<td></td>
+<td>yes</td>
 <td>&quot;https&quot;</td>
 </tr>
 <tr>
 <td>language</td>
 <td>string</td>
-<td></td>
+<td>no</td>
 <td>&quot;js&quot;</td>
 </tr>
 <tr>
 <td>script</td>
 <td>string</td>
+<td>no</td>
 <td></td>
-<td></td>
+</tr>
+</tbody></table>
+
+<p>Filters available:</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>device_group_id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+</tr>
+<tr>
+<td>sort[field]</td>
+<td>string as above</td>
+</tr>
+<tr>
+<td>sort[direction]</td>
+<td>string</td>
 </tr>
 </tbody></table>
 <h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/temprs'</span> <span class="se">\</span>
@@ -2395,12 +2920,12 @@ active  | bool | true or false
 <h3 id='content-body'>Content Body</h3>
 <p>Json string containing:
 <code>
-    {
-        &quot;tempr&quot; : { 
-            &quot;name&quot; : &quot;XYZ_ABC&quot;,
-            &quot;description&quot; : &quot;Test of XYZ Connector&quot; 
-        }
+  {
+    &quot;tempr&quot; : { 
+      &quot;name&quot; : &quot;XYZ_ABC&quot;,
+      &quot;description&quot; : &quot;Test of XYZ Connector&quot; 
     }
+  }
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
@@ -2410,7 +2935,7 @@ active  | bool | true or false
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
 --data-raw <span class="s1">'{
     "tempr" : {
-      "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+    "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
       "template" : {
       "host": "endpoint.openinterop.local",
       "port": 443,
@@ -2422,11 +2947,11 @@ active  | bool | true or false
         {
           "Content-Type": "application/json"
         },
-        "body" : {
-            "language" : "js",
-            "script" : "let payload = {   \"trackedEntityType\": \"tuhi0maUrlh\",   \"orgUnit\": message.message.body.event.FARM_NUM,   \"attributes\": [     {       \"attribute\": \"udQ5rLwup6d\",       \"value\": message.message.body.event.SPEC_NUM     },     {       \"attribute\": \"wAr0ZjIO0d8\",       \"value\": \"WNet_Animal\"     }   ],   \"enrollments\": [     {       \"orgUnit\": message.message.body.event.FARM_NUM,       \"program\": \"sWf6NXIupFI\",       \"programStage\": \"kGfHGNWI6iQ\",       \"enrollmentDate\": message.message.body.event.SPEC_DATE,       \"incidentDate\": message.message.body.event.SPEC_DATE,       \"events\": [         {           \"program\": \"sWf6NXIupFI\",           \"orgUnit\": message.message.body.event.FARM_NUM,           \"eventDate\": message.message.body.event.SPEC_DATE,           \"status\": \"COMPLETED\",           \"programStage\": \"kGfHGNWI6iQ\",           \"dataValues\": [               { \"dataElement\" : \"h74xyBYnXPB\", \"value\" : message.message.body.event.AMP_ND10 },               { \"dataElement\" : \"hMbQTNDTia2\", \"value\" : message.message.body.event.CPD_ND10 },               { \"dataElement\" : \"IYXfvQ9nS4O\", \"value\" : message.message.body.event.CIP_ND5 },               { \"dataElement\" : \"gnX3CxdocmO\", \"value\" : message.message.body.event.TCY_ND30 },               { \"dataElement\" : \"OxT8HFtgtCW\", \"value\" : message.message.body.event.GEN_ND10 },               { \"dataElement\" : \"zyXV5PZjiBm\", \"value\" : message.message.body.event.SXT_ND1_2 },               { \"dataElement\" : \"Wsk4NARIElI\", \"value\" : message.message.body.event.ORGANISM },               { \"dataElement\" : \"IvVVi4ft0v8\", \"value\" : message.message.body.event.SPEC_TYPE  }           ]         }       ]     }   ] };  module.exports = payload; "
-        } }
-    }
+    "body" : {
+      "language" : "js",
+      "script" : "let payload = {   \"trackedEntityType\": \"tuhi0maUrlh\",   \"orgUnit\": message.message.body.event.FARM_NUM,   \"attributes\": [     {       \"attribute\": \"udQ5rLwup6d\",       \"value\": message.message.body.event.SPEC_NUM     },     {       \"attribute\": \"wAr0ZjIO0d8\",       \"value\": \"WNet_Animal\"     }   ],   \"enrollments\": [     {       \"orgUnit\": message.message.body.event.FARM_NUM,       \"program\": \"sWf6NXIupFI\",       \"programStage\": \"kGfHGNWI6iQ\",       \"enrollmentDate\": message.message.body.event.SPEC_DATE,       \"incidentDate\": message.message.body.event.SPEC_DATE,       \"events\": [         {           \"program\": \"sWf6NXIupFI\",           \"orgUnit\": message.message.body.event.FARM_NUM,           \"eventDate\": message.message.body.event.SPEC_DATE,           \"status\": \"COMPLETED\",           \"programStage\": \"kGfHGNWI6iQ\",           \"dataValues\": [               { \"dataElement\" : \"h74xyBYnXPB\", \"value\" : message.message.body.event.AMP_ND10 },               { \"dataElement\" : \"hMbQTNDTia2\", \"value\" : message.message.body.event.CPD_ND10 },               { \"dataElement\" : \"IYXfvQ9nS4O\", \"value\" : message.message.body.event.CIP_ND5 },               { \"dataElement\" : \"gnX3CxdocmO\", \"value\" : message.message.body.event.TCY_ND30 },               { \"dataElement\" : \"OxT8HFtgtCW\", \"value\" : message.message.body.event.GEN_ND10 },               { \"dataElement\" : \"zyXV5PZjiBm\", \"value\" : message.message.body.event.SXT_ND1_2 },               { \"dataElement\" : \"Wsk4NARIElI\", \"value\" : message.message.body.event.ORGANISM },               { \"dataElement\" : \"IvVVi4ft0v8\", \"value\" : message.message.body.event.SPEC_TYPE  }           ]         }       ]     }   ] };  module.exports = payload; "
+    } }
+  }
 }'</span>
 </code></pre>
 <blockquote>
@@ -2463,26 +2988,26 @@ active  | bool | true or false
 <h3 id='content-body-2'>Content Body</h3>
 <p>Json string containing:
 <code>
-    {
-        &quot;tempr&quot; : {
-            &quot;example_transmission&quot; : &quot;transmission data layout&quot;,
-            &quot;template&quot; : {
-                &quot;host&quot;: &quot;endpoint.openinterop.local&quot;,
-                &quot;port&quot;: 443,
-                &quot;path&quot;: &quot;/some/path/to/an/api&quot;,
-                &quot;request_method&quot;: &quot;POST&quot;,
-                &quot;protocol&quot;: &quot;https&quot;,
-                &quot;headers&quot;: 
-                {
-                    &quot;Content-Type&quot;: &quot;application/json&quot;
-                },
-                &quot;body&quot; : {
-                    &quot;language&quot; : &quot;moustache&quot;,
-                    &quot;body&quot; : &quot;content of the template display&quot;
-                } 
-            }
-        }
+  {
+    &quot;tempr&quot; : {
+        &quot;example_transmission&quot; : &quot;transmission data layout&quot;,
+          &quot;template&quot; : {
+            &quot;host&quot;: &quot;endpoint.openinterop.local&quot;,
+            &quot;port&quot;: 443,
+            &quot;path&quot;: &quot;/some/path/to/an/api&quot;,
+            &quot;request_method&quot;: &quot;POST&quot;,
+            &quot;protocol&quot;: &quot;https&quot;,
+          &quot;headers&quot;: 
+            {
+                &quot;Content-Type&quot;: &quot;application/json&quot;
+            },
+        &quot;body&quot; : {
+          &quot;language&quot; : &quot;moustache&quot;,
+          &quot;body&quot; : &quot;content of the template display&quot;
+        } 
+      }
     }
+  }
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
@@ -2492,7 +3017,7 @@ active  | bool | true or false
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
 --data-raw <span class="s1">'{
     "tempr" : {
-      "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+    "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
       "template" : {
       "host": "endpoint.openinterop.local",
       "port": 443,
@@ -2504,11 +3029,11 @@ active  | bool | true or false
         {
           "Content-Type": "application/json"
         },
-        "body" : {
-            "language" : "moustache",
-            "body" : "asd of this thing {{message.body.event.COUNTRY_A}} and also {{message.body.event.PATIENT_ID}}"
-        } }
-    }
+    "body" : {
+      "language" : "moustache",
+      "body" : "asd of this thing {{message.body.event.COUNTRY_A}} and also {{message.body.event.PATIENT_ID}}"
+    } }
+  }
 }'</span>
 </code></pre>
 <blockquote>
@@ -2548,26 +3073,26 @@ active  | bool | true or false
 <h3 id='content-body-3'>Content Body</h3>
 <p>Json string containing:
 <code>
-    {
-        &quot;tempr&quot; : {
-            &quot;example_transmission&quot; : &quot;transmission data layout&quot;,
-            &quot;template&quot; : {
-                &quot;host&quot;: &quot;endpoint.openinterop.local&quot;,
-                &quot;port&quot;: 443,
-                &quot;path&quot;: &quot;/some/path/to/an/api&quot;,
-                &quot;request_method&quot;: &quot;POST&quot;,
-                &quot;protocol&quot;: &quot;https&quot;,
-                &quot;headers&quot;: 
-                {
-                    &quot;Content-Type&quot;: &quot;application/json&quot;
-                },
-                &quot;body&quot; : {
-                    &quot;language&quot; : &quot;moustache&quot;,
-                    &quot;body&quot; : &quot;content of the template display&quot;
-                } 
-            }
-        }
+  {
+    &quot;tempr&quot; : {
+        &quot;example_transmission&quot; : &quot;transmission data layout&quot;,
+          &quot;template&quot; : {
+            &quot;host&quot;: &quot;endpoint.openinterop.local&quot;,
+            &quot;port&quot;: 443,
+            &quot;path&quot;: &quot;/some/path/to/an/api&quot;,
+            &quot;request_method&quot;: &quot;POST&quot;,
+            &quot;protocol&quot;: &quot;https&quot;,
+          &quot;headers&quot;: 
+            {
+                &quot;Content-Type&quot;: &quot;application/json&quot;
+            },
+        &quot;body&quot; : {
+          &quot;language&quot; : &quot;moustache&quot;,
+          &quot;body&quot; : &quot;content of the template display&quot;
+        } 
+      }
     }
+  }
 </code></p>
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
@@ -2617,7 +3142,7 @@ active  | bool | true or false
     </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This command will ...</p>
+<p>This command will retrieve a list of Temprs on the system, matching supplied filters or all</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET http://localhost/api/v1/temprs</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
@@ -2651,9 +3176,9 @@ active  | bool | true or false
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span> <span class="se">\</span>
 --data-raw <span class="s1">'{
-    "tempr" : {
-        "tempr_id" : 64
-    }
+  "tempr" : {
+    "tempr_id" : 64
+  }
 }'</span>
 </code></pre>
 <blockquote>
@@ -2678,11 +3203,11 @@ active  | bool | true or false
 <h3 id='content-body-4'>Content Body</h3>
 <p>Json string containing:
 <code>
-    {
-        &quot;tempr&quot;: {
-            &quot;tempr_id&quot;:&quot;1234&quot;,
-        }
+  {
+    &quot;tempr&quot;: {
+      &quot;tempr_id&quot;:&quot;1234&quot;,
     }
+  }
 </code></p>
 <h3 id='headers-5'>Headers</h3>
 <table><thead>
@@ -2840,22 +3365,16 @@ active  | bool | true or false
 <td>Unique</td>
 </tr>
 <tr>
-<td>xemail</td>
-<td>string</td>
+<td>schedule_id</td>
+<td>number</td>
 <td>yes</td>
-<td>Unique</td>
+<td></td>
 </tr>
 <tr>
-<td>xtime_zone</td>
-<td>string</td>
-<td>no</td>
-<td>Default en-gb</td>
-</tr>
-<tr>
-<td>xpassword</td>
-<td>string</td>
+<td>tempr_id</td>
+<td>number</td>
 <td>yes</td>
-<td>only accessed via API calls</td>
+<td></td>
 </tr>
 </tbody></table>
 <h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/schedule_temprs?tempr_id=1&amp;schedule_id=1'</span> <span class="se">\</span>
@@ -2876,7 +3395,9 @@ active  | bool | true or false
 <p>On Success the command returns JSON structured like this:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"schedule_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"tempr_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">59</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request'>HTTP Request</h3>
 <p><code>POST http://localhost/api/v1/schedule_temprs?tempr_id=&lt;tid&gt;&amp;schedule_id=&lt;sid&gt;</code></p>
@@ -2978,7 +3499,7 @@ active  | bool | true or false
 --header <span class="s1">'Authorization: yourauthtoken'</span> <span class="se">\</span>
 --header <span class="s1">'Content-Type: text/plain'</span>
 </code></pre>
-<p>Delete a single xxx from the system.</p>
+<p>Delete a single schedule from the system.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>DELETE http://localhost/api/v1/schedule_temprs/&lt;id&gt;?device_id=&lt;did&gt;&amp;tempr_id=&lt;tid&gt;</code></p>
 <h3 id='url-parameter-3'>URL Parameter</h3>
@@ -3033,22 +3554,46 @@ active  | bool | true or false
 <td>Unique</td>
 </tr>
 <tr>
-<td>xemail</td>
-<td>string</td>
+<td>device_id</td>
+<td>number</td>
 <td>yes</td>
-<td>Unique</td>
+<td>eg. 5</td>
 </tr>
 <tr>
-<td>xtime_zone</td>
-<td>string</td>
-<td>no</td>
-<td>Default en-gb</td>
+<td>tempr_id</td>
+<td>number</td>
+<td>yes</td>
+<td>eg. 2</td>
+</tr>
+</tbody></table>
+
+<p>Filters available:</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>number</td>
 </tr>
 <tr>
-<td>xpassword</td>
+<td>device_id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>tempr_id</td>
+<td>number</td>
+</tr>
+<tr>
+<td>sort[field]</td>
+<td>string as above</td>
+</tr>
+<tr>
+<td>sort[direction]</td>
 <td>string</td>
-<td>yes</td>
-<td>only accessed via API calls</td>
 </tr>
 </tbody></table>
 <h2 id='create'>Create</h2><pre class="highlight shell tab-shell"><code>curl --location --request POST <span class="s1">'http://localhost/api/v1/device_temprs?tempr_id=1&amp;device_id=3'</span> <span class="se">\</span>
@@ -3089,10 +3634,6 @@ active  | bool | true or false
 <p>Json string containing:
 <code>
     {
-        &quot;xxx&quot; : { 
-            &quot;name&quot; : &quot;XYZ_ABC&quot;,
-            &quot;description&quot; : &quot;Test of XYZ Connector&quot; 
-        }
     }
 </code></p>
 
@@ -3120,7 +3661,7 @@ active  | bool | true or false
     </span><span class="s2">"core_version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.1.4"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This command will ...</p>
+<p>This command will return a list of device to temprs links</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET http://localhost/api/v1/device_temprs</code></p>
 <h3 id='url-parameter'>URL Parameter</h3>
