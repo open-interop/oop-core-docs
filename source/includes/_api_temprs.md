@@ -1,26 +1,23 @@
 # Temprs
 
-Temprs is short for:
-	Template Mapping Recipe Schema
-
-The Tempr can have one or more of the following fields:
+A `Tempr` is a template, mapping, recipe, or schema. It can have one or more of the following fields.
 
 Field | Type | Required | Example
 ----- | ---- | -------- | -------
-device_group_id	|  number  | yes |
-tempr_id		    |  number  | yes |
-name			      |  string  | yes |
-description		  |  string  | no |
-endpoint_type	  |  string  | yes |
-queue_request	  |  boolean | ?? |
-queue_response	|  boolean | ?? |
-host			      |  string  | yes | "your-endpoint.example.com"
-port			      |  number  | no | 443
-path			      |  string  | yes | "/api/devices/XYZ/messages?authentication_token=ABCDEX"
-request_method	|  string  | yes | "POST"
-protocol		    |  string  | yes | "https"
-language		    |  string  | no | "js"
-script			    |  string  | no |
+device_group_id |  number  | yes |
+tempr_id        |  number  | yes |
+name            |  string  | yes |
+description     |  string  | no |
+endpoint_type   |  string  | yes |
+queue_request   |  boolean | ?? |
+queue_response  |  boolean | ?? |
+host            |  string  | yes | "your-endpoint.example.com"
+port            |  number  | no | 443
+path            |  string  | yes | "/api/devices/XYZ/messages?authentication_token=ABCDEX"
+request_method  |  string  | yes | "POST"
+protocol        |  string  | yes | "https"
+language        |  string  | no | "js"
+script          |  string  | no |
 
 Filters available:
 Filter | Type
@@ -73,7 +70,7 @@ curl --location --request POST 'http://localhost/api/v1/temprs' \
 ```json
 {
   "<fieldname>": [
-  	"<error message details>"
+    "<error message details>"
   ]
 }
 ```
@@ -100,12 +97,12 @@ Authorization | yourauthtoken
 
 Json string containing:
 `
-	{
-		"tempr" : { 
-			"name" : "XYZ_ABC",
-			"description" : "Test of XYZ Connector" 
-		}
-	}
+  {
+    "tempr" : { 
+      "name" : "XYZ_ABC",
+      "description" : "Test of XYZ Connector" 
+    }
+  }
 `
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
@@ -122,7 +119,7 @@ curl --location --request POST 'http://localhost/api/v1/temprs/preview' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
     "tempr" : {
-	  "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+    "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
       "template" : {
       "host": "endpoint.openinterop.local",
       "port": 443,
@@ -134,11 +131,11 @@ curl --location --request POST 'http://localhost/api/v1/temprs/preview' \
         {
           "Content-Type": "application/json"
         },
-		"body" : {
-			"language" : "js",
-			"script" : "let payload = {   \"trackedEntityType\": \"tuhi0maUrlh\",   \"orgUnit\": message.message.body.event.FARM_NUM,   \"attributes\": [     {       \"attribute\": \"udQ5rLwup6d\",       \"value\": message.message.body.event.SPEC_NUM     },     {       \"attribute\": \"wAr0ZjIO0d8\",       \"value\": \"WNet_Animal\"     }   ],   \"enrollments\": [     {       \"orgUnit\": message.message.body.event.FARM_NUM,       \"program\": \"sWf6NXIupFI\",       \"programStage\": \"kGfHGNWI6iQ\",       \"enrollmentDate\": message.message.body.event.SPEC_DATE,       \"incidentDate\": message.message.body.event.SPEC_DATE,       \"events\": [         {           \"program\": \"sWf6NXIupFI\",           \"orgUnit\": message.message.body.event.FARM_NUM,           \"eventDate\": message.message.body.event.SPEC_DATE,           \"status\": \"COMPLETED\",           \"programStage\": \"kGfHGNWI6iQ\",           \"dataValues\": [               { \"dataElement\" : \"h74xyBYnXPB\", \"value\" : message.message.body.event.AMP_ND10 },               { \"dataElement\" : \"hMbQTNDTia2\", \"value\" : message.message.body.event.CPD_ND10 },               { \"dataElement\" : \"IYXfvQ9nS4O\", \"value\" : message.message.body.event.CIP_ND5 },               { \"dataElement\" : \"gnX3CxdocmO\", \"value\" : message.message.body.event.TCY_ND30 },               { \"dataElement\" : \"OxT8HFtgtCW\", \"value\" : message.message.body.event.GEN_ND10 },               { \"dataElement\" : \"zyXV5PZjiBm\", \"value\" : message.message.body.event.SXT_ND1_2 },               { \"dataElement\" : \"Wsk4NARIElI\", \"value\" : message.message.body.event.ORGANISM },               { \"dataElement\" : \"IvVVi4ft0v8\", \"value\" : message.message.body.event.SPEC_TYPE  }           ]         }       ]     }   ] };  module.exports = payload; "
-		} }
-	}
+    "body" : {
+      "language" : "js",
+      "script" : "let payload = {   \"trackedEntityType\": \"tuhi0maUrlh\",   \"orgUnit\": message.message.body.event.FARM_NUM,   \"attributes\": [     {       \"attribute\": \"udQ5rLwup6d\",       \"value\": message.message.body.event.SPEC_NUM     },     {       \"attribute\": \"wAr0ZjIO0d8\",       \"value\": \"WNet_Animal\"     }   ],   \"enrollments\": [     {       \"orgUnit\": message.message.body.event.FARM_NUM,       \"program\": \"sWf6NXIupFI\",       \"programStage\": \"kGfHGNWI6iQ\",       \"enrollmentDate\": message.message.body.event.SPEC_DATE,       \"incidentDate\": message.message.body.event.SPEC_DATE,       \"events\": [         {           \"program\": \"sWf6NXIupFI\",           \"orgUnit\": message.message.body.event.FARM_NUM,           \"eventDate\": message.message.body.event.SPEC_DATE,           \"status\": \"COMPLETED\",           \"programStage\": \"kGfHGNWI6iQ\",           \"dataValues\": [               { \"dataElement\" : \"h74xyBYnXPB\", \"value\" : message.message.body.event.AMP_ND10 },               { \"dataElement\" : \"hMbQTNDTia2\", \"value\" : message.message.body.event.CPD_ND10 },               { \"dataElement\" : \"IYXfvQ9nS4O\", \"value\" : message.message.body.event.CIP_ND5 },               { \"dataElement\" : \"gnX3CxdocmO\", \"value\" : message.message.body.event.TCY_ND30 },               { \"dataElement\" : \"OxT8HFtgtCW\", \"value\" : message.message.body.event.GEN_ND10 },               { \"dataElement\" : \"zyXV5PZjiBm\", \"value\" : message.message.body.event.SXT_ND1_2 },               { \"dataElement\" : \"Wsk4NARIElI\", \"value\" : message.message.body.event.ORGANISM },               { \"dataElement\" : \"IvVVi4ft0v8\", \"value\" : message.message.body.event.SPEC_TYPE  }           ]         }       ]     }   ] };  module.exports = payload; "
+    } }
+  }
 }'
 ```
 
@@ -175,26 +172,26 @@ Authorization | yourauthtoken
 
 Json string containing:
 `
-	{
-		"tempr" : {
-	  		"example_transmission" : "transmission data layout",
-      		"template" : {
-      			"host": "endpoint.openinterop.local",
-      			"port": 443,
-      			"path": "/some/path/to/an/api",
-      			"request_method": "POST",
-      			"protocol": "https",
-			    "headers": 
-        		{
-          			"Content-Type": "application/json"
-        		},
-				"body" : {
-					"language" : "moustache",
-					"body" : "content of the template display"
-				} 
-			}
-		}
-	}
+  {
+    "tempr" : {
+        "example_transmission" : "transmission data layout",
+          "template" : {
+            "host": "endpoint.openinterop.local",
+            "port": 443,
+            "path": "/some/path/to/an/api",
+            "request_method": "POST",
+            "protocol": "https",
+          "headers": 
+            {
+                "Content-Type": "application/json"
+            },
+        "body" : {
+          "language" : "moustache",
+          "body" : "content of the template display"
+        } 
+      }
+    }
+  }
 `
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
@@ -211,7 +208,7 @@ curl --location --request POST 'http://localhost/api/v1/temprs/preview' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
     "tempr" : {
-	  "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
+    "example_transmission" : "{  \"event\": {    \"COUNTRY_A\": \"UK\",    \"LABORATORY\": \"UTH\",    \"ORIGIN\": \"\",    \"PATIENT_ID\": \"PATTEST4\",    \"LAST_NAME\": \"\",    \"FIRST_NAME\": \"\" }}",
       "template" : {
       "host": "endpoint.openinterop.local",
       "port": 443,
@@ -223,11 +220,11 @@ curl --location --request POST 'http://localhost/api/v1/temprs/preview' \
         {
           "Content-Type": "application/json"
         },
-		"body" : {
-			"language" : "moustache",
-			"body" : "asd of this thing {{message.body.event.COUNTRY_A}} and also {{message.body.event.PATIENT_ID}}"
-		} }
-	}
+    "body" : {
+      "language" : "moustache",
+      "body" : "asd of this thing {{message.body.event.COUNTRY_A}} and also {{message.body.event.PATIENT_ID}}"
+    } }
+  }
 }'
 ```
 > On Success the command returns JSON structured like this:
@@ -266,26 +263,26 @@ Authorization | yourauthtoken
 
 Json string containing:
 `
-	{
-		"tempr" : {
-	  		"example_transmission" : "transmission data layout",
-      		"template" : {
-      			"host": "endpoint.openinterop.local",
-      			"port": 443,
-      			"path": "/some/path/to/an/api",
-      			"request_method": "POST",
-      			"protocol": "https",
-			    "headers": 
-        		{
-          			"Content-Type": "application/json"
-        		},
-				"body" : {
-					"language" : "moustache",
-					"body" : "content of the template display"
-				} 
-			}
-		}
-	}
+  {
+    "tempr" : {
+        "example_transmission" : "transmission data layout",
+          "template" : {
+            "host": "endpoint.openinterop.local",
+            "port": 443,
+            "path": "/some/path/to/an/api",
+            "request_method": "POST",
+            "protocol": "https",
+          "headers": 
+            {
+                "Content-Type": "application/json"
+            },
+        "body" : {
+          "language" : "moustache",
+          "body" : "content of the template display"
+        } 
+      }
+    }
+  }
 `
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
@@ -377,9 +374,9 @@ curl --location --request PUT 'http://localhost/api/v1/temprs/68' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
-	"tempr" : {
-		"tempr_id" : 64
-	}
+  "tempr" : {
+    "tempr_id" : 64
+  }
 }'
 ```
 
@@ -404,11 +401,11 @@ id | tempr ID to be updated
 
 Json string containing:
 `
-	{
-		"tempr": {
-			"tempr_id":"1234",
-		}
-	}
+  {
+    "tempr": {
+      "tempr_id":"1234",
+    }
+  }
 `
 
 ### Headers

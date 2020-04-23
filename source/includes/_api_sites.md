@@ -1,6 +1,6 @@
 # Sites
 
-Sites are made up of the folloqinf fields... (and other words)
+Sites are made up of the following fields.
 
 The Site can have one or more of the following fields:
 
@@ -346,7 +346,7 @@ curl --location --request GET 'http://localhost/api/v1/sites/sidebar?site_id=666
 }
 ```
 
-Get the Sidebar structure for a single Site on the system.
+The sidebar endpoint is purely used to render the sidebar in the interface. It groups devices together under their device groups, and the site they belong to.
 
 ### HTTP Request
 
