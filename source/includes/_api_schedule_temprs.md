@@ -5,9 +5,8 @@ The Schedule Temprs can have one or more of the following fields:
 Field | Type | Required | Notes
 ----- | ---- | -------- | -----
 id  | number | yes | Unique
-xemail | string | yes | Unique
-xtime_zone | string | no | Default en-gb
-xpassword | string | yes | only accessed via API calls
+schedule_id | number | yes | 
+tempr_id | number | yes | 
 
 [//]:#(*****************************************************************************)
 
@@ -34,7 +33,9 @@ curl --location --request POST 'http://localhost/api/v1/schedule_temprs?tempr_id
 
 ```json
 {
-  "id": 88
+  "id": 88,
+  "schedule_id": 1,
+  "tempr_id": 59
 }
 ```
 
@@ -133,7 +134,7 @@ curl --location --request DELETE 'http://localhost/api/v1/schedule_temprs/1?devi
 --header 'Content-Type: text/plain'
 ```
 
-Delete a single xxx from the system.
+Delete a single schedule from the system.
 
 ### HTTP Request
 

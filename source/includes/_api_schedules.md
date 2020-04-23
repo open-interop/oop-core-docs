@@ -6,17 +6,26 @@ Timings are Cron style timing definitions
 eg. for minute "12/2" will run the task every 2 minutes after 12
 
 Schedules have these fields:
-Fieldname | Type | Info
-id	| number | Unique ID
-name	| string | Readable name
-minute	| string | Timing string see above
-hour	| string | Timing string see above
-day_of_week	| string | Timing string see above
-day_of_month	| string | Timing string see above
-month_of_year	| string | Timing string see above
-year	| string | Timing string see above
-active	| bool | true or false
-    }
+Fieldname | Type | Info | Sortable
+--------- | ---- | ---- | --------
+id	| number | Unique ID | yes
+name	| string | Readable name | yes
+minute	| string | Timing string see above | no
+hour	| string | Timing string see above | no
+day_of_week	| string | Timing string see above | no
+day_of_month	| string | Timing string see above | no
+month_of_year	| string | Timing string see above | no
+year	| string | Timing string see above | no
+active	| bool | true or false | yes
+
+Filters available:
+Filter | Type
+------ | ----
+id | number
+name | string
+active | string 
+sort[field] | string as above (where marked as sortable)
+sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
@@ -49,7 +58,18 @@ curl --location --request POST 'http://localhost/api/v1/schedules' \
 
 ```json
 {
-  "id": 88
+	"id": 88,
+	"account_id": 1,
+	"name": "XYZ_Schedule",
+	"active": true,
+	"minute": "*",
+	"hour": "*",
+	"day_of_week": "1",
+	"day_of_month": "*",
+	"month_of_year": "*",
+	"year": "*",
+	"created_at": "2020-04-22T15:12:08.260Z",
+	"updated_at": "2020-04-22T15:12:08.260Z"
 }
 ```
 
@@ -92,21 +112,34 @@ curl --location --request GET 'http://localhost/api/v1/schedules' \
 
 ```json
 {
-    "total_records": 0,
-    "number_of_pages": 0,
+    "total_records": 1,
+    "number_of_pages": 1,
     "page": {
         "number": 1,
         "size": 20
     },
-    "data": [],
+    "data": [
+	    {
+	      "id": 1,
+	      "name": "XYZ_Schedule",
+	      "minute": "*/2",
+	      "hour": "*",
+	      "day_of_week": "*",
+	      "day_of_month": "*",
+	      "month_of_year": "*",
+	      "year": "*",
+	      "created_at": "2020-02-03T17:03:02.185Z",
+	      "updated_at": "2020-02-05T18:21:41.830Z",
+	      "active": true
+	    }
+    ],
     "core_version": "1.1.4"
 }
 ```
 
-This command will ...
+This command will fetch a list of schedules based in the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
-
 `GET http://localhost/api/v1/schedules`
 
 ### URL Parameter
@@ -140,9 +173,23 @@ curl --location --request PUT 'http://localhost/api/v1/schedules/1' \
 > On Success the command will return:
 
 ```json
+{
+    "account_id": 1,
+    "id": 2,
+    "active": false,
+    "name": "XYZ_Schedule",
+    "minute": "*",
+    "hour": "*",
+    "day_of_week": "1",
+    "day_of_month": "*",
+    "month_of_year": "*",
+    "year": "*",
+    "created_at": "2020-04-22T15:12:08.260Z",
+    "updated_at": "2020-04-22T15:17:03.251Z"
+}
 ```
 
-This command will ...
+This command will update the schedule for the supplied fields.
 
 ### HTTP Request
 
@@ -211,7 +258,7 @@ Authorization | yourauthtoken
 ## History
 
 ```shell
-curl --location --request GET 'http://localhost/api/v1/schedules/59/history' \
+curl --location --request GET 'http://localhost/api/v1/schedules/2/history' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -219,6 +266,44 @@ curl --location --request GET 'http://localhost/api/v1/schedules/59/history' \
 > On Success the command will return:
 
 ```json
+{
+    "total_records": 1,
+    "number_of_pages": 1,
+    "page": {
+        "number": 1,
+        "size": 20
+    },
+    "data": [
+        {
+            "id": 410,
+            "auditable_id": 2,
+            "auditable_type": "Schedule",
+            "associated_id": null,
+            "associated_type": null,
+            "user_id": 33,
+            "user_type": "User",
+            "username": null,
+            "action": "create",
+            "audited_changes": {
+                "hour": "*",
+                "name": "XYZ_Schedule",
+                "year": "*",
+                "active": true,
+                "minute": "*",
+                "account_id": 1,
+                "day_of_week": "1",
+                "day_of_month": "*",
+                "month_of_year": "*"
+            },
+            "version": 1,
+            "comment": null,
+            "remote_address": "127.0.0.1",
+            "request_uuid": "8f78e130-d7a3-4fbf-b6ac-b101b051bf37",
+            "created_at": "2020-04-22T15:12:10.045Z"
+        }
+    ],
+    "core_version": "1.1.4"
+}
 ```
 
 This command will ...
@@ -258,7 +343,7 @@ curl --location --request POST 'http://localhost/api/v1/schedules/10/assign_temp
 ```json
 ```
 
-This command will ...
+This command will link a Tempr to a given Schedule.
 
 ### HTTP Request
 

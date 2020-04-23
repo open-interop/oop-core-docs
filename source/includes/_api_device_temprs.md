@@ -5,9 +5,17 @@ The Device Temprs can have one or more of the following fields:
 Field | Type | Required | Notes
 ----- | ---- | -------- | -----
 id  | number | yes | Unique
-xemail | string | yes | Unique
-xtime_zone | string | no | Default en-gb
-xpassword | string | yes | only accessed via API calls
+device_id | number | yes | eg. 5
+tempr_id | number | yes | eg. 2
+
+Filters available:
+Filter | Type
+------ | ----
+id | number
+device_id | number
+tempr_id | number
+sort[field] | string as above
+sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
@@ -53,10 +61,6 @@ Authorization | yourauthtoken
 Json string containing:
 `
 	{
-		"xxx" : { 
-			"name" : "XYZ_ABC",
-			"description" : "Test of XYZ Connector" 
-		}
 	}
 `
 
@@ -94,7 +98,7 @@ curl --location --request GET 'http://localhost/api/v1/device_temprs?filter[temp
 }
 ```
 
-This command will ...
+This command will return a list of device to temprs links
 
 ### HTTP Request
 

@@ -3,26 +3,34 @@
 Temprs is short for:
 	Template Mapping Recipe Schema
 
-
-
 The Tempr can have one or more of the following fields:
 
 Field | Type | Required | Example
 ----- | ---- | -------- | -------
-device_group_id	|  number | yes |
-tempr_id		|  number | yes |
-name			|  string | yes |
-description		|  string | |
-endpoint_type	|  string | |
-queue_request	|  boolean | |
-queue_response	|  boolean | |
-host			|  string | | "your-endpoint.example.com"
-port			|  number | | 443
-path			|  string | | "/api/devices/XYZ/messages?authentication_token=ABCDEX"
-request_method	|  string | | "POST"
-protocol		|  string | | "https"
-language		|  string | | "js"
-script			|  string | |
+device_group_id	|  number  | yes |
+tempr_id		    |  number  | yes |
+name			      |  string  | yes |
+description		  |  string  | no |
+endpoint_type	  |  string  | yes |
+queue_request	  |  boolean | ?? |
+queue_response	|  boolean | ?? |
+host			      |  string  | yes | "your-endpoint.example.com"
+port			      |  number  | no | 443
+path			      |  string  | yes | "/api/devices/XYZ/messages?authentication_token=ABCDEX"
+request_method	|  string  | yes | "POST"
+protocol		    |  string  | yes | "https"
+language		    |  string  | no | "js"
+script			    |  string  | no |
+
+Filters available:
+Filter | Type
+------ | ----
+id | number
+device_group_id | number
+name | string
+description | string
+sort[field] | string as above
+sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
@@ -337,7 +345,7 @@ curl --location --request GET 'http://localhost/api/v1/temprs' \
 }
 ```
 
-This command will ...
+This command will retrieve a list of Temprs on the system, matching supplied filters or all
 
 ### HTTP Request
 

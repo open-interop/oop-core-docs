@@ -4,24 +4,46 @@ Sites are made up of the folloqinf fields... (and other words)
 
 The Site can have one or more of the following fields:
 
-Field | Type | Required
------ | ---- | --------
-account_id  | number | yes
-site_id  | number | no
-name  | string | no
-description  | string | no
-address  | string | no
-city  | string | no
-state  | string | no
-zip_code  | string | no
-country  | string | no
-region  | string | no
-latitude  | number | no
-longitude  | number | no
-time_zone  | string | no
-external_uuids  | object | no
-full_name  | string | no
+Field | Type | Required | Sortable
+----- | ---- | -------- | --------
+id | number | yes | yes
+account_id  | number | yes | yes
+site_id  | number | no | yes
+name  | string | no | yes
+description  | string | no | yes
+address  | string | no | yes
+city  | string | no | yes
+state  | string | no | yes
+zip_code  | string | no | yes
+country  | string | no | yes
+region  | string | no | yes
+latitude  | number | no | no
+longitude  | number | no | no
+time_zone  | string | no | yes
+external_uuids  | object | no | no
+full_name  | string | no | yes
 
+
+Filters available:
+Filter | Type
+------ | ----
+id | number
+account_id | number
+site_id | number
+latitude | number
+longitude | number
+name | string
+full_name | string
+description | string
+address | string
+city | string
+state | string
+zip_code | string
+country | string
+region | string
+time_zone | string
+sort[field] | string as above (where marked as sortable)
+sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
