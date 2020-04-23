@@ -5,9 +5,8 @@ The Schedule Temprs can have one or more of the following fields:
 Field | Type | Required | Notes
 ----- | ---- | -------- | -----
 id  | number | yes | Unique
-xemail | string | yes | Unique
-xtime_zone | string | no | Default en-gb
-xpassword | string | yes | only accessed via API calls
+schedule_id | number | yes | 
+tempr_id | number | yes | 
 
 [//]:#(*****************************************************************************)
 
@@ -34,7 +33,9 @@ curl --location --request POST 'http://oop.bluefrontier.local:9009/api/v1/schedu
 
 ```json
 {
-  "id": 88
+  "id": 88,
+  "schedule_id": 1,
+  "tempr_id": 59
 }
 ```
 
