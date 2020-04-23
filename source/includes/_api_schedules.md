@@ -6,19 +6,21 @@ Timings are Cron style timing definitions
 eg. for minute "12/2" will run the task every 2 minutes after 12
 
 Schedules have these fields:
+
 Fieldname | Type | Info | Sortable
 --------- | ---- | ---- | --------
-id	| number | Unique ID | yes
-name	| string | Readable name | yes
-minute	| string | Timing string see above | no
-hour	| string | Timing string see above | no
-day_of_week	| string | Timing string see above | no
-day_of_month	| string | Timing string see above | no
-month_of_year	| string | Timing string see above | no
-year	| string | Timing string see above | no
-active	| bool | true or false | yes
+id | number | Unique ID | yes
+name | string | Readable name | yes
+minute | string | Timing string see above | no
+hour | string | Timing string see above | no
+day_of_week | string | Timing string see above | no
+day_of_month | string | Timing string see above | no
+month_of_year | string | Timing string see above | no
+year | string | Timing string see above | no
+active | bool | true or false | yes
 
 Filters available:
+
 Filter | Type
 ------ | ----
 id | number
@@ -37,10 +39,10 @@ curl --location --request POST 'http://localhost/api/v1/schedules' \
 --header 'Content-Type: application/json' \
 --header 'Content-Type: text/plain' \
 --data-raw '{
-	"schedule" : {
-		"name" : "XYZ_Schedule",
-		"day_of_week" : "1"
-	}
+  "schedule" : {
+    "name" : "XYZ_Schedule",
+    "day_of_week" : "1"
+  }
 }'
 ```
 
@@ -49,7 +51,7 @@ curl --location --request POST 'http://localhost/api/v1/schedules' \
 ```json
 {
   "<fieldname>": [
-  	"<error message details>"
+    "<error message details>"
   ]
 }
 ```
@@ -58,18 +60,18 @@ curl --location --request POST 'http://localhost/api/v1/schedules' \
 
 ```json
 {
-	"id": 88,
-	"account_id": 1,
-	"name": "XYZ_Schedule",
-	"active": true,
-	"minute": "*",
-	"hour": "*",
-	"day_of_week": "1",
-	"day_of_month": "*",
-	"month_of_year": "*",
-	"year": "*",
-	"created_at": "2020-04-22T15:12:08.260Z",
-	"updated_at": "2020-04-22T15:12:08.260Z"
+  "id": 88,
+  "account_id": 1,
+  "name": "XYZ_Schedule",
+  "active": true,
+  "minute": "*",
+  "hour": "*",
+  "day_of_week": "1",
+  "day_of_month": "*",
+  "month_of_year": "*",
+  "year": "*",
+  "created_at": "2020-04-22T15:12:08.260Z",
+  "updated_at": "2020-04-22T15:12:08.260Z"
 }
 ```
 
@@ -87,12 +89,12 @@ Authorization | yourauthtoken
 
 Json string containing:
 `
-	{
-		"schedule" : { 
-			"name" : "XYZ_Schedule",
-			"day_of_week" : "1" 
-		}
-	}
+  {
+    "schedule" : { 
+      "name" : "XYZ_Schedule",
+      "day_of_week" : "1" 
+    }
+  }
 `
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
@@ -119,19 +121,19 @@ curl --location --request GET 'http://localhost/api/v1/schedules' \
         "size": 20
     },
     "data": [
-	    {
-	      "id": 1,
-	      "name": "XYZ_Schedule",
-	      "minute": "*/2",
-	      "hour": "*",
-	      "day_of_week": "*",
-	      "day_of_month": "*",
-	      "month_of_year": "*",
-	      "year": "*",
-	      "created_at": "2020-02-03T17:03:02.185Z",
-	      "updated_at": "2020-02-05T18:21:41.830Z",
-	      "active": true
-	    }
+      {
+        "id": 1,
+        "name": "XYZ_Schedule",
+        "minute": "*/2",
+        "hour": "*",
+        "day_of_week": "*",
+        "day_of_month": "*",
+        "month_of_year": "*",
+        "year": "*",
+        "created_at": "2020-02-03T17:03:02.185Z",
+        "updated_at": "2020-02-05T18:21:41.830Z",
+        "active": true
+      }
     ],
     "core_version": "1.1.4"
 }
@@ -205,11 +207,11 @@ id | schedule ID to be updated
 
 Json string containing:
 `
-	{
-		"schedule": {
-			"active": false,
-		}
-	}
+  {
+    "schedule": {
+      "active": false,
+    }
+  }
 `
 
 ### Headers
