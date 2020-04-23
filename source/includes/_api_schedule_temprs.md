@@ -134,7 +134,7 @@ curl --location --request DELETE 'http://localhost/api/v1/schedule_temprs/1?devi
 --header 'Content-Type: text/plain'
 ```
 
-Delete a single xxx from the system.
+Delete a single schedule from the system.
 
 ### HTTP Request
 

@@ -345,7 +345,7 @@ curl --location --request GET 'http://localhost/api/v1/temprs' \
 }
 ```
 
-This command will retreive a list of Temprs on the system, matching supplied filters or all
+This command will retrieve a list of Temprs on the system, matching supplied filters or all
 
 ### HTTP Request
 

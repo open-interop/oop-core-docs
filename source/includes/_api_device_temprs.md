@@ -61,10 +61,6 @@ Authorization | yourauthtoken
 Json string containing:
 `
 	{
-		"xxx" : { 
-			"name" : "XYZ_ABC",
-			"description" : "Test of XYZ Connector" 
-		}
 	}
 `
 

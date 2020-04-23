@@ -189,7 +189,7 @@ curl --location --request PUT 'http://localhost/api/v1/schedules/1' \
 }
 ```
 
-This command will update the scedule for the supplied fields.
+This command will update the schedule for the supplied fields.
 
 ### HTTP Request
 
@@ -343,7 +343,7 @@ curl --location --request POST 'http://localhost/api/v1/schedules/10/assign_temp
 ```json
 ```
 
-This command will ...
+This command will link a Tempr to a given Schedule.
 
 ### HTTP Request
 

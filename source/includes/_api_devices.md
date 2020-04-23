@@ -136,7 +136,7 @@ curl --location --request GET 'http://localhost/api/v1/devices' \
 }
 ```
 
-This command will retreive a list of devices based on either filter parameters or all devices by default.
+This command will retrieve a list of devices based on either filter parameters or all devices by default.
 
 ### HTTP Request
 

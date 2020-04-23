@@ -71,7 +71,7 @@ curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions?f
 }
 ```
 
-This command will retreive a list of transmissions for a device.
+This command will retrieve a list of transmissions for a device.
 
 ### HTTP Request
 
