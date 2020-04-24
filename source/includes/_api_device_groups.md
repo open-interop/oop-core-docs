@@ -108,7 +108,7 @@ curl --location --request GET 'http://localhost/api/v1/device_groups' \
 }
 ```
 
-This command will list existing device groups.
+This command will list existing device groups based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 
@@ -118,7 +118,7 @@ This command will list existing device groups.
 
 Parameter | Description
 --------- | -----------
-filter[xx] | yy
+filter[..] | see table above for options
 
 ### Headers
 

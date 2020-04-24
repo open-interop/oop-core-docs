@@ -99,7 +99,7 @@ curl --location --request GET 'http://localhost/api/v1/device_temprs?filter[temp
 }
 ```
 
-This command will return a list of device to temprs links
+This command will return a list of device to temprs links, based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 
@@ -109,7 +109,7 @@ This command will return a list of device to temprs links
 
 Parameter | Description
 --------- | -----------
-filter[tempr_id] | unique temprs id
+filter[..] | see table above for options
 
 ### Headers
 

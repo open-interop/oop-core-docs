@@ -156,7 +156,7 @@ curl --location --request GET 'http://localhost/api/v1/users' \
 }
 ```
 
-Gets a list of the users on the system.
+Gets a list of the users on the system, based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 
@@ -166,7 +166,7 @@ Gets a list of the users on the system.
 
 Parameter | Description
 --------- | -----------
-filter[xx] | yy
+filter[..] | see table above for options
 
 ### Headers
 

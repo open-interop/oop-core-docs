@@ -1,8 +1,10 @@
 # Schedules
 
 Timings are Cron style timing definitions
-"/x" = runs every x minor time units, 
-"x" = run on x minor time units after the major time until
+
+"/x" | runs every x minor time units, 
+"x" | run on x minor time units after the major time until
+
 eg. for minute "12/2" will run the task every 2 minutes after 12
 
 Schedules have these fields:
@@ -139,7 +141,7 @@ curl --location --request GET 'http://localhost/api/v1/schedules' \
 }
 ```
 
-This command will fetch a list of schedules based in the filters supplied, or all of them if no filters given.
+This command will fetch a list of schedules based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 `GET http://localhost/api/v1/schedules`
@@ -148,7 +150,7 @@ This command will fetch a list of schedules based in the filters supplied, or al
 
 Parameter | Description
 --------- | -----------
-filter[xx] | yy
+filter[..] | see table above for options
 
 ### Headers
 

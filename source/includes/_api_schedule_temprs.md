@@ -99,7 +99,7 @@ curl --location --request GET 'http://localhost/api/v1/schedule_temprs?filter[sc
 }
 ```
 
-This command will ...
+This command will retrieve a list of schedule to temprs links, based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 
@@ -110,7 +110,7 @@ This command will ...
 Parameter | Description
 --------- | -----------
 sid | schedule ID
-filter[xx] | yy
+filter[..] | see table above for options
 
 ### Headers
 
