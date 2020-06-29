@@ -19,6 +19,8 @@ includes:
   - api_devices
   - api_device_transmissions
   - api_temprs
+  - api_layers
+  - api_tempr_layers
   - api_schedule_temprs
   - api_device_temprs
   - api_microservices
