@@ -1,5 +1,7 @@
 # Devices
 
+A device is a representation of the physical device used to collect data.  It can be based at a site location, or at a specified latitude/longitude, within a time-zone.
+
 The Device can have one or more of the following fields:
 
 Field | Type | Required | Notes
@@ -137,7 +139,7 @@ curl --location --request GET 'http://localhost/api/v1/devices' \
 }
 ```
 
-This command will retrieve a list of devices based on either filter parameters or all devices by default.
+This command will retrieve a list of devices, based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 
@@ -147,7 +149,7 @@ This command will retrieve a list of devices based on either filter parameters o
 
 Parameter | Description
 --------- | -----------
-filter[xx] | yy
+filter[..] | see table above for options
 
 ### Headers
 

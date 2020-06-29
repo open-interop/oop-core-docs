@@ -167,7 +167,7 @@ curl --location --request GET 'http://localhost/api/v1/sites' \
 }
 ```
 
-Gets a list of the sites on the system.
+Gets a list of the sites on the system, based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 
@@ -177,7 +177,7 @@ Gets a list of the sites on the system.
 
 Parameter | Description
 --------- | -----------
-filter[xx] | yy
+filter[..] | see table above for options
 
 ### Headers
 

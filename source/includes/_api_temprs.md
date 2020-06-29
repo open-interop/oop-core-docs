@@ -343,7 +343,7 @@ curl --location --request GET 'http://localhost/api/v1/temprs' \
 }
 ```
 
-This command will retrieve a list of Temprs on the system, matching supplied filters or all
+This command will retrieve a list of Temprs on the system, based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 
@@ -353,7 +353,7 @@ This command will retrieve a list of Temprs on the system, matching supplied fil
 
 Parameter | Description
 --------- | -----------
-filter[xx] | yy
+filter[..] | see table above for options
 
 ### Headers
 

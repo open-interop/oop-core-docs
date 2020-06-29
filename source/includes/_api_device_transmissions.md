@@ -1,18 +1,21 @@
 # Device Transmissions
 
 
-Device Treansmissions have these fields:
-id 
-device_id 
-tempr_id 
-schedule_id 
-status 
-message_uuid
-transmission_uuid 
-success 
-transmitted_at
-created_at 
-updated_at
+Device Transmissions have these fields:
+
+Field | Type
+----- | ----
+id | number
+device_id  | number
+tempr_id  | number
+schedule_id  | number
+status | string
+message_uuid | string
+transmission_uuid | string
+success | bool
+transmitted_at | date time
+created_at | date time
+updated_at | date time
 
 
 Filters available:
@@ -72,7 +75,7 @@ curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions?f
 }
 ```
 
-This command will retrieve a list of transmissions for a device.
+This command will retrieve a list of transmissions for a device, based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 
@@ -84,7 +87,7 @@ Parameter | Description
 --------- | -----------
 id | device id
 filter[messageUuid] | unique message id
-filter[...] | see above
+filter[..] | see table above for options
 filter[sort][field] | string field name as above
 filter[sort][direction] | string either 'asc' or 'desc'
 

@@ -1,32 +1,31 @@
-# Device Temprs
+# Tempr Layer
 
-The Device Temprs can have one or more of the following fields:
+A Tempr Layer is an association between Temprs and Layers.
 
-Field | Type | Required | Notes
------ | ---- | -------- | -----
-id  | number | yes | Unique
-device_id | number | yes | eg. 5
-tempr_id | number | yes | eg. 2
+Field | Type | Required | Example
+----- | ---- | -------- | -------
+tempr_id |  number  | yes |
+layer_id |  number  | yes |
 
 Filters available:
 
 Filter | Type
 ------ | ----
-id | number
-device_id | number
+layer_id | number
 tempr_id | number
 sort[field] | string as above
 sort[direction] | string
+
 
 [//]:#(*****************************************************************************)
 
 ## Create
 
 ```shell
-curl --location --request POST 'http://localhost/api/v1/device_temprs?tempr_id=1&device_id=3' \
+curl --location --request POST 'http://localhost/api/v1/tempr_layers?tempr_id=39&layer_id=2' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json' \
---data-raw ''
+}'
 ```
 
 > If there is a problem then the command returns JSON structured like this (with multiple errors the fields will each have an entry):
@@ -34,7 +33,7 @@ curl --location --request POST 'http://localhost/api/v1/device_temprs?tempr_id=1
 ```json
 {
   "<fieldname>": [
-  	"<error message details>"
+    "<error message details>"
   ]
 }
 ```
@@ -43,13 +42,22 @@ curl --location --request POST 'http://localhost/api/v1/device_temprs?tempr_id=1
 
 ```json
 {
-  "id": 88
+  "id": 88,
+  "tempr_id": 39,
+  "layer_id": 2
 }
 ```
 
 ### HTTP Request
 
-`POST http://localhost/api/v1/device_temprs`
+`POST http://localhost/api/v1/tempr_layers`
+
+### URL Parameter
+
+Parameter | Description
+--------- | -----------
+tempr_id | Tempr ID
+layer_id | Layer ID
 
 ### Headers
 
@@ -59,13 +67,8 @@ Authorization | yourauthtoken
 
 ### Content Body
 
-Json string containing:
-`
-	{
-	}
-`
-
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
+
 
 
 
@@ -74,15 +77,16 @@ Json string containing:
 ## List
 
 ```shell
-curl --location --request GET 'http://localhost/api/v1/device_temprs?filter[tempr_id]]=2' \
---header 'Authorization: yourauthtoken'
+curl --location --request GET 'http://localhost/api/v1/tempr_layers?filter[layer_id]=2' \
+--header 'Authorization: yourauthtoken' \
+--header 'Content-Type: application/json'
 ```
 
 > On Success the command will return:
 
 ```json
 {
-    "total_records": 1,
+    "total_records": 5,
     "number_of_pages": 1,
     "page": {
         "number": 1,
@@ -90,20 +94,21 @@ curl --location --request GET 'http://localhost/api/v1/device_temprs?filter[temp
     },
     "data": [
         {
-            "id": 6,
-            "device_id": 6,
-            "tempr_id": 2
-        }
+            "id": 56,
+            "tempr_id": 213,
+            "layer_id": 2
+        },
+        {...}
     ],
-    "core_version": "1.1.4"
+    "core_version": "1.1.5"
 }
 ```
 
-This command will return a list of device to temprs links, based on the filters supplied, or all of them if no filters given.
+This command will retrieve a list of Tempr-Layer associations on the system for a given filter.
 
 ### HTTP Request
 
-`GET http://localhost/api/v1/device_temprs`
+`GET http://localhost/api/v1/tempr_layers`
 
 ### URL Parameter
 
@@ -126,23 +131,23 @@ Authorization | yourauthtoken
 ## Delete
 
 ```shell
-curl --location --request DELETE 'http://localhost/api/v1/device_temprs/10?device_id=9&tempr_id=4' \
---header 'Authorization: yourauthtoken'
+curl --location --request DELETE 'http://localhost/api/v1/tempr_layers/1?tempr_id=n&layer_id=n' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: yourauthtoken' \
 ```
 
-Delete a single device temprs from the system.
+Delete a single Tempr-Layer association from the system - requires both Tempr id and Layer id.
 
 ### HTTP Request
 
-`DELETE http://localhost/api/v1/device_temprs/<id>?device_id=<did>&tempr_id=<tid>`
+`DELETE http://localhost/api/v1/tempr_layers/<id>`
 
 ### URL Parameter
 
 Parameter | Description
 --------- | -----------
-id | device_temprs ID to be deleted
-did | device ID to be deleted
-tid | temprs ID to be deleted
+tempr_id | Tempr ID +
+layer_id | Layer ID +
 
 ### Headers
 
