@@ -32,7 +32,7 @@ sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
-## Create
+## Create a New Tempr
 
 ```shell
 curl --location --request POST 'http://localhost/api/v1/temprs' \
@@ -292,7 +292,7 @@ Json string containing:
 
 [//]:#(*****************************************************************************)
 
-## List
+## List Temprs
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/temprs' \
@@ -367,7 +367,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Update
+## Update a Tempr
 
 ```shell
 curl --location --request PUT 'http://localhost/api/v1/temprs/68' \
@@ -421,7 +421,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Delete
+## Delete a Tempr
 
 ```shell
 curl --location --request DELETE 'http://localhost/api/v1/temprs/65' \
@@ -454,7 +454,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## History
+## Tempr History
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/temprs/56/history' \

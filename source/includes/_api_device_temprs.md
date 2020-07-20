@@ -20,7 +20,7 @@ sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
-## Create
+## Create a New Device Tempr
 
 ```shell
 curl --location --request POST 'http://localhost/api/v1/device_temprs?tempr_id=1&device_id=3' \
@@ -71,7 +71,7 @@ Json string containing:
 
 [//]:#(*****************************************************************************)
 
-## List
+## List Device Temprs
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/device_temprs?filter[tempr_id]]=2' \
@@ -123,7 +123,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Delete
+## Delete a Device Tempr
 
 ```shell
 curl --location --request DELETE 'http://localhost/api/v1/device_temprs/10?device_id=9&tempr_id=4' \

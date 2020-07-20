@@ -32,7 +32,7 @@ sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
-## Create
+## Create a New Device
 
 ```shell
 curl --location --request POST 'http://localhost/api/v1/devices' \
@@ -104,7 +104,7 @@ Json string containing:
 
 [//]:#(*****************************************************************************)
 
-## List
+## List Devices
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/devices' \
@@ -163,7 +163,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Update
+## Update a Device
 
 ```shell
 curl --location --request PUT 'http://localhost/api/v1/devices/3' \
@@ -176,6 +176,22 @@ curl --location --request PUT 'http://localhost/api/v1/devices/3' \
 > On Success the command will return:
 
 ```json
+{
+    "account_id": 7,
+    "id": 3,
+    "authentication_headers": [],
+    "authentication_query": [],
+    "name": "XYZ_ABC",
+    "authentication_path": "/gateway/xyz-abc",
+    "site_id": 1,
+    "device_group_id": 1,
+    "latitude": null,
+    "longitude": null,
+    "time_zone": null,
+    "created_at": "2020-07-15T15:47:51.569Z",
+    "updated_at": "2020-07-15T15:47:51.569Z",
+    "active": true
+}
 ```
 
 This command will update a specific device's fields.
@@ -213,7 +229,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Delete
+## Delete a Device
 
 ```shell
 curl --location --request DELETE 'http://localhost/api/v1/devices/16' \
@@ -245,7 +261,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## History
+## Device History
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/devices/59/history' \
