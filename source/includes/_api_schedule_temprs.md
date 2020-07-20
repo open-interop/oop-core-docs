@@ -10,7 +10,7 @@ tempr_id | number | yes |
 
 [//]:#(*****************************************************************************)
 
-## Create
+## Create a New Schedule Tempr
 
 ```shell
 curl --location --request POST 'http://localhost/api/v1/schedule_temprs?tempr_id=1&schedule_id=1' \
@@ -70,7 +70,7 @@ Json string containing:
 
 [//]:#(*****************************************************************************)
 
-## List
+## List Schedule Temprs
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/schedule_temprs?filter[schedule_id]=1' \
@@ -125,7 +125,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Delete
+## Delete a Schedule Tempr
 
 ```shell
 curl --location --request DELETE 'http://localhost/api/v1/schedule_temprs/1?device_id=4&tempr_id=8' \

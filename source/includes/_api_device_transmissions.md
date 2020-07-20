@@ -37,7 +37,7 @@ sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
-## List
+## List Device Transmissions
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions?filter[messageUuid]=9dc5ab1c-8d05-4e5b-8c21-48a7b2f6f241&filter[sort][field]=created_at&filter[sort][direction]=desc' \
@@ -103,7 +103,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Show
+## Show Device Transmissions
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions' \

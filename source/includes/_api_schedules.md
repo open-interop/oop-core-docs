@@ -33,7 +33,7 @@ sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
-## Create
+## Create a New Schedule
 
 ```shell
 curl --location --request POST 'http://localhost/api/v1/schedules' \
@@ -105,7 +105,7 @@ Json string containing:
 
 [//]:#(*****************************************************************************)
 
-## List
+## List Schedules
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/schedules' \
@@ -164,7 +164,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Update
+## Update a Schedule
 
 ```shell
 curl --location --request PUT 'http://localhost/api/v1/schedules/1' \
@@ -228,7 +228,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Delete
+## Delete a Schedule
 
 ```shell
 curl --location --request DELETE 'http://localhost/api/v1/schedules/16' \
@@ -259,7 +259,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## History
+## Schedule History
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/schedules/2/history' \

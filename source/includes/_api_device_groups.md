@@ -73,7 +73,7 @@ Json string containing:
 
 [//]:#(*****************************************************************************)
 
-## List
+## List Device Groups
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/device_groups' \
@@ -132,19 +132,39 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Update
+## Update a Device Group
 
 ```shell
 curl --location --request PUT 'http://localhost/api/v1/device_groups/4' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: text/plain' \
---data-raw '{ "user" : { "time_zone" : "London" } }'
+--data-raw '{ "device_group" : { "time_zone" : "London" } }'
 ```
 
 > On Success the command will return:
 
 ```json
+{
+    "account_id": 7,
+    "id": 1,
+    "name": "XYZ Device Group",
+    "site_id": null,
+    "description": "Test of XYZ Connector",
+    "address": null,
+    "city": null,
+    "state": null,
+    "zip_code": null,
+    "country": null,
+    "region": null,
+    "latitude": null,
+    "longitude": null,
+    "time_zone": "London",
+    "external_uuids": {},
+    "created_at": "2019-08-30T08:58:48.022Z",
+    "updated_at": "2019-08-30T08:58:48.022Z",
+    "full_name": "XYZ Device Group"
+}
 ```
 
 This command will update specified fields within a device group.
@@ -182,7 +202,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Delete
+## Delete a Device Group
 
 ```shell
 ```
@@ -210,7 +230,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## History
+## Device Group History
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/device_groups/1/history' \

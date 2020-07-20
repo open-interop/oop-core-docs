@@ -270,7 +270,7 @@ Json string containing:
 
 [//]:#(*****************************************************************************)
 
-## History
+## Site History
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/sites/666/history' \

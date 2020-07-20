@@ -19,7 +19,7 @@ sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
-## Create
+## Create a New Tempr Layer
 
 ```shell
 curl --location --request POST 'http://localhost/api/v1/tempr_layers?tempr_id=39&layer_id=2' \
@@ -74,7 +74,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## List
+## List Tempr Layers
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/tempr_layers?filter[layer_id]=2' \
@@ -128,7 +128,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Delete
+## Delete a Tempr Layer
 
 ```shell
 curl --location --request DELETE 'http://localhost/api/v1/tempr_layers/1?tempr_id=n&layer_id=n' \

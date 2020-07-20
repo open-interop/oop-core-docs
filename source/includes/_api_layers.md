@@ -22,7 +22,7 @@ sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
-## Create
+## Create a New Layers
 
 ```shell
 curl --location --request POST 'http://localhost/api/v1/layers' \
@@ -92,7 +92,7 @@ Json string containing:
 
 [//]:#(*****************************************************************************)
 
-## List
+## List Layers
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/layers' \
@@ -149,7 +149,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Update
+## Update a Layer
 
 ```shell
 curl --location --request PUT 'http://localhost/api/v1/layers/68' \
@@ -214,7 +214,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Delete
+## Delete a Layer
 
 ```shell
 curl --location --request DELETE 'http://localhost/api/v1/layers/65' \
@@ -289,7 +289,7 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## History
+## Layer History
 
 ```shell
 curl --location --request GET 'http://localhost/api/v1/layers/1/history' \
