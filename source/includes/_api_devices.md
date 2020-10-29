@@ -21,11 +21,11 @@ Filter | Type
 ------ | ----
 id | number
 name | string
-deviceGroupId | number
-siteId | number
+device_group_id | number
+site_id | number
 latitude | number
 longitude | number
-timeZone | string
+time_zone | string
 active | boolean
 sort[field] | string as above (except latitude and longitude)
 sort[direction] | string
