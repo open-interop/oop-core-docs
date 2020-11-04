@@ -1,7 +1,7 @@
-# Device Transmissions
+# Transmissions
 
 
-Device Transmissions have these fields:
+Transmissions have these fields:
 
 Field | Type
 ----- | ----
@@ -10,6 +10,7 @@ device_id  | number
 tempr_id  | number
 schedule_id  | number
 status | string
+state | string
 message_uuid | string
 transmission_uuid | string
 success | bool
@@ -24,11 +25,12 @@ Filter | Type
 ------ | ----
 id | number
 status | number
-temprId | number
-scheduleId | number
-messageUuid | string 
-transmissionUuid | string 
+tempr_id | number
+schedule_id | number
+message_uuid | string 
+transmission_uuid | string 
 success | boolean
+state | string
 transmitted_at | date time
 created_at | date time
 updated_at | date time
@@ -37,10 +39,10 @@ sort[direction] | string
 
 [//]:#(*****************************************************************************)
 
-## List Device Transmissions
+## List Transmissions
 
 ```shell
-curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions?filter[messageUuid]=9dc5ab1c-8d05-4e5b-8c21-48a7b2f6f241&filter[sort][field]=created_at&filter[sort][direction]=desc' \
+curl --location --request GET 'http://localhost/api/v1/transmissions?filter[messageUuid]=9dc5ab1c-8d05-4e5b-8c21-48a7b2f6f241&filter[sort][field]=created_at&filter[sort][direction]=state' \
 --header 'Authorization: yourauthtoken'
 ```
 
@@ -75,17 +77,16 @@ curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions?f
 }
 ```
 
-This command will retrieve a list of transmissions for a device, based on the filters supplied, or all of them if no filters given.
+This command will retrieve a list of transmissions, based on the filters supplied, or all of them if no filters given.
 
 ### HTTP Request
 
-`GET http://localhost/api/v1/devices/<id>/transmissions?filter[messageUuid]=<uuid>&filter[sort][field]=created_at&filter[sort][direction]=desc`
+`GET http://localhost/api/v1/transmissions?filter[messageUuid]=<uuid>&filter[sort][field]=created_at&filter[sort][direction]=state`
 
 ### URL Parameter
 
 Parameter | Description
 --------- | -----------
-id | device id
 filter[messageUuid] | unique message id
 filter[..] | see table above for options
 filter[sort][field] | string field name as above
@@ -103,10 +104,10 @@ Authorization | yourauthtoken
 
 [//]:#(*****************************************************************************)
 
-## Show Device Transmissions
+## Show Transmission
 
 ```shell
-curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions' \
+curl --location --request GET 'http://localhost/api/v1/transmissions/42' \
 --header 'Authorization: yourauthtoken'
 ```
 
@@ -141,11 +142,11 @@ curl --location --request GET 'http://localhost/api/v1/devices/9/transmissions' 
 }
 ```
 
-This command will ...
+This command will return a specific transmission with the id provided.
 
 ### HTTP Request
 
-`GET http://localhost/api/v1/devices/<id>/transmissions/<id>`
+`GET http://localhost/api/v1/transmissions/<id>`
 
 ### Headers
 

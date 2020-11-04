@@ -17,7 +17,8 @@ includes:
   - api_device_groups
   - api_schedules
   - api_devices
-  - api_device_transmissions
+  - api_transmissions
+  - api_messages
   - api_temprs
   - api_layers
   - api_tempr_layers
