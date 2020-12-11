@@ -457,7 +457,7 @@ Authorization | yourauthtoken
 ## Tempr History
 
 ```shell
-curl --location --request GET 'http://localhost/api/v1/temprs/56/history' \
+curl --location --request GET 'http://localhost/api/v1/temprs/56/audit_logs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -519,11 +519,11 @@ curl --location --request GET 'http://localhost/api/v1/temprs/56/history' \
 }
 ```
 
-This command will ...
+This command will retrieve the audit logs for a single tempr on the site
 
 ### HTTP Request
 
-`GET http://localhost/api/v1/temprs/<id>/history`
+`GET http://localhost/api/v1/temprs/<id>/audit_logs`
 
 ### URL Parameter
 
