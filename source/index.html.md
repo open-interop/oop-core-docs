@@ -26,6 +26,7 @@ includes:
   - api_schedule_temprs
   - api_device_temprs
   - api_microservices
+  - api_audit_logs
 
 search: true
 ---

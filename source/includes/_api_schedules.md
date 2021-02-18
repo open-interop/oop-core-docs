@@ -262,7 +262,7 @@ Authorization | yourauthtoken
 ## Schedule History
 
 ```shell
-curl --location --request GET 'http://localhost/api/v1/schedules/2/history' \
+curl --location --request GET 'http://localhost/api/v1/schedules/2/audit_logs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -310,11 +310,11 @@ curl --location --request GET 'http://localhost/api/v1/schedules/2/history' \
 }
 ```
 
-This command will ...
+This command will return all audit logs for a specific schedule
 
 ### HTTP Request
 
-`GET http://localhost/api/v1/schedules/<id>/history`
+`GET http://localhost/api/v1/schedules/<id>/audit_logs`
 
 ### URL Parameter
 
