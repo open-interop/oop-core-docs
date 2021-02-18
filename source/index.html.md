@@ -10,6 +10,7 @@ toc_footers:
 includes:
   - introduction
   - authentication
+  - api_account
   - api_dashboard
   - api_password
   - api_users

@@ -2,7 +2,7 @@
 
 Users are made up of the following fields... (and other words)
 
-The Site can have one or more of the following fields:
+The User can have one or more of the following fields:
 
 Field | Type | Required | Notes
 ----- | ---- | -------- | -----
@@ -10,6 +10,11 @@ id  | number | yes | Unique
 email | string | yes | Unique
 time_zone | string | no | Default en-gb
 password | string | yes | only accessed via API calls
+first_name | string | no | only letters, spaces or hyphens
+last_name | string | no | only letters, spaces or hypens
+job_title | string | no | 
+description | text | no | 
+date_of_birth | date time | no | date time in the past
 
 Filters available:
 
@@ -34,7 +39,10 @@ curl --location --request POST 'http://localhost/api/v1/users' \
 "user" : {
   "email": "new_email_address",
   "password": "new_password",
-  "password_confirmation": "new_password"
+  "password_confirmation": "new_password",
+  "first_name": "test",
+  "last_name": "user name",
+  "date_of_birth": "12/12/1999"
 }}'
 ```
 
@@ -74,6 +82,9 @@ Json string containing:
 		"email":"new_email_address",
 		"password":"new_password",
 		"password_confirmation":"new_password",
+    "first_name": "test",
+    "last_name": "user name",
+    "date_of_birth": "12/12/1999"
 	}
 `
 
@@ -94,13 +105,18 @@ curl --location --request GET 'http://localhost/api/v1/users/666' \
 > On Success:
 
 ```json
-    {
-        "id": 666,
-        "email": "testperson1@testplace.com",
-        "created_at": "2019-12-13T16:30:56.104Z",
-        "updated_at": "2020-04-14T09:43:33.425Z",
-        "time_zone": "Mexico City"
-    },
+  {
+    "id": 9,
+    "email": "test@example.com",
+    "created_at": "2020-08-04T13:34:04.298Z",
+    "updated_at": "2021-01-07T09:29:03.472Z",
+    "time_zone": "Hawaii",
+    "first_name": "NEW NAME",
+    "last_name": "LAST",
+    "description": null,
+    "job_title": null,
+    "date_of_birth": "2021-01-25"
+  },
 ```
 
 Get details for a single user on the system.
@@ -145,10 +161,16 @@ curl --location --request GET 'http://localhost/api/v1/users' \
     },
     "data": [
         {
-            "id": 666,
-            "email": "testperson1@testplace.com",
-            "created_at": "2019-12-13T16:30:56.104Z",
-            "updated_at": "2020-04-14T09:43:33.425Z"
+            "id": 9,
+            "email": "test@example.com",
+            "created_at": "2020-08-04T13:34:04.298Z",
+            "updated_at": "2021-01-07T09:29:03.472Z",
+            "time_zone": "Hawaii",
+            "first_name": "NEW NAME",
+            "last_name": "OH",
+            "description": null,
+            "job_title": null,
+            "date_of_birth": "2021-01-25"
         },
         {...}
     ],
