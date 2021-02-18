@@ -292,7 +292,7 @@ Authorization | yourauthtoken
 ## Layer History
 
 ```shell
-curl --location --request GET 'http://localhost/api/v1/layers/1/history' \
+curl --location --request GET 'http://localhost/api/v1/layers/1/audit_logs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -337,11 +337,11 @@ curl --location --request GET 'http://localhost/api/v1/layers/1/history' \
 }
 ```
 
-The History command will get some details about the history of the Layer.
+The Audit Log command will get some details about the history of the Layer.
 
 ### HTTP Request
 
-`GET http://localhost/api/v1/layers/<id>/history`
+`GET http://localhost/api/v1/layers/<id>/audit_logs`
 
 ### URL Parameter
 

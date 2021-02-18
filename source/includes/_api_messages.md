@@ -46,6 +46,7 @@ curl --location --request GET 'http://localhost/api/v1/messages?filter[device_id
 ```
 
 > On Success the command will return:
+
 ```json
 {
     "total_records": 14,
@@ -160,6 +161,7 @@ curl --location --request GET 'http://localhost/api/v1/messages/501' \
 ```
 
 > On Success the command will return:
+
 ```json
 {
     "id": 501,
@@ -209,4 +211,3 @@ Parameter | Description
 Authorization | yourauthtoken
 
 <aside class="notice">Replace <code>yourauthtoken</code> with your actual authenication token</aside>
- 31  source/includes/_api_device_transmissions.md → source/includes/_api_transmissions.md 

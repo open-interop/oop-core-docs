@@ -233,7 +233,7 @@ Authorization | yourauthtoken
 ## Device Group History
 
 ```shell
-curl --location --request GET 'http://localhost/api/v1/device_groups/1/history' \
+curl --location --request GET 'http://localhost/api/v1/device_groups/1/audit_logs' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: yourauthtoken'
 ```
@@ -257,7 +257,7 @@ This command will get the audit history for the specified device group.
 
 ### HTTP Request
 
-`GET http://localhost/api/v1/device_groups/<id>/history`
+`GET http://localhost/api/v1/device_groups/<id>/audit_logs`
 
 ### URL Parameter
 

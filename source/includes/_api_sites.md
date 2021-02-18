@@ -273,7 +273,7 @@ Json string containing:
 ## Site History
 
 ```shell
-curl --location --request GET 'http://localhost/api/v1/sites/666/history' \
+curl --location --request GET 'http://localhost/api/v1/sites/666/audit_logs' \
 --header 'Authorization: yourauthtoken' \
 --header 'Content-Type: application/json'
 ```
@@ -282,7 +282,7 @@ Get the History Audit information for a single Site on the system.
 
 ### HTTP Request
 
-`PUT http://localhost/api/v1/sites/<id>/history`
+`PUT http://localhost/api/v1/sites/<id>/audit_logs`
 
 ### URL Parameter
 
